@@ -1,3 +1,15 @@
+.fix-nav {
+    display: block;
+    height: 63px; /* this is the height of header */
+    margin-top: -63px; /* this is again negative value of the height of header */
+    visibility: hidden;
+}
+
+/* TODO: Add animationsb  */
+h1, p, li, img, button, a, .awards {
+    /* animation: fade linear; */
+}
+
 :root {
     --bg: #080A11;
     --text: #DDE0EE;
@@ -20,10 +32,13 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: 'Montserrat', sans-serif;
+
+    
 }
 
 body {
     background-color: var(--bg);
+    /* font-size: clamp(1.125rem, 2vw, 1.25rem); */
 }
 
 section {
@@ -35,11 +50,6 @@ h1, p, a, li {
 }
 
 span {
-    font-weight: bold;
-}
-
-a {
-    font-size: 30px;
     font-weight: bold;
 }
 
@@ -69,10 +79,17 @@ button:hover {
 
 h1 {
     font-size: 60px;
+    line-height: 1.2;
 }
 
 p {
     font-size: 25px;
+    line-height: 1.4;
+}
+
+a {
+    font-size: 30px;
+    font-weight: bold;
 }
 
 /* Header */
@@ -172,7 +189,7 @@ nav ul li {
 
 /* Main "about" */
 .main__about {
-    background: url(img/about_company_bg_1.png) no-repeat center;
+    background: url(img/about\ company/about_company_bg_1.png) no-repeat center;
     background-size: 300vh;
 
     margin-top: 80px;
@@ -181,7 +198,7 @@ nav ul li {
 
 .about-title {
     margin: 0;
-    margin-left: 40%;
+    padding-left: 40%;
     padding-top: 20px;
 }
 
@@ -322,18 +339,41 @@ nav ul li {
     text-align: right;
 }
 
-/* Награды */
-.awards {
-    margin-left: 100px;
-    margin-top: 50px;
-
+.slider-container {
     display: flex;
+    gap: 20px;
+
+    overflow-x: auto;
+
+    scroll-snap-type: x mandatory;
+
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
-.awards img {
-    width: 7%;
+.slide {
+    width: 100%;
+    height: 100%;
+}
+
+.slider-container > .slide {
+    scroll-snap-align: start;
+}
+
+/* .awards {
+    display: flex;
+    gap: 20px;
+
+    overflow-x:scroll;
+
+    margin-left: 100px;
+    margin-right: 100px;
+} */
+
+.slider-container > .slide > img {
+    width: 25vh;
     object-fit: cover;
-}   
+}
 
 .corruption {
     margin-left: 100px;
@@ -352,7 +392,8 @@ nav ul li {
 .ecology-text-desc {
     text-align: center;
     max-width: 80vh;
-    margin: auto;
+    margin-top: 25px;
+    padding-left: 30%;
 }
 
 .ecology-link-container {
@@ -430,7 +471,7 @@ li {
 
 /* Секция Контакты */
 .contacts__main {
-    background: url("img/contacts_bg.png");
+    background: url("img/contacts/contacts_bg.png");
 }
 
 /* Footer */
