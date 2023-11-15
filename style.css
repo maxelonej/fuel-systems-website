@@ -30,7 +30,7 @@ section {
     background-color: var(--bg);
 }
 
-h1, p, a {
+h1, p, a, li {
     color: var(--text);
 }
 
@@ -39,10 +39,16 @@ span {
 }
 
 a {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+nav a {
+    font-size: 100%;
     text-decoration: none;
 }
 
-ul li a:hover {
+a:hover {
     color: var(--hover);
 }
 
@@ -61,6 +67,14 @@ button:hover {
     background-color: var(--hover);
 }
 
+h1 {
+    font-size: 60px;
+}
+
+p {
+    font-size: 25px;
+}
+
 /* Header */
 
 header {
@@ -68,6 +82,10 @@ header {
 }
 
 nav {
+    /* make nav sticky */
+    position: fixed;
+    top: 0;
+
     width: 100%;
     height: 10%;
     
@@ -75,11 +93,7 @@ nav {
     align-items: center;
 
     background-color: var(--bg);
-
-    /* make nav sticky */
-    position: fixed;
-    top: 0;
-
+    
     z-index: 2;
 }
 
@@ -97,7 +111,6 @@ nav ul li {
 
 .logo:hover {
     cursor: pointer;
-    /* Перенос на главную */
 }
 
 /* Main */
@@ -159,16 +172,17 @@ nav ul li {
 
 /* Main "about" */
 .main__about {
-    background: url(img/about_company_bg.png) no-repeat center;
+    background: url(img/about_company_bg_1.png) no-repeat center;
     background-size: 300vh;
+
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
 
 .about-title {
-    font-size: 60px;
-
-    padding-top: 60px;
-    margin-top: 0;
+    margin: 0;
     margin-left: 40%;
+    padding-top: 20px;
 }
 
 .about-text-desc {
@@ -200,11 +214,11 @@ nav ul li {
 .big_img{
     max-width: 50%;
     width: 50%;
-    /* border: 2px solid #6593bf; */
 }
 
-.wrapper {
+.wrapper__oneliner {
     display: flex;
+    margin-bottom: 0;
 }
 
 /* Иконки с текстом */
@@ -216,9 +230,7 @@ nav ul li {
 
     padding: 30px 10px 0px 0px;
 }
-.item {
-    /* border: 2px solid var(--hover); */
-}
+
 .item .icon {
     width: 100px;
     height: 100px;
@@ -235,16 +247,18 @@ nav ul li {
     margin-left: 10px;
 }
 
-.title {
-    font-size: 60px;
+/* Разделы Миссия и Стратегия */
+.mission {
     margin-left: 100px;
-    margin-bottom: 0px;
 }
 
-.text-desc {
-    font-size: 25px;
+.strategy {
     margin-left: 100px;
-    margin-top: 15px;
+}
+
+/* Продукция */
+.production {
+    margin-left: 100px;
 }
 
 .production-desc {
@@ -255,22 +269,37 @@ nav ul li {
     margin-right: 35px;
 }
 
+/* Клиенты */
+.clients {
+    display: flex;
+}
+
+.client-img {
+    margin-top: 60px;
+    width: 50%;
+    height: 400px;
+}
+
+.client-container {
+    margin-left: 100px;
+    width: 50%;
+}
+
 /* Секция Безопасность */
 .safety {
     margin-top: 10px;
 }
 
-.safety-link {
-    text-decoration: underline;
-}
-
 .safety__main {
-    background: url(img/bezopasnost_bg.jpg);
+    background: url(img/safety_bg.jpg);
     background-size: cover;
     padding-bottom: 100px;
+
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
 
-.safety-text-desc {
+.safety-text-desc{
     font-size: 25px;
     padding-left: 30%;
     padding-bottom: 25px;
@@ -286,19 +315,11 @@ nav ul li {
     flex-direction: column;
     float: right;
 
-    font-weight: bold;
-
     margin-right: 150px;
 }
 
 .safety-link {
-    color: var(--text);
-    font-size: 30px;
     text-align: right;
-}
-
-.safety-link:hover {
-    color: var(--hover);
 }
 
 /* Награды */
@@ -310,21 +331,106 @@ nav ul li {
 }
 
 .awards img {
-    width: 15%;
+    width: 7%;
     object-fit: cover;
-    margin-left: 20px;
-    margin-top: 20px;
 }   
 
-.ecology {
+.corruption {
+    margin-left: 100px;
+}
+
+/* Секция Экология */
+.ecology__main {
     margin-top: 100px;
-    background-image: url(img/ecology_bg_4.jpg);
+    background-image: url(img/ecology/ecology_bg.jpg);
+    background-size: cover;
+
+    /* для линка */
+    padding-bottom: 100px;
 }
 
 .ecology-text-desc {
     text-align: center;
     max-width: 80vh;
     margin: auto;
+}
+
+.ecology-link-container {
+    float: right;
+    margin-right: 80px;
+    padding-top: 20px;
+}
+
+.ecology-link {
+    text-align: right;
+}
+
+.ecology__sub {
+    display: flex;
+
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+
+    /* !!!! */
+}
+
+/* ecology__left */
+
+.ecology-title {
+    font-size: 60px;
+    margin-left: 15px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+ul {
+    margin-top: 20px;
+}
+
+li {
+    padding-top: 20px;
+}
+
+/* ecology__right */
+
+.ecology-item {
+    text-align: center;
+    margin: 0;
+}
+
+li {
+    font-size: 20px;
+}
+
+.ecology__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ecology-item {
+    width: 25vh;
+}
+
+.ecology-img {
+    height: 120px;
+    width: 120px;
+
+    display: block;
+    margin: auto;
+
+    margin-top: 20px;
+}
+
+.ecology-item p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Секция Контакты */
+.contacts__main {
+    background: url("img/contacts_bg.png");
 }
 
 /* Footer */
