@@ -1,0 +1,333 @@
+:root {
+    --bg: #080A11;
+    --text: #DDE0EE;
+    --hover: #6593bf;
+
+    /* ? */
+    --primary: #857942;
+    --primary: ##56bbc8;
+
+    --secondary: ##142211;
+    --accent: #ab9b54;
+
+    /* old idk */
+    --body-bg: #161616;
+    --section-bg: #252525;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+section {
+    background-color: var(--bg);
+}
+
+h1, p, a {
+    color: var(--text);
+}
+
+span {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: var(--hover);
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid var(--hover);
+    color: var(--text);
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: var(--hover);
+}
+
+/* Header */
+
+header {
+    margin-bottom: 92px;
+}
+
+nav {
+    width: 100%;
+    height: 10%;
+    
+    display: flex;
+    align-items: center;
+
+    background-color: var(--bg);
+
+    /* make nav sticky */
+    position: fixed;
+    top: 0;
+
+    z-index: 2;
+}
+
+nav ul li {
+    display: inline;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.logo {
+    margin-right: auto;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.logo:hover {
+    cursor: pointer;
+    /* Перенос на главную */
+}
+
+/* Main */
+
+/* Секция 1 - Главная - Hero */
+.hero {
+    background: rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    min-height: 50vh;
+    height: 100vh;
+    z-index: 1;
+}
+
+#video {
+    position: absolute;
+    z-index: -3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.title-hero {
+    font-size: 60px;
+
+    margin-top: 100px;
+    margin-bottom: 10px;
+
+    text-align: left;
+    margin-left: 300px;
+}
+
+.text-desc-hero {
+    font-size: 35px;
+
+    text-align: left;
+    margin-left: 300px;
+
+    margin-top: 20px;
+
+    max-width: 1200px;
+}
+
+.btn_vacancies {
+    margin-left: 16%;
+    width: auto;
+    height: auto;
+
+    font-size: 40px;
+
+    font-weight: 600;
+    text-decoration: underline  ;
+    text-underline-offset: 8px;
+}
+
+/* Секция 2. О компании */  
+
+/* Main "about" */
+.main__about {
+    background: url(img/about_company_bg.png) no-repeat center;
+    background-size: 300vh;
+}
+
+.about-title {
+    font-size: 60px;
+
+    padding-top: 60px;
+    margin-top: 0;
+    margin-left: 40%;
+}
+
+.about-text-desc {
+    font-size: 25px;
+    padding-left: 30%;
+    padding-bottom: 25px;
+
+    max-width: 80vh;
+
+    text-align: center;
+}
+
+/* Кнопка "Подробнее" в секции "О компании" */
+.btn_about {
+    background-color: rgba(0, 0, 0, 0);
+    margin-left: 45%;
+
+    border: 2px solid var(--hover);
+    color: var(--text);
+    padding: 10px 20px;
+    
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.big_img{
+    max-width: 50%;
+    width: 50%;
+    /* border: 2px solid #6593bf; */
+}
+
+.wrapper {
+    display: flex;
+}
+
+/* Иконки с текстом */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    max-width: 50%;
+
+    padding: 30px 10px 0px 0px;
+}
+.item {
+    /* border: 2px solid var(--hover); */
+}
+.item .icon {
+    width: 100px;
+    height: 100px;
+
+    display: block;
+    margin: auto;
+
+    max-width: 300px;
+}
+.item p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.title {
+    font-size: 60px;
+    margin-left: 100px;
+    margin-bottom: 0px;
+}
+
+.text-desc {
+    font-size: 25px;
+    margin-left: 100px;
+    margin-top: 15px;
+}
+
+.production-desc {
+    padding-right: 5%;
+}
+
+.production-img {
+    margin-right: 35px;
+}
+
+/* Секция Безопасность */
+.safety {
+    margin-top: 10px;
+}
+
+.safety-link {
+    text-decoration: underline;
+}
+
+.safety__main {
+    background: url(img/bezopasnost_bg.jpg);
+    background-size: cover;
+    padding-bottom: 100px;
+}
+
+.safety-text-desc {
+    font-size: 25px;
+    padding-left: 30%;
+    padding-bottom: 25px;
+
+    max-width: 80vh;
+    margin-bottom: 0;
+
+    text-align: center;
+}
+
+.safety-links-container {
+    display: flex;
+    flex-direction: column;
+    float: right;
+
+    font-weight: bold;
+
+    margin-right: 150px;
+}
+
+.safety-link {
+    color: var(--text);
+    font-size: 30px;
+    text-align: right;
+}
+
+.safety-link:hover {
+    color: var(--hover);
+}
+
+/* Награды */
+.awards {
+    margin-left: 100px;
+    margin-top: 50px;
+
+    display: flex;
+}
+
+.awards img {
+    width: 15%;
+    object-fit: cover;
+    margin-left: 20px;
+    margin-top: 20px;
+}   
+
+.ecology {
+    margin-top: 100px;
+    background-image: url(img/ecology_bg_4.jpg);
+}
+
+.ecology-text-desc {
+    text-align: center;
+    max-width: 80vh;
+    margin: auto;
+}
+
+/* Footer */
+footer {
+    display: block;
+}
