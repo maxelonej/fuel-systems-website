@@ -5,7 +5,7 @@
     visibility: hidden;
 }
 
-/* TODO: Add animationsb  */
+/* TODO: Add animations  */
 h1, p, li, img, button, a, .awards {
     /* animation: fade linear; */
 }
@@ -19,7 +19,7 @@ h1, p, li, img, button, a, .awards {
     --primary: #857942;
     --primary: ##56bbc8;
 
-    --secondary: ##142211;
+    --secondary: #142211;
     --accent: #ab9b54;
 
     /* old idk */
@@ -32,8 +32,6 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: 'Montserrat', sans-serif;
-
-    
 }
 
 body {
@@ -174,6 +172,7 @@ nav ul li {
 }
 
 .btn_vacancies {
+    margin-top: 2%;
     margin-left: 16%;
     width: auto;
     height: auto;
@@ -221,11 +220,18 @@ nav ul li {
     color: var(--text);
     padding: 10px 20px;
     
+    text-decoration: none;
+
     display: inline-block;
     font-size: 20px;
     cursor: pointer;
     border-radius: 8px;
     margin-bottom: 20px;
+}
+
+.btn_about:hover {
+    color: var(--text);
+    background: var(--hover);
 }
 
 .big_img{
@@ -339,40 +345,53 @@ nav ul li {
     text-align: right;
 }
 
-.slider-container {
-    display: flex;
-    gap: 20px;
-
-    overflow-x: auto;
-
-    scroll-snap-type: x mandatory;
-
-    margin-left: 100px;
-    margin-right: 100px;
-}
-
-.slide {
+/* Награды */
+.gallery {
     width: 100%;
-    height: 100%;
-}
-
-.slider-container > .slide {
-    scroll-snap-align: start;
-}
-
-/* .awards {
     display: flex;
-    gap: 20px;
 
-    overflow-x:scroll;
+    overflow-x: scroll;
+}
 
-    margin-left: 100px;
-    margin-right: 100px;
-} */
+.gallery div {
+    width: 100%;
+    display: grid;
 
-.slider-container > .slide > img {
-    width: 25vh;
-    object-fit: cover;
+    /* !!! */
+    grid-template-columns: repeat(7, 1fr);
+
+    grid-gap: 30px;
+    flex: none;
+
+    padding: 20px;
+}
+
+.gallery div img {
+    width: 100%;
+    filter: grayscale(100);
+    transition: transform 0.5s;
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#backBtn, #nextBtn {
+    width: 80px;
+    cursor: pointer;
+    margin: 40px;
+}
+
+.gallery div img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .corruption {
@@ -477,4 +496,131 @@ li {
 /* Footer */
 footer {
     display: block;
+}
+
+/* Всплывающее окно при нажатии на кнопку "Подробнее" в секции "О компании" */
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.555);
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    /* Анимация */
+    opacity: 0;
+    visibility: hidden;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    transition: all 0.8s ease 0s;
+}
+
+/* При нажатии на кнопку "Подробнее" */
+body.lock {
+    overflow: hidden;
+}
+
+.popup.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup.open .popup__content {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+.popup__body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 100px;
+    padding: 30px 10px;
+}
+
+.popup__content {
+    position: relative;
+
+    background-color: var(--bg);
+    min-width: 800px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+    transform: translate(0px, -100%);
+}
+
+.popup__content h1, p {
+    margin: 0;
+}
+
+.popup__content h1 {
+    font-size: 40px;
+}
+
+.popup__content img {
+    background-size: cover;
+    margin: 10px auto;
+
+    padding: 5px;
+}
+
+.popup::-webkit-scrollbar {
+    display: none;
+}
+
+/* Убрал скроллбар с сайта */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.dsk {
+    margin-left: 20px;
+}
+
+.plastic-omnium p, .dsk p {
+    font-size: 20px;
+}
+
+.popup__close {
+    position: absolute;
+
+    text-decoration: none;
+
+    right: 5px;
+    top: 5px;
+
+    color: red;
+
+    padding-left: 5px;
+    padding-right: 5px;
+
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);
+    -webkit-mask-size: 200%;
+    animation: wave 3s infinite;
+}
+
+@keyframes wave {
+    from {
+        -webkit-mask-position: 150%;
+    }
+    to {
+        -webkit-mask-position: -50%;
+    }
+}
+
+.before-titles {
+    font-size: 30px;
+}
+
+.title-popup h1 {
+    margin-top: auto;
+    margin-bottom: auto;
 }

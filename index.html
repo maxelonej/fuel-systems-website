@@ -20,7 +20,7 @@
     <!-- Шапка -->
     <header>
         <!-- Навигация -->
-        <nav>
+        <nav id="nav">
             <a class="logo" href="#hero" title="hero">
                 <img src="img/logo/logo_top.png" alt="Logo DIPO">
             </a>
@@ -43,11 +43,12 @@
             <div class="hero__main">
                 <h1 class="title-hero">Пластиковые топливные системы</h1>
                 <p class="text-desc-hero">ООО "ДИПО" - лидер России по производству пластиковых топливных систем для автомобилей c экологическим стандартом Евро5 и Евро6.</p>
+                <!-- !!! -->
                 <button class="btn_vacancies">Вакансии</button>
             </div>
             <video autoplay loop muted plays-inline id="video">
                 <source src="img/video.mp4" type="video/mp4">
-                Ваш браузер не поддержтвает HTML5 видео.
+                Ваш браузер не поддерживает HTML5 видео.
             </video>
         </section>
         
@@ -58,11 +59,12 @@
             <div class="main__about">
                 <h1 class="about-title">О компании</h1>
                 <p class="about-text-desc">ООО “ДИПО” основано в 2012 году как совместное предприятие между французской компанией Пластик Омниум и российской компанией Детальстройконструкция.</p>    
-                <button class="btn_about">Подробнее</button>
+                <a href="#popup" class="btn_about popup-link">Подробнее</a>
+                <!-- <button class="btn_about">Подробнее</button> -->
             </div>
 
             <div class="wrapper__oneliner">
-                <img class="big_img" src="img/about company/about_company_bg_2.jpg" alt="">
+                <img class="big_img" src="img/about company/about_company_bg_2.jpg" alt="img company bg 2">
 
                 <div class="container">
                     <div class="item">
@@ -160,71 +162,36 @@
                 <p class="safety-text-desc">Для гарантии соответствующего и последовательного внедрения во всем мире системы управления охраной труда дивизион Clean Energy System обязует все производственные площадки сертифицироваться на соответствие стандартов ISO 45001 "Охрана труда и техники безопасности" у независимых аккредитованных организаций в рамках интегрированной системы менеджмента.</p>    
                 
                 <div class="safety-links-container">
-                    <a class="safety-link" href="#">Скачать Политику в области охраны струда ДИПО</a>
-                    <a class="safety-link" href="#">Скачать Локальное приложение к IMS</a>
+                    <a class="safety-link" href="#">Политика в области охраны труда ДИПО</a>
+                    <a class="safety-link" href="#">Локальное приложение к IMS</a>
                 </div>
             </div>
 
-            <div class="slider-container">
-                <!-- <div class="awards"> -->
-                    <div class="slide">
+            <!-- Коллекция наград -->
+            <div class="gallery-wrap">
+                <img id="backBtn" src="img/awards/back.png" alt="back">
+                <div class="gallery">
+                    <div>
                         <img src="img/awards/asset_1.png" alt="awards asset_1">
-                    </div>
-                    
-                    <div class="slide">
                         <img src="img/awards/asset_2.png" alt="awards asset_2">
-                    </div>
-
-                    <div class="slide">
                         <img src="img/awards/asset_3.png" alt="awards asset_3">
-                    </div>
-
-                    <div class="slide">
                         <img src="img/awards/asset_4.png" alt="awards asset_4">
-                    </div>
-
-                    <div class="slide">
                         <img src="img/awards/asset_5.png" alt="awards asset_5">
-                    </div>
-
-                    <div class="slide">
                         <img src="img/awards/asset_6.png" alt="awards asset_6">
-                    </div>
-
-                    <div class="slide">
                         <img src="img/awards/asset_7.png" alt="awards asset_7">
                     </div>
-
-                    <div class="slide">
+                    <div>
                         <img src="img/awards/asset_8.png" alt="awards asset_8">
-                    </div>
-
-                    <div class="slide">
                         <img src="img/awards/asset_9.png" alt="awards asset_9">
-                    </div>
-
-                    <div class="slide">
                         <img src="img/awards/asset_10.png" alt="awards asset_10">
-                    </div>
-
-                    <div class="slide">
                         <img src="img/awards/asset_11.png" alt="awards asset_11">
-                    </div>
-
-                    <div class="slide">
                         <img src="img/awards/asset_12.png" alt="awards asset_12">
-                    </div>
-
-                    <div class="slide">
                         <img src="img/awards/asset_13.png" alt="awards asset_13">
-                    </div>
-
-                    <div class="slide">
                         <img src="img/awards/asset_14.png" alt="awards asset_14">
                     </div>
-                <!-- </div> -->
+                </div>
+                <img id="nextBtn" src="img/awards/next.png" alt="next">
             </div>
-            
 
             <div class="corruption">
                 <h1>Противодействие коррупции</h1>
@@ -299,6 +266,40 @@
         <h1>Footer</h1>
     </footer>
 
+    <!-- Всплывающее окно при нажатии на кнопку "Подробнее" в секции "О компании" -->
+    <div class="popup" id="popup">
+        <div class="popup__body">
+            <!-- Оболочка контента -->
+            <div class="popup__content">
+                <a href="#nav" class="popup__close close-popup">X</a>
+
+                <p class="before-titles">Общество с ограниченной ответственностью «ДСК Пластик Омниум Инержи» является совместным предприятием и было основано 30 марта 2012 года двумя компаниями:</p>
+                
+                <div class="wrapper__oneliner">
+                    <div class="plastic-omnium">
+                        <div class="title-popup wrapper__oneliner">
+                            <h1>Пластик Омниум</h1>
+                            <img src="img/more/logo_o.png" alt="PLASTICOMNIUM">
+                        </div>
+                        
+                        <p>Мировой лидер по производству автомобильных пластиковых топливных систем Clean Energy Systems - подразделение группы Пластик Омниум и лидирующий поставщик автокомпонентов первого уровня - топливных систем и систем снижения выброса вредных веществ в атмосферу для производителей автомобилей. Штаб-квартира расположена в Лавале, Франция, по всему миру работают более 33000 человек на 127 заводе в 31 стране. Пластик Омниум благодаря дивизиону Clean Energy Systems находится в авангарде новых технологий, что является главным фактором в конкурентоспособности и успехе.</p>
+                    </div>
+
+                    <div class="dsk">
+                        <div class="title-popup wrapper__oneliner">
+                            <h1>Детальстройконструкция (ДСК)</h1>
+                            <img src="img/more/logo_d.png" alt="DSK">
+                        </div>
+                        <p>ДСК позиционируется на российском рынке автокомпонентов как динамично развивающееся предприятие, основными направлениями деятельности которого являются производство деталей интерьера автомобиля и деталей топливной системы. Предприятие создает условия для проектирования, развития и диверсификации производства новых конкурентоспособных видов продукции, повышения эффективности инновационного процесса при низких издержках производства в целях завоевания и закрепления лидирующего положения на рынке автомобильных компонентов. Предприятие способствуют становлению рыночной ориентации персонала и повышению его ключевых компетенций, соответствию социальных и морально – этических ценностей персонала потребительским ценностям.</p>
+                        <br>
+                        <p>Продукцией ДИПО являются пластиковые топливные системы автомобилей (топливные баки) для крупнейших автомобильных концернов, собирающих свои автомобили в России. На данный момент у ДИПО имеются 3 производственные площадки: в г. Тольятти (на территории ООО «ДСК»), пгт Ставрово и г. Санкт-Петербург. В данный момент ДИПО является лидирующим поставщиком топливных систем для автомобилестроения в России с нулевым показателем PPM брака у Потребителя.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+    <script src="popups.js"></script>
 </body>
 </html>
