@@ -259,10 +259,12 @@ nav ul li {
 }
 
 .transparent {
-    margin-left: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
     padding-left: 10px;
     padding-right: 10px;
     background: rgba(0, 0, 0, .6);
+    padding-bottom: 20px;
 }
 
 .big_img{
@@ -354,8 +356,9 @@ nav ul li {
     margin-bottom: 100px;
 }
 
-.safety__main > .main__wrapper > .transparent, .ecology__main > .main__wrapper > .transparent, .contacts__main > .main__wrapper > .transparent {
-    padding-bottom: 20px;
+.safety__main > .main__wrapper > .links-container {
+    padding-right: 30px;
+    padding-bottom: 15px;
 }
 
 /* Награды */
@@ -410,6 +413,10 @@ nav ul li {
 .corruption {
     margin-left: 100px;
     padding-bottom: 20px;
+}
+
+.safety > .links-container {
+    padding-right: 30px;
 }
 
 /* Секция Экология */
