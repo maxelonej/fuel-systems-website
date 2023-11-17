@@ -195,7 +195,7 @@ nav ul li {
 
 /* Описание для всех main в секциях */
 .text-desc {
-    font-size: 25px;
+    font-size: 30px;
     padding-bottom: 25px;
     
     margin-left: auto;
@@ -208,9 +208,6 @@ nav ul li {
 .links-container {
     display: flex;
     flex-direction: column;
-    float: right;
-
-    margin-right: 150px;
 }
 
 .link {
@@ -261,6 +258,13 @@ nav ul li {
     background: var(--hover);
 }
 
+.transparent {
+    margin-left: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: rgba(0, 0, 0, .6);
+}
+
 .big_img{
     max-width: 50%;
     width: 50%;
@@ -296,6 +300,8 @@ nav ul li {
     font-size: 20px;
     margin-left: 10px;
 }
+
+
 
 /* Разделы Миссия и Стратегия */
 .mission {
@@ -343,10 +349,13 @@ nav ul li {
 .safety__main {
     background: url(img/safety_bg.jpg);
     background-size: cover;
-    padding-bottom: 160px;
 
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.safety__main > .main__wrapper > .transparent, .ecology__main > .main__wrapper > .transparent, .contacts__main > .main__wrapper > .transparent {
+    padding-bottom: 20px;
 }
 
 /* Награды */
@@ -406,11 +415,9 @@ nav ul li {
 /* Секция Экология */
 .ecology__main {
     margin-top: 100px;
+    margin-bottom: 100px;
     background-image: url(img/ecology/ecology_bg.jpg);
     background-size: cover;
-
-    /* для линка */
-    padding-bottom: 100px;
 }
 
 .ecology-title {
@@ -421,9 +428,6 @@ nav ul li {
 
 .ecology__sub {
     display: flex;
-
-    margin-top: 30px;
-    margin-bottom: 30px;
     margin-left: 100px;
     margin-right: 100px;
 
@@ -478,6 +482,8 @@ li {
 /* Секция Контакты */
 .contacts__main {
     background: url("img/contacts/contacts_bg.png");
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 /* Footer */
