@@ -69,6 +69,8 @@ input, textarea, button {
 
 textarea {
     min-height: 80px;
+    max-height: 500px;
+
     resize: vertical;
 }
 
