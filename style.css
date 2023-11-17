@@ -88,6 +88,7 @@ p {
 a {
     font-size: 30px;
     font-weight: bold;
+    text-decoration: none;
 }
 
 /* Header */
@@ -150,21 +151,23 @@ nav ul li {
     min-height: 100%;
 }
 
-.title-hero {
+.hero__main {
+    text-align: left;
+}
+
+.hero-wrapper {
+    margin-left: 300px;
+}
+
+.main-title {
     font-size: 60px;
 
     margin-top: 100px;
     margin-bottom: 10px;
-
-    text-align: left;
-    margin-left: 300px;
 }
 
-.text-desc-hero {
+.main-text-desc {
     font-size: 35px;
-
-    text-align: left;
-    margin-left: 300px;
 
     margin-top: 20px;
 
@@ -172,16 +175,57 @@ nav ul li {
 }
 
 .btn_vacancies {
-    margin-top: 2%;
-    margin-left: 16%;
-    width: auto;
-    height: auto;
-
     font-size: 40px;
-
     font-weight: 600;
-    text-decoration: underline  ;
-    text-underline-offset: 8px;
+
+    margin-top: 2%;
+}
+
+/* Обертка для всего контента в main section */
+.main__wrapper {
+    text-align: center;
+}
+
+/* Заголовок для всех main в секциях */
+.title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+
+/* Описание для всех main в секциях */
+.text-desc {
+    font-size: 25px;
+    padding-bottom: 25px;
+    
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 150vh;
+}
+
+/* Стили для всех main section ссылок с иконкой и описанием */
+.links-container {
+    display: flex;
+    flex-direction: column;
+    float: right;
+
+    margin-right: 150px;
+}
+
+.link {
+    text-align: right;
+    display: flex;
+    margin-left: auto;
+}
+
+.link > a {
+    padding: 10px;
+}
+
+.link > img {
+    width: 60px;
+    height: 60px;
 }
 
 /* Секция 2. О компании */  
@@ -195,26 +239,9 @@ nav ul li {
     margin-bottom: 80px;
 }
 
-.about-title {
-    margin: 0;
-    padding-left: 40%;
-    padding-top: 20px;
-}
-
-.about-text-desc {
-    font-size: 25px;
-    padding-left: 30%;
-    padding-bottom: 25px;
-
-    max-width: 80vh;
-
-    text-align: center;
-}
-
 /* Кнопка "Подробнее" в секции "О компании" */
 .btn_about {
     background-color: rgba(0, 0, 0, 0);
-    margin-left: 45%;
 
     border: 2px solid var(--hover);
     color: var(--text);
@@ -226,7 +253,7 @@ nav ul li {
     font-size: 20px;
     cursor: pointer;
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .btn_about:hover {
@@ -298,7 +325,7 @@ nav ul li {
 }
 
 .client-img {
-    margin-top: 60px;
+    margin-top: 30px;
     width: 50%;
     height: 400px;
 }
@@ -316,33 +343,10 @@ nav ul li {
 .safety__main {
     background: url(img/safety_bg.jpg);
     background-size: cover;
-    padding-bottom: 100px;
+    padding-bottom: 160px;
 
     margin-top: 80px;
     margin-bottom: 80px;
-}
-
-.safety-text-desc{
-    font-size: 25px;
-    padding-left: 30%;
-    padding-bottom: 25px;
-
-    max-width: 80vh;
-    margin-bottom: 0;
-
-    text-align: center;
-}
-
-.safety-links-container {
-    display: flex;
-    flex-direction: column;
-    float: right;
-
-    margin-right: 150px;
-}
-
-.safety-link {
-    text-align: right;
 }
 
 /* Награды */
@@ -396,6 +400,7 @@ nav ul li {
 
 .corruption {
     margin-left: 100px;
+    padding-bottom: 20px;
 }
 
 /* Секция Экология */
@@ -408,27 +413,17 @@ nav ul li {
     padding-bottom: 100px;
 }
 
-.ecology-text-desc {
-    text-align: center;
-    max-width: 80vh;
-    margin-top: 25px;
-    padding-left: 30%;
+.ecology-title {
+    margin: 0 15px;
 }
 
-.ecology-link-container {
-    float: right;
-    margin-right: 80px;
-    padding-top: 20px;
-}
-
-.ecology-link {
-    text-align: right;
-}
+.ecology-text-desc {}
 
 .ecology__sub {
     display: flex;
 
     margin-top: 30px;
+    margin-bottom: 30px;
     margin-left: 100px;
     margin-right: 100px;
 
@@ -436,14 +431,6 @@ nav ul li {
 }
 
 /* ecology__left */
-
-.ecology-title {
-    font-size: 60px;
-    margin-left: 15px;
-    margin-bottom: 0;
-    margin-top: 0;
-}
-
 ul {
     margin-top: 20px;
 }
@@ -519,10 +506,6 @@ footer {
 }
 
 /* При нажатии на кнопку "Подробнее" */
-body.lock {
-    overflow: hidden;
-}
-
 .popup.open {
     opacity: 1;
     visibility: visible;
@@ -591,8 +574,6 @@ body::-webkit-scrollbar {
 
 .popup__close {
     position: absolute;
-
-    text-decoration: none;
 
     right: 5px;
     top: 5px;
