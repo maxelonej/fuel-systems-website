@@ -61,14 +61,34 @@ a:hover {
 }
 
 input, textarea, button {
-    font-family: 'Montserrat', sans-serif;
+    font-family: inherit;
+    background-color: var(--body-bg);
+    color: var(--text);
+    
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+input, textarea {
+    border: 1px solid var(--bg);
+    padding: 10px;
+}
+
+input:hover, textarea:hover {
+    border: 1px solid var(--hover);
+}
+
+input:focus, textarea:focus {
+    outline: none;
 }
 
 button {
     font-size: 30px;
     background-color: rgba(0, 0, 0, 0);
     border: 2px solid var(--hover);
-    color: var(--text);
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 8px;
