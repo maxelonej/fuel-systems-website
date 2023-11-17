@@ -60,8 +60,11 @@ a:hover {
     color: var(--hover);
 }
 
-button {
+input, textarea, button {
     font-family: 'Montserrat', sans-serif;
+}
+
+button {
     font-size: 30px;
     background-color: rgba(0, 0, 0, 0);
     border: 2px solid var(--hover);
