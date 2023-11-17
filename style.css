@@ -508,31 +508,16 @@ li {
     width: 100%;
 }
 
-.choice .option-1:hover .map-choice-img img {
-    /* Change the image on hover */
+.option:hover .map-choice-img img {
     content: url('img/map/hover.png');
 }
 
-.choice .option-2:hover .map-choice-img img {
-    /* Change the image on hover */
-    content: url('img/map/hover.png');
-}
-
-.choice .option-3:hover .map-choice-img img {
-    /* Change the image on hover */
-    content: url('img/map/hover.png');
-}
-
-.choice .option-1:hover .map-choice-txt p {
+.option:hover .map-choice-txt p {
     color: var(--hover);
 }
 
-.choice .option-2:hover .map-choice-txt p {
-    color: var(--hover);
-}
-
-.choice .option-3:hover .map-choice-txt p {
-    color: var(--hover);
+.option:hover {
+    cursor: pointer;
 }
 
 .iframe {
@@ -542,10 +527,6 @@ li {
 
 .option-1 {
     padding-top: 20px;
-}
-
-.option-1:hover, .option-2:hover, .option-3:hover {
-    cursor: pointer;
 }
 
 .option-2 {
@@ -574,9 +555,25 @@ li {
 
 /* Footer */
 footer {
-    margin-top: 100%;
+    padding: 100px;
+    margin-top: auto;
+    background-color: var(--body-bg);
 }
 
+form {
+    margin-left: 25%;
+    margin-bottom: 20px;
+}
+
+form h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+footer h1 {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
 /* Всплывающее окно при нажатии на кнопку "Подробнее" в секции "О компании" */
 .popup {
     position: fixed;
