@@ -53,34 +53,6 @@ a:hover {
     color: var(--hover);
 }
 
-input, textarea, button {
-    font-family: inherit;
-    background-color: var(--bg-3);
-    color: var(--text);
-    
-}
-
-textarea {
-    min-height: 80px;
-    max-height: 500px;
-
-    resize: vertical;
-}
-
-input, textarea {
-    border: 1px solid var(--bg-1);
-    padding: 10px;
-}
-
-input:hover, textarea:hover {
-    border: 1px solid var(--hover);
-}
-
-input:focus, textarea:focus {
-    outline: none;
-    border: 1px solid var(--hover);
-}
-
 button {
     font-size: 30px;
     background-color: rgba(0, 0, 0, 0);
@@ -594,19 +566,30 @@ li {
 }
 
 .map-container {
-    box-sizing: border-box;
-    padding: auto;
-    justify-content: center;
-    align-items: center;
-
     background-color: var(--bg-3);
-
-    margin-left: 25%;
-    margin-right: 20%;
+    margin: 0 25%;
 }
 
 .choice {
+    width: 50%;
+    height: 50%;
+    
+    background-color: var(--bg-3);
+    padding: 20px;
+}
+
+.map {
     width: 100%;
+    height: 100%;
+}
+
+.iframe {
+    width: 50%;
+    height: auto;
+}
+
+.option {
+    margin: 20px;
 }
 
 .option:hover .map-choice-img img {
@@ -621,29 +604,11 @@ li {
     cursor: pointer;
 }
 
-.iframe {
-    width: 100%;
-    height: 100%;
-}
 
-.option-1 {
-    padding-top: 20px;
-}
-
-.option-2 {
-    padding-top: 60px;
-    padding-bottom: 80px;
-}
 
 .night-map {
     filter: invert(100%);
     border: 0;
-}
-
-.choice {
-    background-color: var(--bg-3);
-    margin-top: 2%;
-    margin-left: 2%;
 }
 
 .map-choice-img img {
@@ -661,6 +626,14 @@ footer {
     background-color: var(--bg-3);
 }
 
+.follow-links {
+    margin-left: auto;
+}
+
+.follow-link {
+    padding: 10px;
+}
+
 form {
     margin-left: 25%;
     margin-bottom: 20px;
@@ -671,10 +644,45 @@ form h1 {
     margin-bottom: 20px;
 }
 
+input, textarea, button {
+    font-family: inherit;
+    color: var(--text);
+    border-radius: 15px;
+}
+
+textarea {
+    min-height: 80px;
+    max-height: 500px;
+
+    resize: vertical;
+
+    border-radius: 15px;
+}
+
+input, textarea {
+    background-color: var(--bg-3);
+    border: 1px solid var(--bg-1);
+    padding: 10px;
+}
+
+input {
+    border-radius: 50px;
+}
+
+input:hover, textarea:hover {
+    border: 1px solid var(--hover);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border: 1px solid var(--hover);
+}
+
 footer h1 {
     margin-top: 0;
     margin-bottom: 30px;
 }
+
 /* Всплывающее окно при нажатии на кнопку "Подробнее" в секции "О компании" */
 .popup {
     position: fixed;
