@@ -10,21 +10,20 @@ h1, p, li, img, button, a, .awards {
     /* animation: fade linear; */
 }
 
-:root {
-    --bg: #080A11;
+:root .light {
+    --bg-1: #95A4C1;
+    --bg-2: #31579F;
+    --bg-3: #DDE0EE;
+    --text: #252525;
+    --hover: #DDE0EE;
+}
+
+:root, :root .dark {
+    --bg-1: #080A11;
+    --bg-2: #080A11;
+    --bg-3: #161616;
     --text: #DDE0EE;
     --hover: #6593bf;
-
-    /* ? */
-    --primary: #857942;
-    --primary: ##56bbc8;
-
-    --secondary: #142211;
-    --accent: #ab9b54;
-
-    /* old idk */
-    --body-bg: #161616;
-    --section-bg: #252525;
 }
 
 body, html {
@@ -35,12 +34,11 @@ body, html {
 }
 
 body {
-    background-color: var(--bg);
-    /* font-size: clamp(1.125rem, 2vw, 1.25rem); */
+    background-color: var(--bg-1);
 }
 
 section {
-    background-color: var(--bg);
+    background-color: var(--bg-1);
 }
 
 h1, p, a, li {
@@ -51,18 +49,13 @@ span {
     font-weight: bold;
 }
 
-nav a {
-    font-size: 100%;
-    text-decoration: none;
-}
-
 a:hover {
     color: var(--hover);
 }
 
 input, textarea, button {
     font-family: inherit;
-    background-color: var(--body-bg);
+    background-color: var(--bg-3);
     color: var(--text);
     
 }
@@ -75,7 +68,7 @@ textarea {
 }
 
 input, textarea {
-    border: 1px solid var(--bg);
+    border: 1px solid var(--bg-1);
     padding: 10px;
 }
 
@@ -117,10 +110,26 @@ a {
     text-decoration: none;
 }
 
+.grid {
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.flex {
+    display: flex;
+}
+
 /* Header */
 
 header {
     margin-bottom: 92px;
+}
+
+nav a {
+    font-size: 100%;
+    text-decoration: none;
 }
 
 nav {
@@ -134,7 +143,7 @@ nav {
     display: flex;
     align-items: center;
 
-    background-color: var(--bg);
+    background-color: var(--bg-1);
     
     z-index: 2;
 }
@@ -142,7 +151,7 @@ nav {
 nav ul li {
     display: inline;
     font-size: 20px;
-    margin-right: 20px;
+    padding-right: 20px;
 }
 
 .logo {
@@ -175,6 +184,55 @@ nav ul li {
     transform: translate(-50%, -50%);
     min-width: 100%;
     min-height: 100%;
+}
+
+@media only screen and (max-width: 780px) {
+    ul {
+        display: none;
+    }
+
+    .menuBtn {
+        display: block;
+    }
+
+    ul li {
+        display: block;
+        margin: 20px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    /* xd */
+    #menu {
+        width: 100%;
+        background: rgb(11, 46, 54);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero {
+        background: rgba(0, 0, 0, 0.2);
+        position: relative;
+        overflow: hidden;
+        min-height: 50vh;
+        z-index: 1;
+    }
+
+    #video {
+        position: absolute;
+        z-index: -3;
+        top: 0;
+        left: 0;
+        width: 60rem;
+        height: auto;
+        transform: none;
+    }
 }
 
 .hero__main {
@@ -285,12 +343,8 @@ nav ul li {
 
 .big_img{
     max-width: 50%;
-    width: 50%;
-}
-
-.wrapper__oneliner {
-    display: flex;
-    margin-bottom: 0;
+    max-height: 50%;
+    object-fit: cover;
 }
 
 /* Иконки с текстом */
@@ -300,7 +354,11 @@ nav ul li {
 
     max-width: 50%;
 
-    padding: 30px 10px 0px 0px;
+    padding: 30px 20px 0px 20px;
+}
+
+.item {
+    padding-bottom: 10px;
 }
 
 .item .icon {
@@ -329,22 +387,17 @@ nav ul li {
 }
 
 /* Продукция */
-.production {
+.production-text {
     margin-left: 100px;
-}
-
-.production-desc {
     padding-right: 5%;
 }
 
 .production-img {
     margin-right: 35px;
+    margin-top: 20px;
 }
 
 /* Клиенты */
-.clients {
-    display: flex;
-}
 
 .client-img {
     margin-top: 30px;
@@ -486,8 +539,6 @@ nav ul li {
     display: flex;
     margin-left: 100px;
     margin-right: 100px;
-
-    /* !!!! */
 }
 
 /* ecology__left */
@@ -548,7 +599,7 @@ li {
     justify-content: center;
     align-items: center;
 
-    background-color: var(--body-bg);
+    background-color: var(--bg-3);
 
     margin-left: 25%;
     margin-right: 20%;
@@ -590,7 +641,7 @@ li {
 }
 
 .choice {
-    background-color: var(--body-bg);
+    background-color: var(--bg-3);
     margin-top: 2%;
     margin-left: 2%;
 }
@@ -607,7 +658,7 @@ li {
 footer {
     padding: 100px;
     margin-top: auto;
-    background-color: var(--body-bg);
+    background-color: var(--bg-3);
 }
 
 form {
@@ -667,7 +718,7 @@ footer h1 {
 .popup__content {
     position: relative;
 
-    background-color: var(--bg);
+    background-color: var(--bg-1);
     min-width: 800px;
     padding-left: 10px;
     padding-right: 10px;

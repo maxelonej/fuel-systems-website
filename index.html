@@ -10,6 +10,7 @@
     
     <!-- Подключение CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme-toggle.css">
     
     <!-- Подключение шрифта Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,17 +22,26 @@
     <header>
         <!-- Навигация -->
         <nav>
-            <a class="logo" href="#hero" title="hero">
+            <div class="logo" href="#hero" title="hero">
                 <img src="img/logo/logo_top.png" alt="Logo DIPO">
-            </a>
-            <ul id="menu">
-                <li><a href="#hero">Главная</a></li>
-                <li><a href="#about">О компании</a></li>
-                <li><a href="#production">Продукция</a></li>
-                <li><a href="#safety">Безопасность</a></li>
-                <li><a href="#ecology">Экология</a></li>
-                <li><a href="#contacts">Контакты</a></li>
-            </ul>
+            </div>
+            <span class="hamburgerOpen" onclick="openMenu()">&#9776</span>
+            <span class="hamburgerClose" onclick="closeMenu()">&#9746</span>
+            
+            <div class="main-menu">
+                <ul id="menu">
+                    <li><a href="#hero">Главная</a></li>
+                    <li><a href="#about">О компании</a></li>
+                    <li><a href="#production">Продукция</a></li>
+                    <li><a href="#safety">Безопасность</a></li>
+                    <li><a href="#ecology">Экология</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </div>
+
+            <!-- Сменить тему -->
+            <input type="checkbox" name="theme-toggle" id="theme-toggle">
+            <label class="theme-view" for="theme-toggle"></label>
         </nav>
     </header>
 
@@ -65,7 +75,7 @@
                 </div>
             </div>
 
-            <div class="wrapper__oneliner">
+            <div class="flex">
                 <img class="big_img" src="img/about company/about_company_bg_2.jpg" alt="img company bg 2">
 
                 <div class="container">
@@ -115,13 +125,12 @@
 
                 </div>
             </div>
-            <div class="wrapper__oneliner">
+            <div class="flex">
                 <div class="mission">
                     <h1 class="title">Миссия</h1>
                     <p>Наша миссия – постоянно укреплять свои позиции как лидирующего поставщика 1-го уровня в производстве пластиковых топливных систем. С помощью наших глобальных подразделений мы поставляем экологически чистую и безопасную,
 отвечающую техническим и экономическим требованиям автопроизводителей продукцию.</p>
                 </div>
-
                 <div class="strategy">
                     <h1 class="title">Стратегия</h1>
                     <p>ДИПО инвестирует в научно - исследовательскую деятельность, разработку и развитие мощностей для удержания лидирующей позиции в России по производству интегрированных пластиковых систем для хранения, транспортировки, подачи и регулирования топлива и жидкостей автомобиля и заботится об окружающем сообществе посредством (через) социальныx инициатив.</p>
@@ -130,29 +139,31 @@
                 </div>
             </div>
 
-            <div class="wrapper__oneliner">
-                <span class="fix-nav" id="production"></span>
-                <div class="production">
+            <span class="fix-nav" id="production"></span>
+            <div class="production flex">
+                <div class="production-text">
                     <h1 class="title">Продукция</h1>
-                    <p class="production-desc">Компания Plastic Omnium, учредитель ООО «ДИПО»
+                    <p>Компания Plastic Omnium, учредитель ООО «ДИПО»
     была первой, кто использовал экструзионно-выдувное формование
     для производства пластиковых топливных баков. Это позволяет
     изготавливать полые пластиковые баки со сложной формой
     и относительно больших размеров. В последние 20 лет эта технология
     стала ведущей для производства автомобильных топливных баков.</p>
-                    <p class="production-desc">Сегодня, более 70% новых автомобилей, оснащены
+                    <p>Сегодня, более 70% новых автомобилей, оснащены
     пластиковыми топливными системами.</p>
                 </div>
-                <img class="production-img" src="img/about company/tan.png" alt="">
+                <div class="production-img">
+                    <img src="img/about company/tan.png" alt="tan">
+                </div>
             </div>
 
-            <div class="clients">
-                <img class="client-img" src="img/about company/static_bg.jpg" alt="">
-                <div class="client-container">
-                    <h1 class="title">Клиенты</h1>
-                    <p class="client-txt">Нашими клиентами являются крупнейшие автопроизводители в России.
-        Каждый 2ой автомобиль в стране оснащен нашим баком.</p>
-                </div>
+            <div class="clients flex">
+                    <img class="client-img" src="img/about company/static_bg.jpg" alt="">
+                    <div class="client-container">
+                        <h1 class="title">Клиенты</h1>
+                        <p class="client-txt">Нашими клиентами являются крупнейшие автопроизводители в России.
+            Каждый 2ой автомобиль в стране оснащен нашим баком.</p>
+                    </div>
             </div> 
         </section>
         
@@ -311,7 +322,7 @@
             </div>
 
             <div class="map-container">
-                <div class="wrapper__oneliner">
+                <div class="flex">
                     <div class="iframe"> 
                         <iframe class="iframe-1 night-map" width="600" height="450"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5634.272611483627!2d49.27472069566329!3d53.57704755079101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4168779be0733e9f%3A0x468850096bb6f248!2z0YPQuy4g0KHQtdCy0LXRgNC90LDRjywgMzksINCi0L7Qu9GM0Y_RgtGC0LgsINCh0LDQvNCw0YDRgdC60LDRjyDQvtCx0LsuLCA0NDUxNDE!5e0!3m2!1sru!2sru!4v1700228480039!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <iframe class="iframe-2 night-map" style="display: none;" width="600" height="450" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2004.4813566010212!2d29.9515129775667!3d59.84114577486621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963f40dede375d%3A0xa0b9186485d96ae!2z0YPQuy4g0J3QvtCy0YvQtSDQl9Cw0LLQvtC00YssIDYwLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTk4NTE3!5e0!3m2!1sru!2sru!4v1700236672806!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -319,7 +330,7 @@
                     </div>
                     <div class="choice">
                         <div class="option-1 option">
-                            <div class="wrapper__oneliner">
+                            <div class="flex">
                                 <div class="map-choice-img">
                                     <img src="img/map/active.png" alt="togliatti marker">
                                 </div>
@@ -331,7 +342,7 @@
                         </div>
                         
                         <div class="option-2 option">
-                            <div class="wrapper__oneliner">
+                            <div class="flex">
                                 <div class="map-choice-img">
                                     <img src="img/map/unactive.png" alt="">
                                 </div>
@@ -343,7 +354,7 @@
                         </div>
                         
                         <div class="option-3 option">
-                            <div class="wrapper__oneliner">
+                            <div class="flex">
                                 <div class="map-choice-img">
                                     <img src="img/map/unactive.png" alt="">
                                 </div>
@@ -385,9 +396,9 @@
 
                 <p class="before-titles">Общество с ограниченной ответственностью «ДСК Пластик Омниум Инержи» является совместным предприятием и было основано 30 марта 2012 года двумя компаниями:</p>
                 
-                <div class="wrapper__oneliner">
+                <div class="flex">
                     <div class="plastic-omnium">
-                        <div class="title-popup wrapper__oneliner">
+                        <div class="title-popup flex">
                             <h1>Пластик Омниум</h1>
                             <img src="img/more/logo_o.png" alt="PLASTICOMNIUM">
                         </div>
@@ -396,7 +407,7 @@
                     </div>
 
                     <div class="dsk">
-                        <div class="title-popup wrapper__oneliner">
+                        <div class="title-popup flex">
                             <h1>Детальстройконструкция (ДСК)</h1>
                             <img src="img/more/logo_d.png" alt="DSK">
                         </div>
