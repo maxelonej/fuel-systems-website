@@ -13,8 +13,8 @@
 /* circle */
 .theme-view:after {
     content: "";
-    width: calc(100% - 70%);
-    height: 25px;
+    width: calc(100% - 75%);
+    height: 20px;
     position: absolute;
     top: 10px;
     left: 10px;
