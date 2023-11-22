@@ -1,0 +1,689 @@
+.fix-nav {
+    display: block;
+    height: 63px; /* this is the height of header */
+    margin-top: -63px; /* this is again negative value of the height of header */
+    visibility: hidden;
+}
+
+/* TODO: Add animations  */
+h1, p, li, img, button, a, .awards {
+    /* animation: fade linear; */
+}
+
+/* Адаптировать..
+Чтобы успешно это сделать, начну с 
+- color
+- font (typofgraphy)
+- spacing things out
+- background
+- complexity
+
+Почему навигация пропадает? Переделать на idk/mediaquery NAV responsive
+http://127.0.0.1:5500/idk/mediaquery%20NAV%20responsive/
+*/
+
+:root {
+    --bg-1: #080A11;
+    --bg-2: #080A11;
+    --bg-3: #161616;
+    --text: #DDE0EE;
+    --hover: #6593bf;
+    --btn-hover: #6593bfbb;
+
+    --ff-primary: 'Inconsolata', monospace;
+    --ff-accent: 'Montserrat', sans-serif;
+}
+
+:root {
+    /* 
+    for body = step 0
+    h1 = step 4 
+    h2 = step 3
+    h3 = step 2?
+    p = step 1?
+    */
+    
+    /* at 1920px */
+    --step--2: clamp(0.7813rem, 0.6959rem + 0.4268vw, 1rem); /* 16px */
+    --step--1: clamp(0.9375rem, 0.8155rem + 0.6098vw, 1.25rem); /* 20px */
+    --step-0: clamp(1.125rem, 0.9543rem + 0.8537vw, 1.5625rem); /* 25px */
+    --step-1: clamp(1.35rem, 1.1146rem + 1.1768vw, 1.9531rem); /* 31.25px */
+    --step-2: clamp(1.62rem, 1.2995rem + 1.6024vw, 2.4413rem); /* 39.06px */
+    --step-3: clamp(1.9438rem, 1.5113rem + 2.1622vw, 3.0519rem); /* 48.83px */
+    --step-4: clamp(2.3325rem, 1.754rem + 2.8927vw, 3.815rem); /* 61.04px */
+    --step-5: clamp(2.7994rem, 2.0311rem + 3.8415vw, 4.7681rem); /* 76.29px */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*::before, *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+*::-webkit-input-placeholder {
+    color: #c0c0c0;
+    opacity: 1;
+}
+
+*::-moz-placeholder {
+    color: #c0c0c0;
+    opacity: 1;
+}
+
+*:-ms-input-placeholder {
+    color: #c0c0c0;
+    opacity: 1;
+}
+
+::-webkit-scrollbar {
+    width: .5em;
+    background-color: var(--bg-3);
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar:hover {
+    background-color: rgba(25, 25, 25, 9);
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    background: rgba(0, 0, 0, .5);
+    border-radius: 100px;
+    background-clip: padding-box;
+    border: 2px solid var(--bg-3);
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb:vertical:active {
+    background-color: rgba(0, 0, 0, .61);
+    border-radius: 100px;
+}
+
+h1 {
+    font-size: var(--step-4);
+    font-weight: 900;
+    line-height: 1;
+}
+
+h2 {
+    font-size: var(--step-2);
+}
+
+h1, h2, h3 {
+    /* color: ...; */
+    font-family: var(--ff-accent);
+}
+
+h2, h3 {
+    font-weight: 100;
+    line-height: 1.2;
+}
+
+h1, h2, h3, p, a, li {
+    color: var(--text);
+}
+
+body, h1, h2, h3, p {
+    margin: 0;
+}
+
+section {
+    background-color: var(--bg-1);
+}
+
+span {
+    font-weight: bold;
+}
+
+a {
+    color: var(--text);
+    transition: color .4s ease;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--hover);
+}
+
+
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: var(--ff-primary);
+    background-color: var(--bg-1);
+    font-weight: 400;
+    font-size: var(--step-0);
+    line-height: 1.6;
+    position: relative;
+    min-width: 320px;
+    overflow-x: hidden;
+    opacity: 1;
+}
+
+img {
+    max-width: 100%;
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container {
+    margin-inline: auto;
+    width: min(90%, 120.5rem);
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.main__container {
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__container > * {
+    margin: .5em;
+}
+
+/* Попробовать вместо grid-container */
+.grid {
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    background-color: var(--bg-3);
+    z-index: 2;
+    padding: 1.5em;
+    width: 100vw;
+}
+
+header .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header ul li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+header ul li a {
+    transition: color .4s ease;
+    display: block;
+    text-decoration: none;
+    color: var(--text);
+}
+
+header ul li a:hover {
+    color: var(--hover);
+}
+
+.header-rightside {
+    display: flex;
+}
+
+.nav > .header-rightside > * {
+    margin-right: 1em;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+/* Секция 1 - Главная */
+.hero {
+    background: rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    min-height: 50vh;
+    height: 100vh;
+    z-index: 1;
+}
+
+#hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 3.78em 0;
+}
+
+.hero .container h1 {
+    padding: 2em 1em .5em 0;
+}
+
+.hero .container h2 {
+    padding: 0 1em 1em 0;
+    max-width: 30em;
+}
+
+.main-button {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid var(--hover);
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: var(--step-2);
+    transition: background-color .4s ease;
+}
+
+button:hover {
+    background-color: var(--btn-hover);
+}
+
+#video {
+    position: absolute;
+    z-index: -3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/* Секция 2. О компании */  
+
+/* Main "about" */
+.about-company {
+    background: url("../img/about company/about_company_bg_1.png") no-repeat;
+    background-size: cover;
+    width: 100vw;
+    padding: 1em;
+    margin: 5em 0;
+}
+
+.big-img {
+    width: 50%;
+    object-fit: cover;
+}
+
+/* Иконки с текстом */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.item {
+    text-align: center;
+    /* width: min(20%, 10em); */
+    padding-bottom: 1em;
+
+}
+
+.icon {
+    display: block;
+    max-width: 5em;
+    margin: auto;
+    height: auto;
+}
+
+.production {
+    padding: 2em 0;
+}
+
+.production-img {
+    padding: auto;
+    margin: auto;
+}
+.clients {
+    padding: 2em 0;
+}
+
+.title {
+    padding-bottom: .3em;
+}
+
+/* Безопасность */
+.safety__main {
+    background: url(../img/safety_bg.jpg);
+    background-size: cover;
+    width: 100%;
+}
+
+.safety__main > .title {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.safety__main > .text-desc {
+    padding-bottom: 1em;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1em;
+}
+
+.link {
+    text-align: right;
+    display: flex;
+    margin-left: auto;
+    padding-bottom: 0.5em;
+}
+
+.link > img {
+    width: 60px;
+    height: 60px;
+}
+
+a.link {
+    padding: 0;
+}
+
+.full-img {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .9);
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+
+    display: none;
+}
+
+.close-full-img {
+    margin-right: 1%;
+    cursor: pointer;
+}
+
+.full-img img {
+    width: 100%;
+    max-width: fit-content;
+    max-height: fit-content;
+}
+
+.gallery {
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.gallery div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 30px;
+    flex: none;
+    padding: 20px;
+}
+
+.gallery div img {
+    width: 100%;
+    filter: grayscale(100);
+    transition: transform 0.5s;
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-wrap {
+    display: flex;
+    align-items: center;
+    padding: 2em 0;
+}
+
+.corruption .links {
+    padding-top: 1em;
+}
+.corruption a {
+    padding: 0;
+}
+
+/* Кнопки для наград */
+#backBtn, #nextBtn {
+    max-width: 3em;
+    cursor: pointer;
+}
+
+#backBtn {
+    margin-right: 1em;
+}
+
+#nextBtn {
+    margin-left: 1em;
+}
+
+.gallery div img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all .4s ease;
+}
+
+/* Секция Экология */
+.ecology__main {
+    background-image: url(../img/ecology/ecology_bg.jpg);
+    background-size: cover;
+    width: 100%;
+    margin: 2em 0;
+}
+
+.transparent {
+    background: rgba(0, 0, 0, .6);
+    margin: 0 10em;
+}
+
+.ecology__main > .transparent > .title {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.ecology__main > .transparent > .text-desc {
+    padding-bottom: 1em;
+}
+
+.ecology-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ecology-item {
+    text-align: center;
+}
+
+.split > div > ul {
+    padding-left: 1em;
+}
+
+
+/* Секция Контакты */
+.contacts__main {
+    background: url("../img/contacts/contacts_bg.png");
+    background-size: cover;
+    width: 100%;
+    padding: 1em 0;
+    margin: 2em 0;
+}
+
+.map-choice-img {
+    padding: 0 2.5%;
+}
+
+.map-choice-img > img {
+    width: 60px;
+    height: 60px;
+}
+
+.iframe {
+    max-width: fit-content;
+    max-height: fit-content;
+}
+
+.iframe > iframe {
+    width: 600px;
+    height: 100%;
+}
+
+.jcc {
+    justify-content: center;
+}
+
+.choice {
+    max-width: fit-content;
+}
+
+.option {
+    padding: 1em;
+    background-color: var(--bg-3);
+    display: flex;
+}
+
+.option:hover .map-choice-img img {
+    content: url('../img/map/hover.png');
+}
+
+.map-choice-txt {
+    transition: color 4s ease;
+}
+
+.option:hover .map-choice-txt p {
+    color: var(--hover);
+}
+
+.option:hover {
+    cursor: pointer;
+}
+
+.night-map {
+    filter: invert(100%);
+    border: 0;
+}
+
+.option-1 {
+    padding-bottom: 0;
+}
+
+.option-3 {
+    padding-top: 0;
+}
+
+footer {
+    background-color: var(--bg-3);
+    padding: .1em 0;
+}
+
+.logo-footer {
+    padding: 0.4em;
+}
+.logo-footer > img {
+    width: 106px;
+    height: 39px;
+}
+
+.follow-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+}
+
+.follow-link {
+    padding: 0.4em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 2em 0;
+}
+.form-wrapper > * {
+    margin: .5em 0;
+}
+.form-wrapper div {
+    display: flex;
+}
+.form-wrapper > div > p {
+    font-size: .8em;
+}
+.form-wrapper > button {
+    font-size: 1em;
+}
+
+.agree-link {
+    text-decoration: underline;
+}
+.form-wrapper div > * {
+    padding-left: .5em;
+}
+
+#agree-checkbox {
+    cursor: pointer;
+}
+
+input, textarea, button {
+    font-family: var(--ff-primary);
+    color: var(--text);
+}
+
+textarea {
+    min-height: 80px;
+    max-height: 500px;
+    resize: vertical;
+    border-radius: 15px;
+}
+
+input, textarea {
+    background-color: var(--bg-3);
+    border: 1px solid var(--bg-1);
+    padding: 1em;
+}
+
+input {
+    border-radius: 50px;
+}
+
+input:hover, textarea:hover {
+    border: 1px solid var(--hover);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border: 1px solid var(--hover);
+}

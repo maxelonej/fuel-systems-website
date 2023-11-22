@@ -9,27 +9,31 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/logo/favicon.ico">
     
     <!-- Подключение CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="theme-toggle.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/theme-toggle.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/adaptive.css">
     
     <!-- Подключение шрифта Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- Подключение шрифта Inconsolata -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Шапка -->
     <header>
-        <!-- Навигация -->
-        <nav>
-            <div class="logo" href="#hero" title="hero">
-                <img src="img/logo/logo_top.png" alt="Logo DIPO">
+        <div class="nav">
+            <div class="logo" href="#hero" >
+                <a href="#hero">
+                    <img src="img/logo/logo_top.png" alt="logo">
+                </a>
             </div>
-            <span class="hamburgerOpen" onclick="openMenu()">&#9776</span>
-            <span class="hamburgerClose" onclick="closeMenu()">&#9746</span>
-            
-            <div class="main-menu">
-                <ul id="menu">
+            <div class="header-rightside">
+                <ul>
                     <li><a href="#hero">Главная</a></li>
                     <li><a href="#about">О компании</a></li>
                     <li><a href="#production">Продукция</a></li>
@@ -37,12 +41,10 @@
                     <li><a href="#ecology">Экология</a></li>
                     <li><a href="#contacts">Контакты</a></li>
                 </ul>
+                <input type="checkbox" name="theme-toggle" id="theme-toggle">
+                <label class="theme-view" for="theme-toggle"></label>
             </div>
-
-            <!-- Сменить тему -->
-            <input type="checkbox" name="theme-toggle" id="theme-toggle">
-            <label class="theme-view" for="theme-toggle"></label>
-        </nav>
+        </div>
     </header>
 
     <!-- Основа -->
@@ -50,232 +52,219 @@
         <span class="fix-nav" id="hero"></span>
         <!-- Секция 1. Главная, Hero -->
         <section class="hero">
-            <div class="hero__main">
-                <div class="hero-wrapper tal">
-                    <h1 class="main-title">Пластиковые топливные системы</h1>
-                    <p class="main-text-desc">ООО "ДИПО" - лидер России по производству пластиковых топливных систем для автомобилей c экологическим стандартом Евро5 и Евро6.</p>
-                    <button class="btn_vacancies">Вакансии</button>
-                </div>
+            <div class="container">
+                <h1>Пластиковые топливные системы</h1>
+                <h2>ООО "ДИПО" - лидер России по производству пластиковых топливных систем для автомобилей c экологическим стандартом Евро5 и Евро6.</h2>
+                <button class="main-button">Вакансии</button>
+                <video autoplay loop muted plays-inline id="video">
+                    <source src="img/video.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает HTML5 видео.
+                </video>
             </div>
-            <video autoplay loop muted plays-inline id="video">
-                <source src="img/video.mp4" type="video/mp4">
-                Ваш браузер не поддерживает HTML5 видео.
-            </video>
         </section>
         
         <!-- Секция 2. О компании -->
         <span class="fix-nav" id="about"></span>
         <section class="about">
-            
-            <div class="main__about">
-                <div class="main__wrapper">
-                    <h1 class="title">О компании</h1>
-                    <p class="text-desc">ООО “ДИПО” основано в 2012 году как совместное предприятие между французской компанией Пластик Омниум и российской компанией Детальстройконструкция.</p>    
-                    <a href="#popup" class="btn_about popup-link">Подробнее</a>
-                </div>
+            <div class="main__container about-company">
+                <h1>О компании</h1>
+                <h2 class="text-center">ООО “ДИПО” основано в 2012 году как совместное предприятие между французской компанией Пластик Омниум и российской компанией Детальстройконструкция.</h2>
+                <button href="#popup" class="btn_about main-button popup-link">Подробнее</>
             </div>
 
-            <div class="flex">
-                <img class="big_img" src="img/about company/about_company_bg_2.jpg" alt="img company bg 2">
-
-                <div class="container">
-                    <div class="item">
-                        <img class="icon" src="img/about company/shtangecircle.png" alt="shtange circle">
-                        <p>Постоянный контроль качества</p>
+            <div class="container">
+                <div class="split">
+                    <img class="big-img" src="img/about company/about_company_bg_2.jpg" alt="img company bg 2">
+                    <div class="grid-container">
+                        <div class="item">
+                            <img class="icon" src="img/about company/shtangecircle.png" alt="shtange circle">
+                            <p class="text-center">Постоянный контроль качества</p>
+                        </div>
+                        <div class="item">
+                            <img class="icon" src="img/about company/gear.png" alt="gear">
+                            <p class="text-center">Оптимизация процессов</p>
+                        </div>
+                        <div class="item">
+                            <img class="icon" src="img/about company/partnership.png" alt="partnership">
+                            <p class="text-center">Крепкое и долгосрочное партнерство</p>
+                        </div>
+                        <div class="item">
+                            <img class="icon" src="img/about company/expertize.png" alt="expertize">
+                            <p class="text-center">Высокая техническая экспертиза</p>
+                        </div>
+                        <div class="item">
+                            <img class="icon" src="img/about company/innovation.png" alt="innovation">
+                            <p class="text-center">Инновационные технические решения</p>
+                        </div>
+                        <div class="item">
+                            <img class="icon" src="img/about company/safety.png" alt="safety">
+                            <p class="text-center">Безопасные условия труда</p>
+                        </div>
+                        <div class="item">
+                            <img class="icon" src="img/about company/leader.png" alt="leader">
+                            <p class="text-center">Лидирующий производитель пластиковых топливных систем в России</p>
+                        </div>
+                        <div class="item">
+                            <img class="icon" src="img/about company/magicwand.png" alt="magic wand">
+                            <p class="text-center">Лучшие в отрасли показатели операционной эффективности</p>
+                        </div>
+                        <div class="item">
+                            <img class="icon" src="img/about company/spectrum.png" alt="spectrum">
+                            <p class="text-center">Весь спектр технологий под потребности заказчика</p>
+                        </div>
                     </div>
-                    <div class="item">
-                        <img class="icon" src="img/about company/gear.png" alt="gear">
-                        <p>Оптимизация процессов</p>
-                    </div>
+                </div>
 
-                    <div class="item">
-                        <img class="icon" src="img/about company/partnership.png" alt="partnership">
-                        <p>Крепкое и долгосрочное партнерство</p>
+                <div class="mission-strategy">
+                    <div class="split">
+                        <div class="mission">
+                            <h1 class="title">Миссия</h1>
+                            <p>Наша миссия – постоянно укреплять свои позиции как лидирующего поставщика 1-го уровня в производстве пластиковых топливных систем. С помощью наших глобальных подразделений мы поставляем экологически чистую и безопасную,
+                                    отвечающую техническим и экономическим требованиям автопроизводителей продукцию.</p>
+                        </div>
+                        <div>
+                            <h1 class="title">Стратегия</h1>
+                            <p>ДИПО инвестирует в научно - исследовательскую деятельность, разработку и развитие мощностей для удержания лидирующей позиции в России по производству интегрированных пластиковых систем для хранения, транспортировки, подачи и регулирования топлива и жидкостей автомобиля и заботится об окружающем сообществе посредством (через) социальныx инициатив.</p>
+                            <p>Для реализации своей стратегии мы применяем стандарты и инструменты
+                        <span>IATF 16949, ISO 14001, IQSR, Lean production, MMOG/LE.</span></p>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="item">
-                        <img class="icon" src="img/about company/expertize.png" alt="expertize">
-                        <p>Высокая техническая экспертиза</p>
+                <span class="fix-nav" id="production"></span>
+                <div class="production">
+                    <div class="split">
+                        <div>
+                            <h1 class="title">Продукция</h1>
+                            <p>Компания Plastic Omnium, учредитель ООО «ДИПО»
+                        была первой, кто использовал экструзионно-выдувное формование
+                        для производства пластиковых топливных баков. Это позволяет
+                        изготавливать полые пластиковые баки со сложной формой
+                        и относительно больших размеров. В последние 20 лет эта технология
+                        стала ведущей для производства автомобильных топливных баков.</p>
+                            <p>Сегодня, более 70% новых автомобилей, оснащены
+                        пластиковыми топливными системами.</p>
+                        </div>
+                        <div class="production-img">
+                            <img src="../img/about company/tan.png" alt="tan">
+                        </div>
                     </div>
+                </div>
 
-                    <div class="item">
-                        <img class="icon" src="img/about company/innovation.png" alt="innovation">
-                        <p>Инновационные технические решения</p>
+                <div class="clients">
+                    <div class="split">
+                        <img class="big-img" src="../img/about company/static_bg.jpg" alt="">
+                        <div>
+                            <h1 class="title">Клиенты</h1>
+                            <p class="client-txt">Нашими клиентами являются крупнейшие автопроизводители в России.
+                            Каждый 2ой автомобиль в стране оснащен нашим баком.</p>
+                        </div>
                     </div>
-
-                    <div class="item">
-                        <img class="icon" src="img/about company/safety.png" alt="safety">
-                        <p>Безопасные условия труда</p>
-                    </div>
-
-                    <div class="item">
-                        <img class="icon" src="img/about company/leader.png" alt="leader">
-                        <p>Лидирующий производитель пластиковых топливных систем в России</p>
-                    </div>
-
-                    <div class="item">
-                        <img class="icon" src="img/about company/magicwand.png" alt="magic wand">
-                        <p>Лучшие в отрасли показатели операционной эффективности</p>
-                    </div>
-
-                    <div class="item">
-                        <img class="icon" src="img/about company/spectrum.png" alt="spectrum">
-                        <p>Весь спектр технологий под потребности заказчика</p>
-                    </div>
-
                 </div>
             </div>
-            <div class="flex">
-                <div class="mission">
-                    <h1 class="title">Миссия</h1>
-                    <p>Наша миссия – постоянно укреплять свои позиции как лидирующего поставщика 1-го уровня в производстве пластиковых топливных систем. С помощью наших глобальных подразделений мы поставляем экологически чистую и безопасную,
-отвечающую техническим и экономическим требованиям автопроизводителей продукцию.</p>
-                </div>
-                <div class="strategy">
-                    <h1 class="title">Стратегия</h1>
-                    <p>ДИПО инвестирует в научно - исследовательскую деятельность, разработку и развитие мощностей для удержания лидирующей позиции в России по производству интегрированных пластиковых систем для хранения, транспортировки, подачи и регулирования топлива и жидкостей автомобиля и заботится об окружающем сообществе посредством (через) социальныx инициатив.</p>
-                    <p>Для реализации своей стратегии мы применяем стандарты и инструменты
-    <span>IATF 16949, ISO 14001, IQSR, Lean production, MMOG/LE.</span></p>
-                </div>
-            </div>
-
-            <span class="fix-nav" id="production"></span>
-            <div class="production flex">
-                <div class="production-text">
-                    <h1 class="title">Продукция</h1>
-                    <p>Компания Plastic Omnium, учредитель ООО «ДИПО»
-    была первой, кто использовал экструзионно-выдувное формование
-    для производства пластиковых топливных баков. Это позволяет
-    изготавливать полые пластиковые баки со сложной формой
-    и относительно больших размеров. В последние 20 лет эта технология
-    стала ведущей для производства автомобильных топливных баков.</p>
-                    <p>Сегодня, более 70% новых автомобилей, оснащены
-    пластиковыми топливными системами.</p>
-                </div>
-                <div class="production-img">
-                    <img src="img/about company/tan.png" alt="tan">
-                </div>
-            </div>
-
-            <div class="clients flex">
-                    <img class="client-img" src="img/about company/static_bg.jpg" alt="">
-                    <div class="client-container">
-                        <h1 class="title">Клиенты</h1>
-                        <p class="client-txt">Нашими клиентами являются крупнейшие автопроизводители в России.
-            Каждый 2ой автомобиль в стране оснащен нашим баком.</p>
-                    </div>
-            </div> 
         </section>
         
         <!-- Секция 3. Безопасность -->
         <span class="fix-nav" id="safety"></span>
-        <section class="safety">
-            <div class="safety__main">
-                <div class="main__wrapper">
+        <section>
+                <div class="main__container">
+                    <div class="safety__main text-center">
                         <h1 class="title">Безопасность</h1>
-                        <p class="text-desc">Для гарантии соответствующего и последовательного внедрения во всем мире системы управления охраной труда дивизион Clean Energy System обязует все производственные площадки сертифицироваться на соответствие стандартов ISO 45001 "Охрана труда и техники безопасности" у независимых аккредитованных организаций в рамках интегрированной системы менеджмента.</p>    
-                        
-                        <div class="links-container">
-                            <!-- link1 -->
+                        <h2 class="text-desc">Для гарантии соответствующего и последовательного внедрения во всем мире системы управления охраной труда дивизион Clean Energy System обязует все производственные площадки сертифицироваться на соответствие стандартов ISO 45001 "Охрана труда и техники безопасности" у независимых аккредитованных организаций в рамках интегрированной системы менеджмента.</h2>
+                        <div class="links">
                             <div class="link">
-                                <div class="wrapper">
+                                <div>
                                     <a href="http://dipoautomotive.ru/files/IMS_rus.pdf" target="_blank">Политика в области охраны труда ДИПО</a>
                                     <p>pdf, 604 Кб</p>
                                 </div>
-                                <img src="img/file.png" alt="file.png">
+                                <img src="../img/file.png" alt="file.png">
                             </div>
-
-                            <!-- link2 -->
                             <div class="link">
-                                <div class="wrapper">
+                                <div>
                                     <a href="http://dipoautomotive.ru/files/Локальное%20приложение%20к%20IMS%20Policy.pdf" target="_blank">Локальное приложение к IMS</a>
                                     <p>pdf, 183 Кб</p>
                                 </div>
-                                <img src="img/file.png" alt="file.png">
+                                <img src="../img/file.png" alt="file.png">
                             </div>
                         </div>
-                </div>
-            </div>
-
-            <!-- Тест -->
-            <div class="full-img-body">
-                <div class="full-img" id="fullImgBox">
-                    <div>
-                        <img src="img/awards/asset_1.png" id="fullImg" alt="awards asset_1">
                     </div>
-                    <a onclick="closeFullImg()" class="popup__close close-full-img">X</a>
-                </div>
-            </div>
-            
-
-            <!-- Коллекция наград -->
-            <div class="gallery-wrap">
-                <img id="backBtn" src="img/awards/back.png" alt="back">
-                <div class="gallery">
-                    <div>
-                        <img src="img/awards/asset_1.png" alt="awards asset_1" onclick="openFullImg(this.src)">
-                        <img src="img/awards/asset_2.png" alt="awards asset_2" onclick="openFullImg(this.src)">
-                        <img src="img/awards/asset_3.png" alt="awards asset_3" onclick="openFullImg(this.src)">
-                        <img src="img/awards/asset_4.png" alt="awards asset_4" onclick="openFullImg(this.src)">
-                        <img src="img/awards/asset_5.png" alt="awards asset_5" onclick="openFullImg(this.src)">
-                        <img src="img/awards/asset_6.png" alt="awards asset_6" onclick="openFullImg(this.src)">
-                        <img src="img/awards/asset_7.png" alt="awards asset_7" onclick="openFullImg(this.src)">
-                    </div>
-                    <div>
-                        <img src="img/awards/asset_8.png" alt="awards asset_8" onclick="openFullImg(this.src)">
-                        <img src="img/awards/asset_9.png" alt="awards asset_9" onclick="openFullImg(this.src)">
-                        <img src="img/awards/asset_10.png" alt="awards asset_10" onclick="openFullImg(this.src)">
-                        <img src="img/awards/asset_11.png" alt="awards asset_11" onclick="openFullImg(this.src)">
-                        <img src="img/awards/asset_12.png" alt="awards asset_12" onclick="openFullImg(this.src)">
-                        <img src="img/awards/asset_13.png" alt="awards asset_13" onclick="openFullImg(this.src)">
-                        <img src="img/awards/asset_14.png" alt="awards asset_14" onclick="openFullImg(this.src)">
+                    <div class="full-img-body">
+                        <div class="full-img" id="fullImgBox">
+                            <div>
+                                <img src="../img/awards/asset_1.png" id="fullImg" alt="awards asset_1">
+                            </div>
+                            <a onclick="closeFullImg()" class="popup__close close-full-img">X</a>
+                        </div>
                     </div>
                 </div>
-                <img id="nextBtn" src="img/awards/next.png" alt="next">
-            </div>
-
-            <div class="corruption">
-                <h1>Противодействие коррупции</h1>
-                <p>Если вы располагаете информацией о фактах коррупционного поведения или иных нарушениях законодательства, просим сообщить об этом на ГОРЯЧУЮ ЛИНИЮ ПО ВОПРОСАМ КОМПЛАЕНС: <a class="safety-link" href="SHR-COMPLIANCE.HOTLINE@PLASTICOMNIUM.COM">SHR-COMPLIANCE.HOTLINE@PLASTICOMNIUM.COM</a> или любым удобным способом. Компания гарантирует соблюдение конфиденциальности вашего обращения.</p>
-            </div>
-
-            <div class="links-container">
-                <div class="link">
-                    <div class="wrapper">
-                        <a href="http://dipoautomotive.ru/files/Антикоррупционная%20политика.pdf" class="link" target="_blank">Антикоррупционная политика ДИПО</a>
-                        <p>pdf, 340 Кб</p>
+            <div class="container">
+                <!-- Коллекция наград -->
+                <div class="gallery-wrap">
+                    <img id="backBtn" src="../img/awards/back.png" alt="back">
+                    <div class="gallery">
+                        <div>
+                            <img src="../img/awards/asset_1.png" alt="awards asset_1" onclick="openFullImg(this.src)">
+                            <img src="../img/awards/asset_2.png" alt="awards asset_2" onclick="openFullImg(this.src)">
+                            <img src="../img/awards/asset_3.png" alt="awards asset_3" onclick="openFullImg(this.src)">
+                            <img src="../img/awards/asset_4.png" alt="awards asset_4" onclick="openFullImg(this.src)">
+                            <img src="../img/awards/asset_5.png" alt="awards asset_5" onclick="openFullImg(this.src)">
+                            <img src="../img/awards/asset_6.png" alt="awards asset_6" onclick="openFullImg(this.src)">
+                            <img src="../img/awards/asset_7.png" alt="awards asset_7" onclick="openFullImg(this.src)">
+                        </div>
+                        <div>
+                            <img src="../img/awards/asset_8.png" alt="awards asset_8" onclick="openFullImg(this.src)">
+                            <img src="../img/awards/asset_9.png" alt="awards asset_9" onclick="openFullImg(this.src)">
+                            <img src="../img/awards/asset_10.png" alt="awards asset_10" onclick="openFullImg(this.src)">
+                            <img src="../img/awards/asset_11.png" alt="awards asset_11" onclick="openFullImg(this.src)">
+                            <img src="../img/awards/asset_12.png" alt="awards asset_12" onclick="openFullImg(this.src)">
+                            <img src="../img/awards/asset_13.png" alt="awards asset_13" onclick="openFullImg(this.src)">
+                            <img src="../img/awards/asset_14.png" alt="awards asset_14" onclick="openFullImg(this.src)">
+                        </div>
                     </div>
-                    <img src="img/file.png" alt="file.png">
+                    <img id="nextBtn" src="../img/awards/next.png" alt="next">
+                </div>
+                <div class="corruption">
+                    <h1 class="title">Противодействие коррупции</h1>
+                    <p>Если вы располагаете информацией о фактах коррупционного поведения или иных нарушениях законодательства, просим сообщить об этом на ГОРЯЧУЮ ЛИНИЮ ПО ВОПРОСАМ КОМПЛАЕНС: <a class="safety-link" href="SHR-COMPLIANCE.HOTLINE@PLASTICOMNIUM.COM">SHR-COMPLIANCE.HOTLINE@PLASTICOMNIUM.COM</a> или любым удобным способом. Компания гарантирует соблюдение конфиденциальности вашего обращения.</p>
+                    <div class="links">
+                        <div class="link">
+                            <div>
+                                <a href="http://dipoautomotive.ru/files/Антикоррупционная%20политика.pdf" class="link" target="_blank">Антикоррупционная политика ДИПО</a>
+                                <p>pdf, 340 Кб</p>
+                            </div>
+                            <img src="../img/file.png" alt="file.png">
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </section>
 
         <!-- Секция Экология -->
         <span class="fix-nav" id="ecology"></span>
-        <section class="ecology">
-            <div class="ecology__main">
-                <div class="main__wrapper">
+        <section>
+            <div class="main__container">
+                <div class="ecology__main text-center">
                     <div class="transparent">
                         <h1 class="title">Экология</h1>
-                        <p class="text-desc">Мы бережно относимся к окружающей среде и полностью осознаем свою ответственность за то, чтобы свести к минимуму последствия нашего производства.</p>
-                        <div class="links-container">
-                            <div class="link">
-                                <div class="wrapper">
-                                    <a href="http://dipoautomotive.ru/files/Экологическая%20политика.pdf" class="link" target="_blank">Экологическая политика</a>
-                                    <p>pdf, 132 Кб</p>
+                        <h2 class="text-desc">Мы бережно относимся к окружающей среде и полностью осознаем свою ответственность за то, чтобы свести к минимуму последствия нашего производства.</h2>
+                        <div class="split">
+                            <div class="links">
+                                <div class="link">
+                                    <div>
+                                        <a href="http://dipoautomotive.ru/files/Экологическая%20политика.pdf" class="link" target="_blank">Экологическая политика</a>
+                                        <p>pdf, 132 Кб</p>
+                                    </div>
+                                    <img src="../img/file.png" alt="file.png">
                                 </div>
-                                <img src="img/file.png" alt="file.png">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="ecology__sub">
-                <div class="ecology__left">
-                    <div class="ecology-text-desc">
-                        <h1 class="ecology-title">Наша экологическая политика</h1>
+            <div class="container">
+                <div class="split">
+                    <div>
+                        <h1 class="title">Наша экологическая политика</h1>
                         <ul>
                             <li>Техническое переоборудование производства</li>
                             <li>Проведение производственного экологического контроля за соблюдением нормативов сбросов</li>
@@ -287,49 +276,43 @@
                             <li>Информирование работников о результатах природоохранной деятельности.</li>
                         </ul>
                     </div>
+                        <div class="ecology-container">
+                            <div class="ecology-item">
+                                <img class="icon" src="/img/ecology/recicle.png" alt="recicle">
+                                <p class="text-center">Весь пластик от производства топливных баков используется повторно</p>
+                            </div>
+                            <div class="ecology-item">
+                                <img class="icon" src="/img/ecology/sort_trash.png" alt="sort trash">
+                                <p class="text-center">Мы сортируем мусор и собираем батарейки для дальнейшей переработки</p>
+                            </div>
+                            <div class="ecology-item">
+                                <img class="icon" src="/img/ecology/euro_six.png" alt="euro 6">
+                                <p class="text-center">Наши баки соответствуют критериям Евро 6</p>
+                            </div>
+                        </div>
                 </div>
-                
-                <div class="ecology__right">
-                    <div class="ecology__container">
-                        <div class="ecology-item">
-                            <img class="ecology-img" src="img/ecology/recicle.png" alt="recicle">
-                            <p>Весь пластик от производства топливных баков используется повторно</p>
-                        </div>
-
-                        <div class="ecology-item">
-                            <img class="ecology-img" src="img/ecology/sort_trash.png" alt="sort trash">
-                            <p>Мы сортируем мусор и собираем батарейки для дальнейшей переработки</p>
-                        </div>
-
-                        <div class="ecology-item">
-                            <img class="ecology-img" src="img/ecology/euro_six.png" alt="euro 6">
-                            <p>Наши баки соответствуют критериям Евро 6</p>
-                        </div>
-                    </div>
-                </div>
-            </div>            
+            </div>
         </section>
 
         <!-- Секция Контакты -->
         <span class="fix-nav" id="contacts"></span>
-        <section class="contacts">
-            <div class="contacts__main">
-                <div class="main__wrapper">
-                        <h1 class="title">Контакты</h1>
-                        <p class="text-desc">Центральный: +7 (8482) 759-628</p>
-                        <p class="text-desc">Почта: shr-dipo-info@dipoautomotive.com</p>
+        <section>
+            <div class="main__container">
+                <div class="contacts__main text-center">
+                    <h1 class="title">Контакты</h1>
+                    <h2 class="text-desc">Центральный: +7 (8482) 759-628</h2>
+                    <h2 class="text-desc">Почта: shr-dipo-info@dipoautomotive.com</h2>
                 </div>
             </div>
-
-            <div class="map-container flex">
-                    <div class="iframe"> 
-                        <iframe class="iframe-1 night-map map"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5634.272611483627!2d49.27472069566329!3d53.57704755079101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4168779be0733e9f%3A0x468850096bb6f248!2z0YPQuy4g0KHQtdCy0LXRgNC90LDRjywgMzksINCi0L7Qu9GM0Y_RgtGC0LgsINCh0LDQvNCw0YDRgdC60LDRjyDQvtCx0LsuLCA0NDUxNDE!5e0!3m2!1sru!2sru!4v1700228480039!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <iframe class="iframe-2 night-map map" style="display: none;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2004.4813566010212!2d29.9515129775667!3d59.84114577486621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963f40dede375d%3A0xa0b9186485d96ae!2z0YPQuy4g0J3QvtCy0YvQtSDQl9Cw0LLQvtC00YssIDYwLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTk4NTE3!5e0!3m2!1sru!2sru!4v1700236672806!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <iframe class="iframe-3 night-map map" style="display: none;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2223.6494514251262!2d40.02402837737192!3d56.12858087322558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414b7fbbd0915555%3A0x9b964839a8641e90!2z0YPQuy4g0J7QutGC0Y_QsdGA0YzRgdC60LDRjywgMTE40LEsINCh0YLQsNCy0YDQvtCy0L4sINCS0LvQsNC00LjQvNC40YDRgdC60LDRjyDQvtCx0LsuLCA2MDEyMjA!5e0!3m2!1sru!2sru!4v1700236704227!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="container">
+                <div class="jcc split">
+                    <div class="iframe">
+                        <iframe class="iframe-1 night-map"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5634.272611483627!2d49.27472069566329!3d53.57704755079101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4168779be0733e9f%3A0x468850096bb6f248!2z0YPQuy4g0KHQtdCy0LXRgNC90LDRjywgMzksINCi0L7Qu9GM0Y_RgtGC0LgsINCh0LDQvNCw0YDRgdC60LDRjyDQvtCx0LsuLCA0NDUxNDE!5e0!3m2!1sru!2sru!4v1700228480039!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe class="iframe-2 night-map" style="display: none;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2004.4813566010212!2d29.9515129775667!3d59.84114577486621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963f40dede375d%3A0xa0b9186485d96ae!2z0YPQuy4g0J3QvtCy0YvQtSDQl9Cw0LLQvtC00YssIDYwLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTk4NTE3!5e0!3m2!1sru!2sru!4v1700236672806!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe class="iframe-3 night-map" style="display: none;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2223.6494514251262!2d40.02402837737192!3d56.12858087322558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414b7fbbd0915555%3A0x9b964839a8641e90!2z0YPQuy4g0J7QutGC0Y_QsdGA0YzRgdC60LDRjywgMTE40LEsINCh0YLQsNCy0YDQvtCy0L4sINCS0LvQsNC00LjQvNC40YDRgdC60LDRjyDQvtCx0LsuLCA2MDEyMjA!5e0!3m2!1sru!2sru!4v1700236704227!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-
                     <div class="choice">
-                        <div class="option-1 option flex">
+                        <div class="option-1 option">
                             <div class="map-choice-img">
                                 <img src="img/map/active.png" alt="togliatti marker">
                             </div>
@@ -338,8 +321,7 @@
                                 <p>+7 (8482) 759628</p>
                             </div>
                         </div>
-                        
-                        <div class="option-2 option flex">
+                        <div class="option-2 option">
                             <div class="map-choice-img">
                                 <img src="img/map/unactive.png" alt="">
                             </div>
@@ -348,8 +330,7 @@
                                 <p>+7 (812) 240-19-76</p>
                             </div>
                         </div>
-                        
-                        <div class="option-3 option flex">
+                        <div class="option-3 option">
                             <div class="map-choice-img">
                                 <img src="img/map/unactive.png" alt="">
                             </div>
@@ -359,30 +340,37 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                
+                    <form action="">
+                        <div class="form-wrapper">
+                            <input type="text" placeholder="E-mail" required>
+                            <textarea placeholder="Сообщение" name="" id="" cols="30" rows="5" required></textarea>
+                            <div>
+                                <input type="checkbox" id="agree-checkbox" required>
+                                <p class="agree-text">я согласен на <a class="agree-text agree-link" href="http://dipoautomotive.ru/files/Персональные%20данные.pdf" target="_blank">обработку персональных данных</a></p>
+                            </div>
+                            <button class="main-button">Отправить</button>
+                        </div>
+                    </form>
+                
             </div>
-
-            <form action="">
-                <h1>Call to action</h1>
-                <input type="text" placeholder="E-mail">
-                <br><br>
-                <textarea placeholder="Сообщение" name="" id="" cols="30" rows="5"></textarea>
-                <br><br>
-                <button>Отправить</button>
-            </form>
         </section>
     </main>
 
     <footer>
-        <div class="flex">
-            <div><img src="img/logo/logo_footer.png"  alt=""></div>
-            <div class="follow-links">
-                <img class="follow-link" src="img/footer/insta.svg" width="60" alt="instagram">
-                <img class="follow-link" src="img/footer/linked_in.svg" width="60" alt="linkedin">
-                <img class="follow-link" src="img/footer/vk.svg" width="60" alt="Vkontake">
+        <div class="container">
+            <div class="split">
+                <div class="logo-footer">
+                    <img src="img/logo/logo_footer.png"  alt="logo DIPO footer">
+                </div>
+                <div class="follow-links">
+                    <img class="follow-link" src="img/footer/insta.svg" width="60" alt="instagram">
+                    <img class="follow-link" src="img/footer/linked_in.svg" width="60" alt="linkedin">
+                    <img class="follow-link" src="img/footer/vk.svg" width="60" alt="Vkontake">
+                </div>
             </div>
         </div>
-        
-        
     </footer>
 
     <!-- Всплывающее окно при нажатии на кнопку "Подробнее" в секции "О компании" -->
@@ -391,26 +379,22 @@
             <!-- Оболочка контента -->
             <div class="popup__content">
                 <a href="#nav" class="popup__close close-popup">X</a>
-
-                <p class="before-titles">Общество с ограниченной ответственностью «ДСК Пластик Омниум Инержи» является совместным предприятием и было основано 30 марта 2012 года двумя компаниями:</p>
-                
-                <div class="flex">
+                <h2 class="before-titles">Общество с ограниченной ответственностью «ДСК Пластик Омниум Инержи» является совместным предприятием и было основано 30 марта 2012 года двумя компаниями:</h2>
+                <div class="container">
                     <div class="plastic-omnium">
-                        <div class="title-popup flex">
+                        <div class="title-popup split">
                             <h1>Пластик Омниум</h1>
                             <img src="img/more/logo_o.png" alt="PLASTICOMNIUM">
                         </div>
-                        
                         <p>Мировой лидер по производству автомобильных пластиковых топливных систем Clean Energy Systems - подразделение группы Пластик Омниум и лидирующий поставщик автокомпонентов первого уровня - топливных систем и систем снижения выброса вредных веществ в атмосферу для производителей автомобилей. Штаб-квартира расположена в Лавале, Франция, по всему миру работают более 33000 человек на 127 заводе в 31 стране. Пластик Омниум благодаря дивизиону Clean Energy Systems находится в авангарде новых технологий, что является главным фактором в конкурентоспособности и успехе.</p>
                     </div>
 
                     <div class="dsk">
-                        <div class="title-popup flex">
+                        <div class="title-popup split">
                             <h1>Детальстройконструкция (ДСК)</h1>
                             <img src="img/more/logo_d.png" alt="DSK">
                         </div>
                         <p>ДСК позиционируется на российском рынке автокомпонентов как динамично развивающееся предприятие, основными направлениями деятельности которого являются производство деталей интерьера автомобиля и деталей топливной системы. Предприятие создает условия для проектирования, развития и диверсификации производства новых конкурентоспособных видов продукции, повышения эффективности инновационного процесса при низких издержках производства в целях завоевания и закрепления лидирующего положения на рынке автомобильных компонентов. Предприятие способствуют становлению рыночной ориентации персонала и повышению его ключевых компетенций, соответствию социальных и морально – этических ценностей персонала потребительским ценностям.</p>
-                        <br>
                         <p>Продукцией ДИПО являются пластиковые топливные системы автомобилей (топливные баки) для крупнейших автомобильных концернов, собирающих свои автомобили в России. На данный момент у ДИПО имеются 3 производственные площадки: в г. Тольятти (на территории ООО «ДСК»), пгт Ставрово и г. Санкт-Петербург. В данный момент ДИПО является лидирующим поставщиком топливных систем для автомобилестроения в России с нулевым показателем PPM брака у Потребителя.</p>
                     </div>
                 </div>
@@ -418,7 +402,7 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
-    <script src="popups.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/popups.js"></script>
 </body>
 </html>

@@ -1,0 +1,139 @@
+/* до 1250 ширины */
+@media (max-width: 1250px) {
+    /* скрывать правую часть шапки */
+    header .nav .header-rightside {
+        display: none;
+    }
+    /* гамбургер меню */
+    /* ... */
+
+    .big-img {
+        width: 100%;
+        padding-bottom: 1em;
+    }
+    .clients .big-img {
+        order: 1;
+    }
+    .clients {
+        padding-top: 0;
+    }
+    .item {
+        font-size: .8em;
+    }
+    .mission {
+        padding: 2em 0;
+    }
+    .production > .split > div > img {
+        padding-top: .5em;
+    }
+
+    .gallery div {
+        width: 350%;
+    }
+
+    .dsk .title-popup h1 {
+        font-size: 1.65rem;
+    }
+
+    .safety__main > .text-desc {
+        font-size: 1em;
+    }
+
+    .safety__main {
+        padding: 1em;
+    }
+
+    .title {
+        font-size: 1.8em;
+    }
+
+    .link div a {
+        font-size: calc(14px + 16 * ((100vw - 320px) / (1280 - 320)));
+    }
+    .link div p {
+        font-size: calc(14px + 16 * ((100vw - 320px) / (1280 - 320)));
+    }
+
+    .ecology__main > .transparent > .text-desc {
+        font-size: 1em;
+    }
+
+    .ecology__main > .transparent {
+        margin: 0 20px;
+    }
+
+    .title-popup {
+        width: 60vw;
+    }
+    .dsk > .title-popup > h1 {
+        font-size: 1.2em;
+    }
+    .title-popup > img {
+        max-width: 50%;
+    }
+    .ecology-item {
+        padding: .5em 0;
+    }
+    .contacts__main > .text-desc {
+        font-size: 1em;
+    }
+    .iframe > iframe {
+        width: auto;
+        height: 15em;
+    }
+
+    .iframe iframe {
+        width: 90vw;
+    }
+
+    .option {
+        width: 90vw;
+    }
+
+    .ecology-container {
+        padding-top: 1em;
+    }
+    .about-company h2 {
+        font-size: 1.2em;
+    }
+
+    /* временно подвал */
+    footer .container .split {
+        align-items: center;
+        justify-content: center;
+    }
+}   
+
+@media (min-width: 1250px) {
+    .split {
+        flex-direction: row;
+    }
+
+    .split > * {
+        flex-basis: 100%;
+    }
+    
+    .split > * + * {
+        margin-left: 2em;
+    }
+
+    .mission-strategy {
+        padding: 2em 0;
+    }
+
+    .transparent .links {
+        padding-right: 1em;
+    }
+
+    .transparent {
+        margin: 0 10em;
+    }
+
+    .option {
+        min-width: 460px;
+    }
+
+    .choice {
+        margin-left: 0;
+    }
+}
