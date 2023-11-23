@@ -48,10 +48,9 @@
     transform: translate(0px, -100%);
 }
 
-/* 
 .popup::-webkit-scrollbar {
     display: none;
-} */
+}
 
 .popup__close {
     position: absolute;
