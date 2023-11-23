@@ -322,12 +322,10 @@ button:hover {
 }
 
 .safety__main > .title {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    padding: 0;
 }
 
 .safety__main > .text-desc {
-    padding-bottom: 1em;
     font-weight: 100;
 }
 
@@ -498,6 +496,9 @@ a.link {
 }
 .contacts__main > .text-desc:nth-child(3) {
     padding-bottom: 2em;
+}
+.contacts__main > p > a {
+    font-size: inherit;
 }
 
 .map-choice-img {
