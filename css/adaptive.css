@@ -18,7 +18,7 @@
         padding-top: 0;
     }
     .item {
-        font-size: .8em;
+        font-size: calc(10px + 16 * ((100vw - 320px) / (1280 - 320)));
     }
     .mission {
         padding: 2em 0;
