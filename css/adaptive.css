@@ -31,14 +31,6 @@
         width: 350%;
     }
 
-    .dsk .title-popup h1 {
-        font-size: 1.65rem;
-    }
-
-    .safety__main > .text-desc {
-        font-size: 1em;
-    }
-
     .safety__main {
         padding: 1em;
     }
@@ -65,9 +57,16 @@
     .title-popup {
         width: 60vw;
     }
-    .dsk > .title-popup > h1 {
-        font-size: 1.2em;
+    
+    .h1-popup {
+        font-size: calc(16px + 16 * ((100vw - 320px) / (1280 - 320)));
+        padding-bottom: 0.8em;
     }
+    .map-choice-img > img {
+        width: 30px;
+        height: 30px;
+    }
+
     .title-popup > img {
         max-width: 50%;
     }
@@ -102,6 +101,25 @@
         align-items: center;
         justify-content: center;
     }
+    h1 {
+    font-weight: 900;
+    line-height: 1;
+    font-size: calc(32px + 16 * ((100vw - 320px) / (1280 - 320)));
+    }
+    h2 {
+        font-size: calc(18px + 16 * ((100vw - 320px) / (1280 - 320)));
+    }
+    p {
+        font-size: calc(14px + 16 * ((100vw - 320px) / (1280 - 320)));
+    }
+    button {
+        font-size: calc(24px + 16 * ((100vw - 320px) / (1280 - 320)));
+    }
+    .safety__main {
+        background: url(../img/safety_bg.jpg) bottom no-repeat;
+        background-size: 800%;
+        width: 100%;
+    }
 }   
 
 @media (min-width: 1250px) {
@@ -135,5 +153,32 @@
 
     .choice {
         margin-left: 0;
+    }
+
+    h1 {
+    font-weight: 900;
+    line-height: 1;
+    font-size: 4em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    p, .split li {
+        font-size: 1.3em;
+    }
+    button {
+        font-size: 2.5em;
+    }
+    a {
+        font-size: 1.5em;
+    }
+    .link > div > p {
+        font-size: 1.5em;
+    }
+    .safety__main > .text-desc {
+        font-size: 2em;
+    }
+    .contacts__main > .text-desc {
+        font-size: 2em;
     }
 }
