@@ -124,6 +124,9 @@
         display: grid;
         grid-template-columns: auto auto;
     }
+    .option:hover .map-choice-img img {
+        content: url('../img/map/active.png');
+    }
 }   
 
 @media (min-width: 1250px) {
