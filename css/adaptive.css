@@ -28,7 +28,7 @@
     }
 
     .gallery div {
-        width: 350%;
+        width: 200vw;
     }
 
     .safety__main {
@@ -42,16 +42,12 @@
     .link div a {
         font-size: calc(14px + 16 * ((100vw - 320px) / (1280 - 320)));
     }
-    .link div p {
+    .link div p, .split div ul {
         font-size: calc(14px + 16 * ((100vw - 320px) / (1280 - 320)));
     }
 
-    .ecology__main > .transparent > .text-desc {
-        font-size: 1em;
-    }
-
     .ecology__main > .transparent {
-        margin: 0 20px;
+        margin: 0;
     }
 
     .title-popup {
@@ -127,7 +123,20 @@
     .option:hover .map-choice-img img {
         content: url('../img/map/active.png');
     }
+    
+    .ecology__main > .transparent > .text-desc {
+        font-size: calc(14px + 16 * ((100vw - 320px) / (1280 - 320)));
+    }
 }   
+
+@media (min-width: 768px) and (max-width: 1250px) {
+    .gallery div {
+        width: 100vw;
+    }
+    #nextBtn, #backBtn {
+        max-width: 5em;
+    }
+}
 
 @media (min-width: 1250px) {
     .split {
