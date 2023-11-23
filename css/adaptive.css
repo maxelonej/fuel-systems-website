@@ -188,4 +188,7 @@
     .contacts__main > .text-desc {
         font-size: 2em;
     }
+    #backBtn, #nextBtn {
+        max-width: 5em;
+    }
 }
