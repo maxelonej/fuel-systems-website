@@ -42,3 +42,19 @@
     transform: translateX(-100%);
     background: linear-gradient(180deg, #777, #080A11);
 }
+
+#dropdown-theme-toggle {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+#dropdown-theme-toggle:checked + .theme-view {
+    background: #161616;
+}
+
+#dropdown-theme-toggle:checked + .theme-view:after {
+    left: 70px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, #777, #080A11);
+}
