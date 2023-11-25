@@ -10,18 +10,6 @@ h1, p, li, img, button, a, .awards {
     /* animation: fade linear; */
 }
 
-/* Адаптировать..
-Чтобы успешно это сделать, начну с 
-- color
-- font (typofgraphy)
-- spacing things out
-- background
-- complexity
-
-Почему навигация пропадает? Переделать на idk/mediaquery NAV responsive
-http://127.0.0.1:5500/idk/mediaquery%20NAV%20responsive/
-*/
-
 :root {
     --bg-1: #080A11;
     --bg-2: #080A11;
@@ -70,7 +58,6 @@ http://127.0.0.1:5500/idk/mediaquery%20NAV%20responsive/
 }
 
 h1, h2, h3 {
-    /* color: ...; */
     font-family: var(--ff-accent);
 }
 
@@ -104,8 +91,6 @@ a {
 a:hover {
     color: var(--hover);
 }
-
-
 
 html, body {
     height: 100%;
@@ -151,14 +136,6 @@ img {
 
 .main__container > * {
     margin: .5em;
-}
-
-/* Попробовать вместо grid-container */
-.grid {
-    width: 100%;
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
 /* Header */
