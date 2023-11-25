@@ -13,15 +13,16 @@
     <link rel="stylesheet" href="css/theme-toggle.css">
     <link rel="stylesheet" href="css/popup.css">
     <link rel="stylesheet" href="css/adaptive.css">
+    <link rel="stylesheet" href="css/hamburger-menu.css">
     
-    <!-- Подключение шрифта Montserrat -->
+    <!-- Подключение к сайту шрифтов -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Подключение шрифта Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
     <!-- Подключение шрифта Inconsolata -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -43,12 +44,27 @@
                 </ul>
                 <input type="checkbox" name="theme-toggle" id="theme-toggle">
                 <label class="theme-view" for="theme-toggle"></label>
+                <div class="toggle-btn">
+                    <button class="burger"></button>
+                </div>
             </div>
+
+            
         </div>
     </header>
 
     <!-- Основа -->
     <main>
+        <div class="dropdown-menu">
+            <li><a href="#hero">Главная</a></li>
+            <li><a href="#about">О компании</a></li>
+            <li><a href="#production">Продукция</a></li>
+            <li><a href="#safety">Безопасность</a></li>
+            <li><a href="#ecology">Экология</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+            <input type="checkbox" name="theme-toggle" id="dropdown-theme-toggle">
+            <label class="theme-view" for="dropdown-theme-toggle"></label>
+        </div>
         <span class="fix-nav" id="hero"></span>
         <!-- Секция 1. Главная, Hero -->
         <section class="hero">
@@ -396,7 +412,9 @@
         </div>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="js/awards.js"></script>
     <script src="js/popups.js"></script>
+    <script src="js/map-option.js"></script>
+    <script src="js/hamburger.js"></script>
 </body>
 </html>

@@ -1,11 +1,12 @@
 /* до 1250 ширины */
 @media (max-width: 1250px) {
-    /* скрывать правую часть шапки */
-    header .nav .header-rightside {
+    /* гамбургер меню */
+    .header-rightside ul, .header-rightside input + label {
         display: none;
     }
-    /* гамбургер меню */
-    /* ... */
+    .nav .toggle-btn {
+        display: block;
+    }
 
     .big-img {
         width: 100%;
@@ -97,10 +98,11 @@
         align-items: center;
         justify-content: center;
     }
+
     h1 {
-    font-weight: 900;
-    line-height: 1;
-    font-size: calc(32px + 16 * ((100vw - 320px) / (1280 - 320)));
+        font-weight: 900;
+        line-height: 1;
+        font-size: calc(32px + 16 * ((100vw - 320px) / (1280 - 320)));
     }
     h2 {
         font-size: calc(18px + 16 * ((100vw - 320px) / (1280 - 320)));
@@ -139,6 +141,10 @@
 }
 
 @media (min-width: 1250px) {
+    .dropdown-menu.open {
+        display: none;
+    }
+
     .split {
         flex-direction: row;
     }
