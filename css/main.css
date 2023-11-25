@@ -5,32 +5,40 @@
     visibility: hidden;
 }
 
-/* TODO: Add animations  */
-h1, p, li, img, button, a, .awards {
-    /* animation: fade linear; */
-}
-
 :root {
-    --bg-1: #080A11;
-    --bg-2: #080A11;
-    --bg-3: #161616;
-    --text: #DDE0EE;
+    --bg-1: #f7f5ee;
+    --bg-2: #f7f5ee;
+    --bg-3: #e9e9e9;
+    --text: #000;
     --hover: #6593bf;
+    --btn-bg: rgba(0, 0, 0, 0); /* transparent */
     --btn-hover: #6593bfbb;
+    --dropdown-menu-bg: rgba(255, 255, 255, .1);
+    --ecology-div-bg: rgba(255, 255, 255, .6);
 
     --ff-primary: 'Inconsolata', monospace;
     --ff-accent: 'Montserrat', sans-serif;
 }
 
+.dark-theme {
+    --bg-1: #080A11;
+    --bg-2: #080A11;
+    --bg-3: #161616;
+    --text: #DDE0EE;
+    --hover: #6593bf;
+    --btn-bg: rgba(0, 0, 0, 0); /* transparent */
+    --btn-hover: #6593bfbb;
+    --dropdown-menu-bg: rgba(25, 25, 25, .1);
+    --ecology-div-bg: rgba(0, 0, 0, .6);
+}
+
 * {
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 *::before, *::after {
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -213,13 +221,25 @@ header ul li a:hover {
 }
 
 .main-button {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: var(--btn-bg);
     border: 2px solid var(--hover);
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 30px;
     font-weight: 500;
     transition: background-color .4s ease;
+}
+
+.dropdown-menu {
+    display: none;
+    top: 6.5em;
+    width: 300px;
+    background: var(--dropdown-menu-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    height: 0;
+    overflow: hidden;
+    transition: height .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .burger::before,
@@ -238,6 +258,7 @@ header ul li a:hover {
     box-shadow: 0 11px 0 var(--text);
 }
 
+/* hide hover */
 .burger:hover {
     background-color: var(--bg-3);
 }
@@ -257,8 +278,6 @@ button:hover {
 }
 
 /* Секция 2. О компании */  
-
-/* Main "about" */
 .about-company {
     background: url("../img/about company/about_company_bg_1.png") no-repeat;
     background-size: cover;
@@ -274,7 +293,6 @@ button:hover {
     object-fit: cover;
 }
 
-/* Иконки с текстом */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -282,9 +300,7 @@ button:hover {
 
 .item {
     text-align: center;
-    /* width: min(20%, 10em); */
     padding-bottom: 1em;
-
 }
 
 .icon {
@@ -443,7 +459,7 @@ a.link {
 }
 
 .transparent {
-    background: rgba(0, 0, 0, .6);
+    background: var(--ecology-div-bg);
     margin: 0 10em;
     padding: 0 1em;
 }
@@ -489,12 +505,15 @@ a.link {
 .contacts__main > .title {
     padding: 0;
 }
+
 .contacts__main > .text-desc {
     margin: 0;
 }
+
 .contacts__main > .text-desc:nth-child(3) {
     padding-bottom: 2em;
 }
+
 .contacts__main > p > a {
     font-size: inherit;
 }
