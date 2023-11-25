@@ -1,17 +1,17 @@
 const toggleBtn = document.querySelector('.toggle-btn')
 const dropDownMenu = document.querySelector('.dropdown-menu')
+const burger = document.querySelector('.burger')
 
 toggleBtn.onclick = () => {
 	dropDownMenu.classList.toggle('open')
 
 	document.querySelector('main').addEventListener('click', (event) => {
-		if (!document.querySelector('.dropdown-menu').contains(event.target)) {
-			document.querySelector('.dropdown-menu').classList.remove('open')
+		if (!dropDownMenu.contains(event.target)) {
+			dropDownMenu.classList.remove('open')
+            burger.classList.remove('active')
 		}
 	})
 }
-
-const burger = document.querySelector('.burger')
 
 burger.addEventListener('click', () => {
 	burger.classList.toggle('active')
