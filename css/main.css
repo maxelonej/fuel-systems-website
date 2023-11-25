@@ -6,15 +6,16 @@
 }
 
 :root {
-    --bg-1: #f7f5ee;
-    --bg-2: #f7f5ee;
-    --bg-3: #e9e9e9;
-    --text: #000;
-    --hover: #6593bf;
+    --bg-1: #DDE0EE;
+    --bg-2: #DDE0EE;
+    --bg-3: #DDE0EE;
+    --text: #080A11;
+    /* --text: #000; */
+    --hover: #21517C;
     --btn-bg: rgba(0, 0, 0, 0); /* transparent */
     --btn-hover: #6593bfbb;
-    --dropdown-menu-bg: rgba(255, 255, 255, .1);
-    --ecology-div-bg: rgba(255, 255, 255, .6);
+    --dropdown-menu-bg: rgba(221, 224, 238, .5);
+    --ecology-div-bg: rgba(221, 224, 238, .4);
 
     --ff-primary: 'Inconsolata', monospace;
     --ff-accent: 'Montserrat', sans-serif;
@@ -28,7 +29,7 @@
     --hover: #6593bf;
     --btn-bg: rgba(0, 0, 0, 0); /* transparent */
     --btn-hover: #6593bfbb;
-    --dropdown-menu-bg: rgba(25, 25, 25, .1);
+    --dropdown-menu-bg: rgba(25, 25, 25, .5);
     --ecology-div-bg: rgba(0, 0, 0, .6);
 }
 
@@ -456,12 +457,14 @@ a.link {
     width: 100%;
     margin: 2em 0;
     padding: 0 2em;
+    position: relative;
 }
 
 .transparent {
-    background: var(--ecology-div-bg);
     margin: 0 10em;
     padding: 0 1em;
+    backdrop-filter: blur(10px);
+    background-color: var(--ecology-div-bg);
 }
 
 .ecology__main > .transparent > .title {
