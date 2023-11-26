@@ -6,17 +6,19 @@
 }
 
 :root {
-    --bg-1: #DDE0EE;
-    --bg-2: #DDE0EE;
-    --bg-3: #DDE0EE;
+    --bg-1: #E6E6E5;
+    --bg-2: #E6E6E5;
+    --bg-3: #FAFAFA;
     --text: #080A11;
+    --white-text: #DDE0EE;
     /* --text: #000; */
-    --hover: #21517C;
+    --hover: #6593bf;
     --btn-bg: rgba(0, 0, 0, 0); /* transparent */
     --btn-hover: #6593bfbb;
     --dropdown-menu-bg: rgba(221, 224, 238, .5);
-    --ecology-div-bg: rgba(221, 224, 238, .4);
-
+    /* --ecology-div-bg: rgba(221, 224, 238, .4); */
+    --ecology-div-bg: rgba(0, 0, 0, .6);
+    
     --ff-primary: 'Inconsolata', monospace;
     --ff-accent: 'Montserrat', sans-serif;
 }
@@ -31,6 +33,10 @@
     --btn-hover: #6593bfbb;
     --dropdown-menu-bg: rgba(25, 25, 25, .5);
     --ecology-div-bg: rgba(0, 0, 0, .6);
+}
+
+.main__container *,  .hero__container > * {
+    color: var(--white-text);
 }
 
 * {
