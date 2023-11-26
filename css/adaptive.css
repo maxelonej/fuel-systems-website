@@ -108,7 +108,7 @@
         font-size: calc(18px + 16 * ((100vw - 320px) / (1280 - 320)));
     }
     p {
-        font-size: calc(14px + 16 * ((100vw - 320px) / (1280 - 320)));
+        font-size: calc(13px + 16 * ((100vw - 320px) / (1280 - 320)));
     }
     button {
         font-size: calc(24px + 16 * ((100vw - 320px) / (1280 - 320)));
@@ -128,6 +128,21 @@
     
     .ecology__main > .transparent > .text-desc {
         font-size: calc(14px + 16 * ((100vw - 320px) / (1280 - 320)));
+    }
+
+    .header-rightside {
+        height: 46px;
+        
+    }
+    .toggle-btn {
+        margin-left: auto;
+        margin-right: 0;
+    }
+    .nav {
+        justify-content: center;
+    }
+    .nav > .header-rightside > * {
+        margin-right: 0;
     }
 }   
 

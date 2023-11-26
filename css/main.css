@@ -193,8 +193,8 @@ header ul li a:hover {
     display: flex;
 }
 
-.nav > .header-rightside > * {
-    margin-right: 1em;
+.nav > .header-rightside > * + * {
+    margin-left: 10px;
 }
 
 .logo:hover {
