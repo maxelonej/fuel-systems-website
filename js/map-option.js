@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		mapChoiceImg2.src = 'img/map/unactive.png'
 		mapChoiceImg3.src = 'img/map/unactive.png'
 
-		mapChoice1.style = 'display: block;'
+		mapChoice1.style = 'display: block; border: 0;'
 		mapChoice2.style = 'display: none;'
 		mapChoice3.style = 'display: none;'
 	})
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		mapChoiceImg3.src = 'img/map/unactive.png'
 
 		mapChoice1.style = 'display: none;'
-		mapChoice2.style = 'display: block;'
+		mapChoice2.style = 'display: block; border: 0;'
 		mapChoice3.style = 'display: none;'
 	})
 	option3.addEventListener('click', () => {
@@ -36,6 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		mapChoice1.style = 'display: none;'
 		mapChoice2.style = 'display: none;'
-		mapChoice3.style = 'display: block;'
+		mapChoice3.style = 'display: block; border: 0;'
 	})
 })
