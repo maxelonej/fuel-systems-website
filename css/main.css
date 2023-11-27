@@ -171,15 +171,17 @@ header {
     top: 0;
     background-color: var(--bg-3);
     z-index: 2;
-    padding: 1.5em;
     width: 100vw;
+    padding: 0 1em;
+}
+
+.logo {
 }
 
 header .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
 }
 
 header ul {
@@ -196,7 +198,7 @@ header ul li a {
     display: block;
     text-decoration: none;
     color: var(--text);
-    padding: .5em;
+    padding: 1em;
 }
 
 .active {
