@@ -5,6 +5,13 @@
     visibility: hidden;
 }
 
+#logo {
+    display: block;
+    height: 63px; /* this is the height of header */
+    margin-top: -63px; /* this is again negative value of the height of header */
+    visibility: hidden;
+}
+
 :root {
     --bg-1: #E6E6E5;
     --bg-2: #E6E6E5;
@@ -168,6 +175,7 @@ header .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 header ul {
@@ -186,8 +194,12 @@ header ul li a {
     color: var(--text);
 }
 
-header ul li a:hover {
+.active {
     color: var(--hover);
+}
+
+header ul li a.active {
+
 }
 
 .header-rightside {

@@ -29,15 +29,15 @@
 <body>
     <header>
         <div class="nav">
-            <div class="logo" href="#hero" >
-                <a href="#hero">
+            <div class="logo">
+                <a href="#logo">
                     <img src="img/logo/logo_top.png" alt="logo">
                 </a>
             </div>
             <div class="header-rightside">
                 <ul>
-                    <li><a href="#hero">Главная</a></li>
-                    <li><a href="#about">О компании</a></li>
+                    <li><a href="#hero" class="active">Главная</a></li>
+                    <li><a href="#about-company" class="">О компании</a></li>
                     <li><a href="#production">Продукция</a></li>
                     <li><a href="#safety">Безопасность</a></li>
                     <li><a href="#ecology">Экология</a></li>
@@ -66,8 +66,10 @@
             <input type="checkbox" name="theme-toggle" id="dropdown-theme-toggle">
             <label class="theme-view" for="dropdown-theme-toggle"></label>
         </div>
+
+        <!-- Секция 1. Главная -->
         <span class="fix-nav" id="hero"></span>
-        <!-- Секция 1. Главная, Hero -->
+        <span id="logo"></span>
         <section class="hero">
             <div class="hero__container container">
                 <h1>Пластиковые топливные системы</h1>
@@ -81,7 +83,7 @@
         </section>
         
         <!-- Секция 2. О компании -->
-        <span class="fix-nav" id="about"></span>
+        <span class="fix-nav" id="about-company"></span>
         <section class="about hidden">
             <div class="main__container about-company">
                 <h1>О компании</h1>
@@ -254,7 +256,7 @@
             </div>
         </section>
 
-        <!-- Секция Экология -->
+        <!-- Секция 4. Экология -->
         <span class="fix-nav" id="ecology"></span>
         <section class="hidden">
             <div class="main__container ecology__main text-center">
@@ -307,7 +309,7 @@
             </div>
         </section>
 
-        <!-- Секция Контакты -->
+        <!-- Секция 5. Контакты -->
         <span class="fix-nav" id="contacts"></span>
         <section class="hidden">
             <div class="main__container contacts__main text-center">
@@ -353,18 +355,17 @@
                     </div>
                 </div>
                 
-                    <form action="">
-                        <div class="form-wrapper">
-                            <input type="text" placeholder="E-mail" required>
-                            <textarea placeholder="Сообщение" name="" id="" cols="30" rows="5" required></textarea>
-                            <div>
-                                <input type="checkbox" id="agree-checkbox" required>
-                                <p class="agree-text">я согласен на <a class="agree-text agree-link" href="http://dipoautomotive.ru/files/Персональные%20данные.pdf" target="_blank">обработку персональных данных</a></p>
-                            </div>
-                            <button class="main-button">Отправить</button>
+                <form action="">
+                    <div class="form-wrapper">
+                        <input type="text" placeholder="E-mail" required>
+                        <textarea placeholder="Сообщение" name="" id="" cols="30" rows="5" required></textarea>
+                        <div>
+                            <input type="checkbox" id="agree-checkbox" required>
+                            <p class="agree-text">я согласен на <a class="agree-text agree-link" href="http://dipoautomotive.ru/files/Персональные%20данные.pdf" target="_blank">обработку персональных данных</a></p>
                         </div>
-                    </form>
-                
+                        <button class="main-button">Отправить</button>
+                    </div>
+                </form>
             </div>
         </section>
     </main>
@@ -419,5 +420,6 @@
     <script src="js/hamburger.js"></script>
     <script src="js/theme-switcher.js"></script>
     <script src="js/animation.js"></script>
+    <script src="js/active-nav-link-on-scroll.js"></script>
 </body>
 </html>
