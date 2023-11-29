@@ -23,8 +23,14 @@
     .item {
         font-size: calc(10px + 16 * ((100vw - 320px) / (1280 - 320)));
     }
-    .mission {
-        padding: 2em 0;
+    .mission, .strategy {
+        margin: 1em 0;
+    }
+    .production {
+        padding-top: 1em;
+    }
+    .production-txt, .client-txt {
+        margin-bottom: 2em;
     }
     .production > .split > div > img {
         padding-top: .5em;
@@ -100,6 +106,7 @@
         align-items: center;
         justify-content: center;
     }
+    
 
     h1 {
         font-weight: 900;
@@ -157,6 +164,10 @@
 }
 
 @media (min-width: 1250px) {
+    /* Temp footer */
+    footer .split > * {
+        margin-left: 0;
+    }
     .dropdown-menu.open {
         display: none;
     }
