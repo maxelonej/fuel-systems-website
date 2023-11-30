@@ -9,7 +9,7 @@
     display: block;
     position: fixed;
     z-index: 3;
-    height: calc(480px + (30) * ((100vw - 320px) / (1250 - 320)));
+    height: calc(380px + (30) * ((100vw - 320px) / (1250 - 320)));
     right: 0;
     left: auto;
     margin-right: 1em;
@@ -22,7 +22,7 @@
 }
 
 .dropdown-menu a {
-    padding: .7rem;
+    padding: .2rem .7rem;
     border-radius: 10px;
     font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1250 - 320)));
     display: flex;

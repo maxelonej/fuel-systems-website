@@ -251,7 +251,7 @@ header ul li a {
     width: 80%;
     border-bottom: solid 1.5px var(--line);
     position: absolute;
-    bottom: 85px;
+    bottom: 80px;
     z-index: 1;
 }
 
@@ -303,7 +303,7 @@ header ul li a {
 
 .dropdown-menu {
     display: none;
-    top: 6.5em;
+    top: 5.5em;
     width: 300px;
     background: var(--dropdown-menu-bg);
     backdrop-filter: blur(10px);
