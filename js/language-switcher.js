@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		// Меняет язык и изображение
 		if (lang.id === 'ru') {
 			lang.id = 'en'
-			translateImg.src = 'img/en.png';
+			translateImg.src = 'img/en.svg';
             translateImg.alt = 'EN flag'
             document.getElementsByName('Msg')[0].placeholder='Message';
 		} else {
