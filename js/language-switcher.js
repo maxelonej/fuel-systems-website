@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		// Меняет язык и изображение
 		if (lang.id === 'ru') {
 			lang.id = 'en'
-			translateImg.src = 'https://media.flaticon.com/dist/min/img/flags/en.svg'
+			translateImg.src = 'img/en.png';
             translateImg.alt = 'EN flag'
             document.getElementsByName('Msg')[0].placeholder='Message';
 		} else {
 			lang.id = 'ru'
-			translateImg.src = 'https://media.flaticon.com/dist/min/img/flags/ru.svg'
+			translateImg.src = 'img/ru.svg'
 			translateImg.alt = 'RU flag'
             document.getElementsByName('Msg')[0].placeholder='Сообщение';
 		}
@@ -28,12 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileTranslateImg.addEventListener('click', () => {
         if (mobileLang.id === 'ru-mobile') {
 			mobileLang.id = 'en-mobile'
-			mobileTranslateImg.src = 'https://media.flaticon.com/dist/min/img/flags/en.svg'
+			mobileTranslateImg.src = 'img/en.svg'
             mobileTranslateImg.alt = 'EN flag'
             document.getElementsByName('Msg')[0].placeholder='Message';
 		} else {
 			mobileLang.id = 'ru-mobile'
-			mobileTranslateImg.src = 'https://media.flaticon.com/dist/min/img/flags/ru.svg'
+			mobileTranslateImg.src = 'img/ru.svg'
 			mobileTranslateImg.alt = 'RU flag'
             document.getElementsByName('Msg')[0].placeholder='Сообщение';
 		}
