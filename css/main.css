@@ -25,7 +25,8 @@
     --btn-hover: #6593bfbb;
     --dropdown-menu-bg: rgba(221, 224, 238, .5);
     --ecology-div-bg: rgba(0, 0, 0, .6);
-    --background-hover: rgba(167, 182, 192, 0.788);
+    --background-hover: rgba(68, 111, 161, 0.788);
+    --line: black;
 
     --ff-primary: 'Open Sans', sans-serif;
     --ff-accent: 'Montserrat', sans-serif;
@@ -44,6 +45,7 @@
     --dropdown-menu-bg: rgba(25, 25, 25, .5);
     --ecology-div-bg: rgba(0, 0, 0, .6);
     --background-hover: rgba(236, 207, 119, .08);
+    --line: grey;
 }
 
 .main__container *,  .hero__container > * {
@@ -171,9 +173,6 @@ header {
     padding: 0 1em;
 }
 
-.logo {
-}
-
 header .nav {
     display: flex;
     align-items: center;
@@ -198,6 +197,8 @@ header ul li a {
 }
 
 .active {
+    color: var(--white-text);
+    font-weight: 600;
     background: var(--background-hover);
 }
 
@@ -206,12 +207,62 @@ header ul li a {
     align-items: center;
 }
 
-.nav > .header-rightside > * + * {
+.theme-view {
     margin-left: 10px;
+}
+
+.lang {
+    width: 4em;
+    margin-left: 20px;
+}
+
+.lang img {
+    /* border: none; */
+    transition: .4s ease;
+    background: initial;
+    border: none;
+}
+
+.lang img:hover {
+    background: var(--background-hover);
+}
+
+.lang img {
+    padding: .8em;
 }
 
 .logo:hover {
     cursor: pointer;
+}
+
+.lang-mobile {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
+    padding: 0.7em;
+}
+
+.mobile-toggle-row {
+    display: flex;
+}
+
+.dropdown-menu > a:nth-last-child(2)::after {
+    content: '';
+    width: 80%;
+    border-bottom: solid 1.5px var(--line);
+    position: absolute;
+    bottom: 85px;
+    z-index: 1;
+}
+
+.dropdown-menu > a {
+    margin: 1em;
+    font-weight: 550;
+}
+
+.dropdown-menu > a:hover {
+    color: var(--white-text);
+    background: var(--background-hover);
 }
 
 /* Секция 1 - Главная */
@@ -364,9 +415,8 @@ button:hover {
     padding: 2em;
 }
 
-span {
+.italic {
     font-style: italic;
-    /* font-weight: bold; */
 }
 
 .mission-strategy h1, .production h1, .clients h1 {
@@ -380,9 +430,14 @@ span {
     font-weight: bold !important;
 }
 
-.strategy p:nth-child(2) {
+/* Пространство между параграфами */
+/* .production-txt p:nth-child(2), .mission p:nth-child(2) {
     padding-bottom: .5em;
 }
+
+.strategy p:nth-child(2) {
+    padding-bottom: .5em;
+} */
 
 .production, .clients {
     padding: 0 0 2em 0;
@@ -509,6 +564,12 @@ a.link {
 .corruption a {
     padding: 0;
 }
+.corruption-txt > * {
+    display: inline;
+}
+.corruption-txt > a {
+    word-wrap: break-word;
+}
 
 /* Кнопки для наград */
 #backBtn, #nextBtn {
@@ -584,6 +645,11 @@ a.link {
     background-size: cover;
     width: 100%;
     margin: 2em 0;
+}
+
+.contacts > * {
+    display: inline;
+    margin-right: 1em;
 }
 
 .contacts__main > .title {
@@ -713,9 +779,6 @@ form {
 .form-wrapper div {
     display: flex;
 }
-.form-wrapper > div > p, .form-wrapper > div > p > a {
-    font-size: .8em;
-}
 
 .form-wrapper > button {
     font-size: 1em;
@@ -730,6 +793,19 @@ form {
 
 #agree-checkbox {
     cursor: pointer;
+}
+
+.agree * {
+    display: inline;
+    font-size: 1em;
+}
+
+.agree a p {
+    transition: .4s ease;
+}
+
+.agree a p:hover {
+    color: var(--hover);
 }
 
 input, textarea, button {

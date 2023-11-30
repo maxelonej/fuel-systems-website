@@ -1,11 +1,14 @@
 /* до 1250 ширины */
 @media (max-width: 1250px) {
     /* гамбургер меню */
-    .header-rightside ul, .header-rightside input + label {
+    .header-rightside ul, .header-rightside input + label, .header-rightside .lang {
         display: none;
     }
     .nav .toggle-btn {
         display: block;
+    }
+    .toggle-btn > .burger {
+        margin-bottom: 12px;
     }
     header {
         padding: 1em 1.5em;
@@ -152,9 +155,13 @@
     .nav > .header-rightside > * {
         margin-right: 0;
     }
+    .corruption-txt > a {
+        font-size: 1em;
+    }
 }   
 
 @media (min-width: 768px) and (max-width: 1250px) {
+    
     .gallery div {
         width: 100vw;
     }
@@ -164,6 +171,9 @@
 }
 
 @media (min-width: 1250px) {
+    /* header ul li a {
+        padding: 1em;
+    } */
     /* Temp footer */
     footer .split > * {
         margin-left: 0;
