@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo/favicon.ico">
+
+    <link rel="stylesheet" href="css/theme-toggle.css">
+    <link rel="stylesheet" href="css/vacancies.css">
+    <link rel="stylesheet" href="css/adaptation.css">
+    <link rel="stylesheet" href="css/hamburger-menu.css">
+    <link rel="stylesheet" href="css/select.css">
+    <link rel="stylesheet" href="css/vacancies-mobile.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <title>DIPO</title>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <div class="logo">
+                <a href="#logo">
+                    <img src="img/logo/logo_top.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-rightside">
+                <ul>
+                    <li><a href="#vacancies" class="active translate" key="vacancies">Вакансии</a></li>
+                    <li><a href="#form" class="translate" key="form">Анкета</a></li>
+                    <li><a href="index.html" class="translate" key="back">Назад</a></li>
+                </ul>
+                
+                <input type="checkbox" name="theme-toggle" id="theme-toggle">
+                <label class="theme-view" for="theme-toggle"></label>
+
+                <div class="lang" id="ru">
+                    <img src="img/ru.svg" alt="RU flag">
+                </div>
+                
+                <div class="toggle-btn">
+                    <button class="burger"></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="dropdown-menu">
+            <a href="#vacancies" class="active translate" key="vacancies">Вакансии</a>
+            <a href="#form" class="translate" key="form">Анкета</a>
+            <a href="index.html" class="translate" key="back">Назад</a>
+            <div class="mobile-toggle-row">
+                <input type="checkbox" name="theme-toggle" id="dropdown-theme-toggle">
+                <label class="theme-view" for="dropdown-theme-toggle"></label>
+                <div class="lang-mobile" id="ru-mobile">
+                    <img src="img/ru.svg" alt="RU flag">
+                </div>
+            </div>
+        </div>
+
+        <div class="vacancies-container">
+            <div class="vacancies-item split">
+                <img src="img/tmp.png" alt="Photo">
+                <div class="vacancies-text">
+                    <h1>Информация о вакансии</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta reiciendis et dolores provident nesciunt reprehenderit unde ipsam animi. Officia ipsam facere laboriosam est qui neque facilis eveniet possimus debitis illum?</p>
+                </div>
+            </div>
+            <span class="fix-nav" id="vacancies"></span>
+            <div class="vacancies-item split">
+                <img src="img/tmp.png" alt="Photo">
+                <div class="vacancies-text">
+                    <h1>Информация о вакансии</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta reiciendis et dolores provident nesciunt reprehenderit unde ipsam animi. Officia ipsam facere laboriosam est qui neque facilis eveniet possimus debitis illum?</p>
+                </div>
+                <span class="fix-nav" id="form"></span>
+            </div>
+            <a class="more" href="#">...</a>
+        </div>
+        
+        <form action="">
+            <div>
+                <h1 class="form-title">Заполните анкету</h1>
+                <div class="data">
+                    <input type="text" placeholder="Введите ФИО" name="name" required>
+                    <input type="email" placeholder="Введите E-mail" required>
+                    <input type="number" placeholder="Введите телефон" required>
+                </div>
+                <div class="__select" data-state="">
+                    <div class="__select__title" data-default="Option 0">Выберите вакансию</div>
+                    <div class="__select__content">
+                        <input  id="singleSelect0" class="__select__input" required type="radio" name="singleSelect" checked />
+                        <label  for="singleSelect0" class="__select__label"></label>
+                        <input  id="singleSelect1" class="__select__input" type="radio" name="singleSelect" />
+                        <label for="singleSelect1" class="__select__label">Вакансия №1</label>
+                        <input id="singleSelect2" class="__select__input" type="radio" name="singleSelect"/>
+                        <label for="singleSelect2" class="__select__label">Вакансия №2</label>
+                        <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect" />
+                        <label for="singleSelect3" class="__select__label">Вакансия №3</label>
+                        <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect" />
+                        <label for="singleSelect4" class="__select__label">Вакансия №4</label>
+                    </div>
+                </div>
+                <button class="submit">Отправить</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="split">
+                <div class="logo-footer">
+                    <img src="img/logo/logo_footer.png"  alt="logo DIPO footer">
+                </div>
+                <div class="follow-links">
+                    <img class="follow-link" src="img/footer/insta.svg" width="60" alt="instagram">
+                    <img class="follow-link" src="img/footer/linked_in.svg" width="60" alt="linkedin">
+                    <img class="follow-link" src="img/footer/vk.svg" width="60" alt="Vkontake">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/language-switcher.js"></script>
+    <script src="js/hamburger.js"></script>
+    <script src="js/select.js"></script>
+    <script src="js/active-nav-link-on-scroll.js"></script>
+</body>
+</html>

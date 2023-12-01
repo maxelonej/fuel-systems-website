@@ -1,0 +1,15 @@
+@media (max-width: 1250px) {
+    .vacancies-text {
+        padding-top: 1em;
+        padding-inline: 1em;
+    }
+    .vacancies-text h1 {
+        font-size: 1.7em;
+    }
+    .dropdown-menu.open {
+        height: calc(240px + (30) * ((100vw - 320px) / (1250 - 320)));
+    }
+    .form-title {
+        font-size: 1.7em;
+    }
+}

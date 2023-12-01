@@ -9,7 +9,6 @@
     display: block;
     position: fixed;
     z-index: 3;
-    height: calc(380px + (70) * ((100vw - 320px) / (1250 - 320)));
     right: 0;
     left: auto;
     margin-right: 1em;
