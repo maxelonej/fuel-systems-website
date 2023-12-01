@@ -2,18 +2,25 @@ document.addEventListener('DOMContentLoaded', () => {
 	const lang = document.querySelector('.lang');
 	const translateImg = document.querySelector('.lang img');
 
+    var path = window.location.pathname;
+    var page = path.split("/").pop();
+
 	translateImg.addEventListener('click', () => {
 		// Меняет язык и изображение
 		if (lang.id === 'ru') {
 			lang.id = 'en'
 			translateImg.src = 'img/en.svg';
             translateImg.alt = 'EN flag'
-            document.getElementsByName('Msg')[0].placeholder='Message';
+            if (page === 'index.html') {
+                document.getElementsByName('Msg')[0].placeholder='Message';
+            }
 		} else {
 			lang.id = 'ru'
 			translateImg.src = 'img/ru.svg'
 			translateImg.alt = 'RU flag'
-            document.getElementsByName('Msg')[0].placeholder='Сообщение';
+            if (page === 'index.html') {
+                document.getElementsByName('Msg')[0].placeholder='Сообщение';
+            }
 		}
 
 		// Применяет тексты для каждого класса lang
@@ -30,12 +37,16 @@ document.addEventListener('DOMContentLoaded', () => {
 			mobileLang.id = 'en-mobile'
 			mobileTranslateImg.src = 'img/en.svg'
             mobileTranslateImg.alt = 'EN flag'
-            document.getElementsByName('Msg')[0].placeholder='Message';
+            if (page === 'index.html') {
+                document.getElementsByName('Msg')[0].placeholder='Message';
+            }
 		} else {
 			mobileLang.id = 'ru-mobile'
 			mobileTranslateImg.src = 'img/ru.svg'
 			mobileTranslateImg.alt = 'RU flag'
-            document.getElementsByName('Msg')[0].placeholder='Сообщение';
+            if (page === 'index.html') {
+                document.getElementsByName('Msg')[0].placeholder='Сообщение';
+            }
 		}
 
         document.querySelectorAll('.translate').forEach(innerItem => {
@@ -131,6 +142,10 @@ const languagesArray = {
         'dsk-title': 'Детальстройконструкция (ДСК)',
         'dsk-description-1': 'ДСК позиционируется на российском рынке автокомпонентов как динамично развивающееся предприятие, основными направлениями деятельности которого являются производство деталей интерьера автомобиля и деталей топливной системы. Предприятие создает условия для проектирования, развития и диверсификации производства новых конкурентоспособных видов продукции, повышения эффективности инновационного процесса при низких издержках производства в целях завоевания и закрепления лидирующего положения на рынке автомобильных компонентов. Предприятие способствуют становлению рыночной ориентации персонала и повышению его ключевых компетенций, соответствию социальных и морально – этических ценностей персонала потребительским ценностям.',
         'dsk-description-2': 'Продукцией ДИПО являются пластиковые топливные системы автомобилей (топливные баки) для крупнейших автомобильных концернов, собирающих свои автомобили в России. На данный момент у ДИПО имеются 3 производственные площадки: в г. Тольятти (на территории ООО «ДСК»), пгт Ставрово и г. Санкт-Петербург. В данный момент ДИПО является лидирующим поставщиком топливных систем для автомобилестроения в России с нулевым показателем PPM брака у Потребителя.',
+        
+        'vacancies': 'Вакансии',
+        'form': 'Анкета',
+        'back': 'Назад',
     },
 
 	'en': {
@@ -219,6 +234,10 @@ const languagesArray = {
         'dsk-title': 'Detalstroykonstruktsiya (DSK)',
         'dsk-description-1': 'DSK is positioned in the Russian auto components market as a dynamically developing enterprise, the main activities of which are the production of car interior parts and fuel system parts. The enterprise creates conditions for the design, development and diversification of production of new competitive types of products, increasing the efficiency of the innovation process at low production costs in order to gain and consolidate a leading position in the automotive components market. The enterprise contributes to the formation of the market orientation of personnel and the improvement of their key competencies, compliance with the social and moral - ethical values ​​of the personnel, consumer values.',
         'dsk-description-2': 'DIPO products are plastic car fuel systems (fuel tanks) for the largest car concerns that assemble their cars in Russia. At the moment, DIPO has 3 production sites: Togliatti (on the territory of DSK LLC), Stavrovo town and St. Petersburg. At the moment, DIPO is the leading supplier of fuel systems for the automotive industry in Russia with a zero PPM defect for the Consumer.',
+    
+        'vacancies': 'Vacancies',
+        'form': 'Form',
+        'back': 'Back',
     },
 
 	'ru-mobile': {
@@ -307,6 +326,10 @@ const languagesArray = {
         'dsk-title': 'Детальстройконструкция (ДСК)',
         'dsk-description-1': 'ДСК позиционируется на российском рынке автокомпонентов как динамично развивающееся предприятие, основными направлениями деятельности которого являются производство деталей интерьера автомобиля и деталей топливной системы. Предприятие создает условия для проектирования, развития и диверсификации производства новых конкурентоспособных видов продукции, повышения эффективности инновационного процесса при низких издержках производства в целях завоевания и закрепления лидирующего положения на рынке автомобильных компонентов. Предприятие способствуют становлению рыночной ориентации персонала и повышению его ключевых компетенций, соответствию социальных и морально – этических ценностей персонала потребительским ценностям.',
         'dsk-description-2': 'Продукцией ДИПО являются пластиковые топливные системы автомобилей (топливные баки) для крупнейших автомобильных концернов, собирающих свои автомобили в России. На данный момент у ДИПО имеются 3 производственные площадки: в г. Тольятти (на территории ООО «ДСК»), пгт Ставрово и г. Санкт-Петербург. В данный момент ДИПО является лидирующим поставщиком топливных систем для автомобилестроения в России с нулевым показателем PPM брака у Потребителя.',
+    
+        'vacancies': 'Вакансии',
+        'form': 'Анкета',
+        'back': 'Назад',
     },
 
 	'en-mobile': {
@@ -395,5 +418,9 @@ const languagesArray = {
         'dsk-title': 'Detalstroykonstruktsiya (DSK)',
         'dsk-description-1': 'DSK is positioned in the Russian auto components market as a dynamically developing enterprise, the main activities of which are the production of car interior parts and fuel system parts. The enterprise creates conditions for the design, development and diversification of production of new competitive types of products, increasing the efficiency of the innovation process at low production costs in order to gain and consolidate a leading position in the automotive components market. The enterprise contributes to the formation of the market orientation of personnel and the improvement of their key competencies, compliance with the social and moral - ethical values ​​of the personnel, consumer values.',
         'dsk-description-2': 'DIPO products are plastic car fuel systems (fuel tanks) for the largest car concerns that assemble their cars in Russia. At the moment, DIPO has 3 production sites: Togliatti (on the territory of DSK LLC), Stavrovo town and St. Petersburg. At the moment, DIPO is the leading supplier of fuel systems for the automotive industry in Russia with a zero PPM defect for the Consumer.',
+    
+        'vacancies': 'Vacancies',
+        'form': 'Form',
+        'back': 'Back',
     },
 }
