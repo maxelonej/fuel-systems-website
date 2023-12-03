@@ -160,55 +160,9 @@ header ul li a {
     cursor: pointer;
 }
 
-.lang-mobile {
-    display: flex;
-    padding: 1em 0 1em 0;
-    text-align: center;
-    text-transform: uppercase;
-    justify-content: center;
-    font-weight: bold;
-}
-
-.mobile-toggle-row {
-    display: flex;
-    margin-inline: auto;
-    width: fit-content;
-    margin-top: 2em;
-}
-
-.dropdown-menu {
-    display: none;
-    top: 5.5em;
-    width: 300px;
-    background: var(--dropdown-menu-bg);
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    height: 0;
-    overflow: hidden;
-    transition: height .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
 
 .dropdown-menu.open {
     height: calc(380px + (70) * ((100vw - 320px) / (1250 - 320)));
-}
-
-.dropdown-menu > a:nth-last-child(2)::after {
-    content: '';
-    width: 80%;
-    border-bottom: solid 1.5px var(--line);
-    position: absolute;
-    bottom: 100px;
-    z-index: 1;
-}
-
-.dropdown-menu > a {
-    margin: 1em;
-    font-weight: 550;
-}
-
-.dropdown-menu > a:hover {
-    color: var(--white-text);
-    background: var(--background-hover);
 }
 
 /* Секция 1 - Главная */

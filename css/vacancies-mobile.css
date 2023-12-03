@@ -7,7 +7,7 @@
         font-size: 1.7em;
     }
     .dropdown-menu.open {
-        height: calc(240px + (30) * ((100vw - 320px) / (1250 - 320)));
+        height: calc(250px + (30) * ((100vw - 320px) / (1250 - 320)));
     }
     .form-title {
         font-size: 1.7em;
