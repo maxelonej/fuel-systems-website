@@ -22,6 +22,9 @@
     .nav {
         justify-content: space-between;
     }
+    .main-button {
+        font-size: 1em;
+    }
 
     .toggle-btn > .burger {
         margin-bottom: 12px;
