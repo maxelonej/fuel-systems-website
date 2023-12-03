@@ -3,8 +3,14 @@
 
 .fix-nav {
     display: block;
-    height: 120px; /* this is the height of header */
-    margin-top: -120px; /* this is again negative value of the height of header */
+    height: 220px; /* this is the height of header */
+    margin-top: -220px; /* this is again negative value of the height of header */
+    visibility: hidden;
+}
+.form-fix-nav {
+    display: block;
+    height: 63px; /* this is the height of header */
+    margin-top: -63px; /* this is again negative value of the height of header */
     visibility: hidden;
 }
 
@@ -242,7 +248,6 @@ a.details {
     padding: 2em;
     display: flex;
 }
-
 .more {
     display: flex;
     justify-content: center;
@@ -252,6 +257,13 @@ a.details {
     padding: .5em;
     margin-inline: auto;
     transition: .4s;
+    cursor: pointer;
+}
+.vacancies-container > .vacancies-item:nth-child(n + 3) {
+    display: none;
+}
+.vacancies-container > .vacancies-item.is-visible {
+    display: flex;
 }
 .more:hover {
     color: var(--white-text);

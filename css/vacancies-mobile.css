@@ -6,9 +6,14 @@
     .vacancies-text {
         padding-top: 1em;
         padding-inline: 1em;
+        
     }
     .vacancies-text h1 {
-        font-size: 1.7em;
+        font-size: 1.4em;
+        padding-bottom: 0.3em;
+    }
+    .vacancies-text p {
+        font-size: 1em;
     }
     .dropdown-menu.open {
         height: calc(250px + (30) * ((100vw - 320px) / (1250 - 320)));
