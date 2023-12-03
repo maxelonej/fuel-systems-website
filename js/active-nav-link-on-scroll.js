@@ -1,5 +1,5 @@
 let sections = document.querySelectorAll('.fix-nav');
-let navLinks = document.querySelectorAll('header ul li a')
+let navLinks = document.querySelectorAll('header ul li a');
 
 window.onscroll = () => {
     sections.forEach(section => {
