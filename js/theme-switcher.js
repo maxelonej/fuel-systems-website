@@ -28,6 +28,16 @@ mobileLight.onclick = () => {
     }
 }
 
+dark.onclick = () => {
+    document.body.classList.remove('dark-theme');
+    light.style.display = 'block';
+    dark.style.display = 'none';
+    if (page === 'index.html') {
+        iframes.forEach((iframe, index) => {
+            iframe.classList.toggle('night-map');
+        });
+    }
+}
 mobileDark.onclick = () => {
     document.body.classList.remove('dark-theme');
     mobileLight.style.display = 'block';
