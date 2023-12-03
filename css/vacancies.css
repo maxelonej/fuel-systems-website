@@ -9,8 +9,8 @@
 }
 .form-fix-nav {
     display: block;
-    height: 63px; /* this is the height of header */
-    margin-top: -63px; /* this is again negative value of the height of header */
+    height: 1000px; /* this is the height of header */
+    margin-top: -1000px; /* this is again negative value of the height of header */
     visibility: hidden;
 }
 
@@ -363,7 +363,7 @@ input:focus, textarea:focus {
     background: var(--hover);
     color: var(--white-text);
     padding: 10px 20px;
-    margin-top: .5em;
+    margin-top: .8em;
     font-size: 1em;
     transition: background .4s ease;
     border: none;
