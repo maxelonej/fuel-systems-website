@@ -1,4 +1,5 @@
 @import url(root.css);
+@import url(style.css);
 
 .fix-nav {
     display: block;
@@ -230,17 +231,16 @@ button:hover {
 .more {
     display: flex;
     justify-content: center;
+    color: var(--white-text);
     background-color: var(--hover);
-    width: max(6%);
-    border-radius: 30px;
+    border-radius: .4em;
+    padding: .5em;
     margin-inline: auto;
+    transition: .4s;
 }
 .more:hover {
-    scale: 1.05;
-    color: var(--text);
-}
-.more:active {
-    scale: .95;
+    color: var(--white-text);
+    background-color: var(--background-hover);
 }
 
 form {
@@ -338,10 +338,12 @@ input:focus, textarea:focus {
     padding: 10px 20px;
     margin-top: .5em;
     font-size: 1em;
-    font-weight: bold;
     transition: background .4s ease;
     border: none;
     border-radius: 10px;
+}
+.submit:hover {
+    background: var(--background-hover);
 }
 
 .container {

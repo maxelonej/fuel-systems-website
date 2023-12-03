@@ -1,4 +1,5 @@
 @import url(root.css);
+@import url(style.css);
 
 .fix-nav {
     display: block;
@@ -160,14 +161,19 @@ header ul li a {
 }
 
 .lang-mobile {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80px;
-    padding: 0.7em;
+    display: flex;
+    padding: 1em 0 1em 0;
+    text-align: center;
+    text-transform: uppercase;
+    justify-content: center;
+    font-weight: bold;
 }
 
 .mobile-toggle-row {
     display: flex;
+    margin-inline: auto;
+    width: fit-content;
+    margin-top: 2em;
 }
 
 .dropdown-menu {
@@ -183,7 +189,7 @@ header ul li a {
 }
 
 .dropdown-menu.open {
-    height: calc(430px + (70) * ((100vw - 320px) / (1250 - 320)));
+    height: calc(380px + (70) * ((100vw - 320px) / (1250 - 320)));
 }
 
 .dropdown-menu > a:nth-last-child(2)::after {
@@ -191,7 +197,7 @@ header ul li a {
     width: 80%;
     border-bottom: solid 1.5px var(--line);
     position: absolute;
-    bottom: 80px;
+    bottom: 100px;
     z-index: 1;
 }
 
@@ -233,6 +239,22 @@ header ul li a {
 
 .main-button a {
     color: var(--white-text);
+}
+.main-button {
+    background: var(--background-hover);
+    font-size: 2em;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all .2s ease-in-out;
+}
+.main-button:hover {
+    color: var(--white-text);
+    scale: 1.05;
+}
+
+.hero__container .main-button {
+    position: absolute;
 }
 
 .burger::before,
@@ -674,6 +696,16 @@ form {
 
 .form-wrapper > button {
     font-size: 1em;
+}
+
+.send {
+    color: var(--white-text);
+    background: var(--hover);
+    font-size: 1em;
+}
+.send:hover {
+    scale: 1;
+    background: var(--background-hover);
 }
 
 .agree-link {

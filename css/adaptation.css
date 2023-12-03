@@ -2,21 +2,27 @@
 
 /* до 1250 ширины */
 @media (max-width: 1250px) {
-    /* гамбургер меню */
     /* header-rightside */
-    .header-rightside ul, .header-rightside input + label, .header-rightside .lang {
-        display: none;
-    }
-    .header-rightside {
-        height: 46px;
-    }
-    .nav > .header-rightside > * {
-        margin-right: 0;
-    }
-
-    .nav .toggle-btn {
+    .nav > #logo, .nav > .toggles > .toggle-btn {
         display: block;
     }
+    .nav > .nav-links, .nav > .toggles > svg, .toggles > p {
+        display: none;
+    }
+    .nav {
+        margin-right: 0;
+    }
+    .nav {
+        display: flex;
+    }
+    .toggle-btn {
+        margin-left: auto;
+        margin-right: 0;
+    }
+    .nav {
+        justify-content: space-between;
+    }
+
     .toggle-btn > .burger {
         margin-bottom: 12px;
     }
@@ -153,13 +159,6 @@
     }
 
     
-    .toggle-btn {
-        margin-left: auto;
-        margin-right: 0;
-    }
-    .nav {
-        justify-content: center;
-    }
     
     .corruption-txt > a {
         font-size: 1em;
@@ -226,40 +225,7 @@
         color: var(--text);
         font-size: 1.4em;
     }
-    .toggles {
-        display: flex;
-        align-items: center;
-    }
-    .lang {
-        color: var(--white-text);
-        width: 65px;
-        background-color: #6593bf;
-        text-align: center;
-        border-radius: .2em;
-        padding: .5em;
-        padding-inline: .8em;
-        margin-left: 20px;
-        transition: .4s ease;
-        cursor: pointer;
-    }    
-    .theme {
-        width: 65px;
-        background-color: #6593bf;
-        color: #DDE0EE;
-        text-align: center;
-        border-radius: .2em;
-        padding: .5em;
-        padding-inline: .8em;
-        margin-left: 20px;
-        transition: .4s ease;
-        cursor: pointer;
-    }
-    .lang:hover, .theme:hover {
-        background: var(--background-hover);
-    }
-    #dark {
-        display: none;
-    }
+    
     
     /* Temp footer */
     footer .split > * {
@@ -329,47 +295,5 @@
     }
     #backBtn, #nextBtn {
         max-width: 5em;
-    }
-    footer {
-        background-color: var(--bg-3);
-    }
-    
-    footer .container {
-        margin-inline: 1em;
-        width: 100%;
-        padding-right: 2em;
-        padding: 1.5em 2em 1.5em 1.5em;
-    }
-    
-    .logo-footer {
-        padding: 0.4em 0;
-    }
-    .logo-footer > img {
-        width: 106px;
-        height: 39px;
-    }
-    
-    .follow-links {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: end;
-    }
-    
-    .follow-link {
-        padding: 0.4em;
-    }
-    .main-button {
-        background-color: var(--btn-bg);
-        font-size: 2em;
-        border: 2px solid var(--hover);
-        padding: 10px 20px;
-        border-radius: 10px;
-        font-weight: 500;
-        transition: background-color .4s ease;
-    }
-    .main-button:hover {
-        color: var(--white-text);
-        background: var(--background-hover);
     }
 }

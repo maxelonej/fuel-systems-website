@@ -1,0 +1,67 @@
+/* Общие стили для страниц */
+.toggles {
+    display: flex;
+    align-items: center;
+}
+
+.lang {
+    color: var(--white-text);
+    width: 65px;
+    background-color: #6593bf;
+    text-align: center;
+    border-radius: .2em;
+    padding: .5em;
+    padding-inline: .8em;
+    margin-left: 20px;
+    transition: .4s;
+    cursor: pointer;
+}    
+.theme {
+    width: 65px;
+    background-color: #6593bf;
+    color: #DDE0EE;
+    text-align: center;
+    border-radius: .2em;
+    padding: .5em;
+    padding-inline: .8em;
+    margin-left: 20px;
+    transition: .4s;
+    cursor: pointer;
+}
+.lang:hover, .theme:hover {
+    background: var(--background-hover);
+}
+#dark, #mobileDark {
+    display: none;
+}
+
+footer {
+    background-color: var(--bg-3);
+}
+
+footer {
+    padding: 1em 1.5em;
+}
+footer .container {
+    margin-inline: 1em;
+    width: 100%;
+}
+
+.logo-footer {
+    padding: 0.4em 0;
+}
+.logo-footer > img {
+    width: 106px;
+    height: 39px;
+}
+
+.follow-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+}
+
+.follow-link {
+    padding: 0.4em;
+}
