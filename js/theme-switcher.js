@@ -1,21 +1,27 @@
-var desktopSwitcher = document.getElementById('theme-toggle');
-var mobileSwitcher = document.getElementById('dropdown-theme-toggle');
-const iframes = document.querySelectorAll('.iframe iframe');
+let path = window.location.pathname;
+let page = path.split("/").pop();
 
-desktopSwitcher.onclick = () => {
-    // Включение темной темы
-    document.body.classList.toggle('dark-theme');
-    
-    // Включение ночной карты
-    iframes.forEach((iframe, index) => {
-        iframe.classList.toggle('night-map');
-    })
+let light = document.getElementById('light');
+let dark = document.getElementById('dark');
+
+light.onclick = () => {
+    document.body.classList.add('dark-theme');
+    light.style.display = 'none';
+    dark.style.display = 'block';
+    if (page === 'index.html') {
+        iframes.forEach((iframe, index) => {
+            iframe.classList.toggle('night-map');
+        });
+    }
 }
 
-// То же самое, только для другого input id, который находится в hamburger menu 
-mobileSwitcher.onclick = () => {
-	document.body.classList.toggle('dark-theme');
-    iframes.forEach((iframe, index) => {
-        iframe.classList.toggle('night-map');
-    })
+dark.onclick = () => {
+    document.body.classList.remove('dark-theme');
+    light.style.display = 'block';
+    dark.style.display = 'none';
+    if (page === 'index.html') {
+        iframes.forEach((iframe, index) => {
+            iframe.classList.toggle('night-map');
+        });
+    }
 }

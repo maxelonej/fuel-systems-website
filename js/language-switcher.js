@@ -1,23 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
 	const lang = document.querySelector('.lang');
-	const translateImg = document.querySelector('.lang img');
+	const translateParagraph = document.querySelector('.lang');
 
     var path = window.location.pathname;
     var page = path.split("/").pop();
 
-	translateImg.addEventListener('click', () => {
+	translateParagraph.addEventListener('click', () => {
 		// Меняет язык и изображение
 		if (lang.id === 'ru') {
 			lang.id = 'en'
-			translateImg.src = 'img/en.svg';
-            translateImg.alt = 'EN flag'
+			translateParagraph.textContent = 'en';
             if (page === 'index.html') {
                 document.getElementsByName('Msg')[0].placeholder='Message';
             }
 		} else {
 			lang.id = 'ru'
-			translateImg.src = 'img/ru.svg'
-			translateImg.alt = 'RU flag'
+			translateParagraph.textContent = 'ru';
             if (page === 'index.html') {
                 document.getElementsByName('Msg')[0].placeholder='Сообщение';
             }
@@ -30,20 +28,18 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
     const mobileLang = document.querySelector('.lang-mobile');
-    const mobileTranslateImg = document.querySelector('.lang-mobile img');
+    const mobiletranslateParagraph = document.querySelector('.lang-mobile');
 
-    mobileTranslateImg.addEventListener('click', () => {
+    mobiletranslateParagraph.addEventListener('click', () => {
         if (mobileLang.id === 'ru-mobile') {
 			mobileLang.id = 'en-mobile'
-			mobileTranslateImg.src = 'img/en.svg'
-            mobileTranslateImg.alt = 'EN flag'
+			mobiletranslateParagraph.textContent = 'en';
             if (page === 'index.html') {
                 document.getElementsByName('Msg')[0].placeholder='Message';
             }
 		} else {
-			mobileLang.id = 'ru-mobile'
-			mobileTranslateImg.src = 'img/ru.svg'
-			mobileTranslateImg.alt = 'RU flag'
+			mobileLang.id = 'ru-mobile';
+			mobiletranslateParagraph.textContent = 'ru';
             if (page === 'index.html') {
                 document.getElementsByName('Msg')[0].placeholder='Сообщение';
             }

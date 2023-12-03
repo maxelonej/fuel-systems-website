@@ -34,27 +34,21 @@
                     <img src="img/logo/logo_top.png" alt="logo">
                 </a>
             </div>
-            <div class="header-rightside">
+            <div class="nav-links">
                 <ul>
-                    <li><a href="#hero" class="active translate" key="main">Главная</a></li>
                     <li><a href="#about-company" class="translate" key="about-company-title">О компании</a></li>
                     <li><a href="#production" class="translate" key="production-title">Продукция</a></li>
                     <li><a href="#safety" class="translate" key="safety-title">Безопасность</a></li>
                     <li><a href="#ecology" class="translate" key="ecology-title">Экология</a></li>
                     <li><a href="#contacts" class="translate" key="contacts-title">Контакты</a></li>
-                    <li><a href="vacancies.html" class="translate" key="vacancies">Вакансии</a></li>
                 </ul>
-                
-                <!-- Тема сайта -->
-                <input type="checkbox" name="theme-toggle" id="theme-toggle">
-                <label class="theme-view" for="theme-toggle"></label>
+            </div>
 
-                <!-- Язык сайта -->
-                <div class="lang" id="ru">
-                    <img src="img/ru.svg" alt="RU flag">
-                </div>
-                
-                <!-- Гамбургер меню -->
+            <!-- Тема, язык, гамбургер меню -->
+            <div class="toggles">
+                <svg id="light" class="theme" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"></path></svg>
+                <svg id="dark" class="theme" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"></path></svg>
+                <p class="lang" id="ru">ru</p>
                 <div class="toggle-btn">
                     <button class="burger"></button>
                 </div>
@@ -72,7 +66,7 @@
             <a href="#safety" class="translate" key="safety-title">Безопасность</a>
             <a href="#ecology" class="translate" key="ecology-title">Экология</a>
             <a href="#contacts" class="translate" key="contacts-title">Контакты</a>
-            <a href="vacancies.html" class="translate" key="vacancies">Вакансии</a>
+            <!-- <a href="vacancies.html" class="translate" key="vacancies">Вакансии</a> -->
 
             <div class="mobile-toggle-row">
                 <!-- Тема сайта -->
@@ -80,7 +74,7 @@
                 <label class="theme-view" for="dropdown-theme-toggle"></label>
                 <!-- Язык сайта -->
                 <div class="lang-mobile" id="ru-mobile">
-                    <img src="img/ru.svg" alt="RU flag">
+                    <p>ru</p>
                 </div>
             </div>
         </div>
@@ -92,9 +86,7 @@
             <div class="hero__container container">
                 <h1 class="translate" key="main-title">Пластиковые топливные системы</h1>
                 <h2 class="translate" key="main-description">ООО "ДИПО" - лидер России по производству пластиковых топливных систем для автомобилей c экологическим стандартом Евро5 и Евро6.</h2>
-                <button class="main-button">
-                    <a href="vacancies.html" class="translate" key="main-button">Вакансии</a>
-                </button>
+                <a href="vacancies.html" class="main-button translate" key="main-button">Вакансии</a>
                 <video autoplay loop muted plays-inline id="video">
                     <source src="img/video.mp4" type="video/mp4">
                     <p class="translate" key="video-does-not-support">Ваш браузер не поддерживает HTML5 видео.</p>
@@ -108,7 +100,7 @@
                 <div class="main__container about-company">
                     <h1 class="translate" key="about-company-title">О компании</h1>
                     <h2 class="text-center translate" key="about-company-description">ООО “ДИПО” основано в 2012 году как совместное предприятие между французской компанией Пластик Омниум и российской компанией Детальстройконструкция.</h2>
-                    <button href="#popup" class="btn_about main-button popup-link translate" key="more">Подробнее</>
+                    <a href="#popup" class="btn_about main-button popup-link translate" key="more">Подробнее</a>
                 </div>
             <div class="sub-about-company about-company-bg">
                 <div class="container">
@@ -388,14 +380,13 @@
                 <form action="">
                     <div class="form-wrapper">
                         <input type="text" placeholder="E-mail" required>
-                        <!-- how to change placeholder value? -->
                         <textarea placeholder="Сообщение" name="Msg" id="" cols="30" rows="5" required></textarea>
                         <div class="agree">
                             <input type="checkbox" id="agree-checkbox" required>
                             <p class="agree-text translate" key="agree">я согласен на</p>
                             <a class="agree-text agree-link" href="http://dipoautomotive.ru/files/Персональные%20данные.pdf" target="_blank"><p class="translate" key="agree-link">обработку персональных данных</p></a>
                         </div>
-                        <button class="main-button translate" key="send">Отправить</button>
+                        <a href="#" class="main-button translate" key="send">Отправить</a>
                     </div>
                 </form>
             </div>
