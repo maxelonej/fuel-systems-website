@@ -189,13 +189,39 @@ button:hover {
 }
 
 
+
 .vacancies-container {
     margin-inline: auto;
-    width: min(90%, 120.5rem);
+    width: min(70%, 120.5rem);
     margin-top: 100px;
     display: flex;
     flex-direction: column;
 }
+
+.vacancies-text h1 {
+    font-size: 2.5em;
+}
+.vacancies-text p {
+    font-size: 1.4em;
+}
+
+a.details {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    color: var(--white-text);
+    background-color: var(--hover);
+    border-radius: .4em;
+    padding: .5em;
+    transition: background-color .4s;
+    width: fit-content;
+    cursor: pointer;
+}
+.details:hover {
+    color: var(--white-text);
+    background-color: var(--background-hover);
+}
+
 .vacancies-item img {
     width: 800px;
     border-radius: 30px;
