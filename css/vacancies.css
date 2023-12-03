@@ -356,6 +356,7 @@ input:focus, textarea:focus {
     transition: background .4s ease;
     border: none;
     border-radius: 10px;
+    cursor: pointer;
 }
 .submit:hover {
     background: var(--background-hover);
