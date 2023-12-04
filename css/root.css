@@ -2,15 +2,17 @@
     --bg-3: #e4edf1;
     /* --bg-2: #E6E6E5; */
     --bg-1: #ffffff;
+    --form-bg: #95A4C1;
+    --gallery-bg: #95A4C1;
+    --btn-bg: rgba(0, 0, 0, 0);
+    --ecology-div-bg: rgba(0, 0, 0, .6);
+    --dropdown-menu-bg: rgba(221, 224, 238, .5);
+    --background-hover: rgba(68, 111, 161, 0.788);
+    --hover: #6593bf;
+    --btn-hover: #6593bfbb;
     --text: #080A11;
     --white-text: #DDE0EE;
     --black-text: #080A11;
-    --hover: #6593bf;
-    --btn-bg: rgba(0, 0, 0, 0);
-    --btn-hover: #6593bfbb;
-    --dropdown-menu-bg: rgba(221, 224, 238, .5);
-    --ecology-div-bg: rgba(0, 0, 0, .6);
-    --background-hover: rgba(68, 111, 161, 0.788);
     --line: black;
 
     --ff-primary: 'Open Sans', sans-serif;
@@ -21,15 +23,15 @@
     --bg-1: #080A11;
     --bg-2: #080A11;
     --bg-3: #161616;
+    --btn-bg: rgba(0, 0, 0, 0);
+    --dropdown-menu-bg: rgba(25, 25, 25, .5);
+    --ecology-div-bg: rgba(0, 0, 0, .6);
+    --hover: #6593bf;
+    --btn-hover: #6593bfbb;
+    --background-hover: rgba(68, 111, 161, 0.788);
     --text: #DDE0EE;
     --white-text: #DDE0EE;
     --black-text: #080A11;
-    --hover: #6593bf;
-    --btn-bg: rgba(0, 0, 0, 0);
-    --btn-hover: #6593bfbb;
-    --dropdown-menu-bg: rgba(25, 25, 25, .5);
-    --ecology-div-bg: rgba(0, 0, 0, .6);
-    --background-hover: rgba(68, 111, 161, 0.788);
     /* --background-hover: rgba(236, 207, 119, .08); */
     --line: grey;
 }
