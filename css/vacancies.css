@@ -271,7 +271,7 @@ a.details {
 
 form {
     margin: 5em 0;
-    background: #95A4C1;
+    background: var(--form-bg);
     width: max(30%, 20rem);
     border-radius: 30px;
     margin-inline: auto;
