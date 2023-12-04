@@ -102,6 +102,11 @@ footer .container {
     width: 100%;
 }
 
+footer .container .split {
+    padding: 1em;
+    padding-left: 0;
+}
+
 .logo-footer {
     padding: 0.4em 0;
 }
