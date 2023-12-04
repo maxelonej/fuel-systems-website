@@ -1,4 +1,13 @@
 /* Общие стили для страниц */
+.fix-nav {
+    
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 10rem;
+}
+
 .toggles {
     display: flex;
     align-items: center;
@@ -16,6 +25,8 @@
     transition: .4s;
     cursor: pointer;
 }    
+
+
 .theme {
     width: 65px;
     background-color: #6593bf;
@@ -49,14 +60,8 @@
 .dropdown-menu.open {
     margin-top: .3em;
 }
-
-.dropdown-menu > a:nth-last-child(2)::after {
-    content: '';
-    width: 80%;
-    border-bottom: solid 1.5px var(--line);
-    position: absolute;
-    bottom: 100px;
-    z-index: 1;
+.dropdown-menu.open a:nth-child(1) {
+    margin-top: 1em;
 }
 
 .dropdown-menu > a {
@@ -82,7 +87,7 @@
     display: flex;
     margin-inline: auto;
     width: fit-content;
-    margin-top: 2em;
+    margin-top: 23px;
 }
 
 footer {
@@ -113,5 +118,10 @@ footer .container {
 }
 
 .follow-link {
-    padding: 0.4em;
+    padding: .4em;
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
 }

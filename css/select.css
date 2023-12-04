@@ -1,6 +1,6 @@
 .__select {
     position: relative;
-    width: 210px;
+    width: 185px;
     height: 40px;
     margin: 0 auto;
 }
@@ -49,7 +49,7 @@
     display: none;
 }
 .__select__input:disabled + label {
-    opacity: 0.6;
+    opacity: 0;
     pointer-events: none;
 }
 

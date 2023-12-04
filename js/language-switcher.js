@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	const lang = document.querySelector('.lang');
 	const translateParagraph = document.querySelector('.lang');
 
-    var path = window.location.pathname;
-    var page = path.split("/").pop();
+    let path = window.location.pathname;
+    let page = path.split("/").pop();
 
 	translateParagraph.addEventListener('click', () => {
 		// Меняет язык и изображение

@@ -1,13 +1,6 @@
 @import url(root.css);
 @import url(style.css);
 
-.fix-nav {
-    display: block;
-    height: 63px; /* this is the height of header */
-    margin-top: -63px; /* this is again negative value of the height of header */
-    visibility: hidden;
-}
-
 #logo {
     display: block;
     height: 63px; /* this is the height of header */
@@ -23,7 +16,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 *::before, *::after {
@@ -103,11 +95,6 @@ img {
     max-width: 100%;
 }
 
-.split {
-    display: flex;
-    flex-direction: column;
-}
-
 .text-center {
     text-align: center;
 }
@@ -164,6 +151,15 @@ header ul li a {
 .dropdown-menu.open {
     height: calc(380px + (70) * ((100vw - 320px) / (1250 - 320)));
 }
+.dropdown-menu > a:nth-last-child(2)::after {
+    content: '';
+    width: 80%;
+    border-bottom: solid 1.5px var(--line);
+    position: absolute;
+    bottom: 90px;
+    z-index: 1;
+}
+
 
 /* Секция 1 - Главная */
 .hero {
@@ -293,6 +289,59 @@ button:hover {
     color: var(--white-text);
     font-weight: bold;
 }
+
+.item:nth-child(2) {
+    transition-delay: 200ms;
+}
+.item:nth-child(3) {
+    transition-delay: 400ms;
+}
+.item:nth-child(4) {
+    transition-delay: 200ms;
+}
+.item:nth-child(5) {
+    transition-delay: 400ms;
+}
+.item:nth-child(6) {
+    transition-delay: 600ms;
+}
+.item:nth-child(7) {
+    transition-delay: 200ms;
+}
+.item:nth-child(8) {
+    transition-delay: 400ms;
+}
+.item:nth-child(9) {
+    transition-delay: 600ms;
+}
+.item:nth-child(10) {
+    transition-delay: 600ms;
+}
+/* .item:nth-child(2) {
+    transition-delay: 200ms;
+}
+.item:nth-child(3) {
+    transition-delay: 400ms;
+}
+.item:nth-child(4) {
+    transition-delay: 600ms;
+}
+.item:nth-child(5) {
+    transition-delay: 800ms;
+}
+.item:nth-child(6) {
+    transition-delay: 1000ms;
+}
+.item:nth-child(7) {
+    transition-delay: 1200ms;
+}
+.item:nth-child(8) {
+    transition-delay: 1400ms;
+}
+.item:nth-child(9) {
+    transition-delay: 1600ms;
+} */
+
 
 .icon {
     display: block;
@@ -500,6 +549,13 @@ a.link {
     position: relative;
 }
 
+.ecology-item:nth-child(2) {
+    transition-delay: 200ms;
+}
+.ecology-item:nth-child(3) {
+    transition-delay: 400ms;
+}
+
 .transparent {
     margin: 0 10em;
     padding: 0 1em;
@@ -577,7 +633,7 @@ a.link {
 
 .iframe {
     max-width: fit-content;
-    max-height: fit-content;
+    max-height: max-content;
 }
 
 .iframe > iframe {

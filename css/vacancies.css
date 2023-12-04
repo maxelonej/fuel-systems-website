@@ -1,18 +1,20 @@
 @import url(root.css);
 @import url(style.css);
 
-.fix-nav {
-    display: block;
-    height: 220px; /* this is the height of header */
-    margin-top: -220px; /* this is again negative value of the height of header */
-    visibility: hidden;
-}
-.form-fix-nav {
-    display: block;
-    height: 1000px; /* this is the height of header */
-    margin-top: -1000px; /* this is again negative value of the height of header */
-    visibility: hidden;
-}
+/*
+    .fix-nav {
+        height: 1000px; 
+        display: block;
+        height: 220px; 
+        margin-top: -220px; 
+        visibility: hidden;
+    }
+    .form-fix-nav {
+        display: block;
+        margin-top: -1000px;
+        visibility: hidden;
+    }
+*/
 
 #logo {
     display: block;
@@ -25,7 +27,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 *::before, *::after {
@@ -156,7 +157,7 @@ header ul li a {
     width: 80%;
     border-bottom: solid 1.5px var(--line);
     position: absolute;
-    bottom: 105px;
+    bottom: 95px;
     z-index: 1;
 }
 
@@ -193,8 +194,6 @@ header ul li a {
 button:hover {
     background-color: var(--btn-hover);
 }
-
-
 
 .vacancies-container {
     margin-inline: auto;
@@ -308,31 +307,39 @@ form > div {
 .data > *:focus {
     outline: none;
 }
-input, textarea, button {
+input, button {
     font-family: var(--ff-primary);
 }
-input, textarea {
+input {
     background-color: var(--bg-3);
     border: 1px solid var(--bg-1);
     padding: 1em;
     transition: border 0.4s ease-in-out;
+    border: transparent;
 }
-input:focus, textarea:focus {
+input:focus {
     outline: none;
-    border: 1px solid var(--hover);
+    border-color: var(--background-hover);
+}
+
+.select-title {
+    font-size: .8em;
 }
 
 .__select__title {
+    border: transparent;
+    border: var(--text);
     background: var(--bg-3);
+    transition: border-color 0.4s ease-in-out;
 }
 .__select__title:hover {
-    border-color: var(--hover);
+    border-color: var(--background-hover);
 }
 .__select__title:hover::before, .__select__title:hover::after {
-    background-color: var(--hover);
+    background-color: var(--background-hover);
 }
 .__select__label:hover {
-    background-color: var(--hover) !important;
+    background-color: var(--background-hover) !important;
     color: var(--text);
 }
 .__select__content {

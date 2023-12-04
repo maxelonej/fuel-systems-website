@@ -21,4 +21,12 @@
     .form-title {
         font-size: 1.7em;
     }
+    
+    .vacancies-container {
+        margin-inline: auto;
+        width: min(90%, 120.5rem);
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+    }
 }

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/hamburger-menu.css">
     <link rel="stylesheet" href="css/select.css">
     <link rel="stylesheet" href="css/vacancies-mobile.css">
+    <link rel="stylesheet" href="css/animation.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +24,7 @@
     <header>
         <div class="nav">
             <div class="logo">
-                <a href="#logo">
+                <a href="index.html">
                     <img src="img/logo/logo_top.png" alt="logo">
                 </a>
             </div>
@@ -59,8 +60,7 @@
             </div>
         </div>
 
-        <span class="fix-nav" id="vacancies"></span>
-        <div class="vacancies-container">
+        <div class="vacancies-container fix-nav hidden" id="vacancies">
             <div class="vacancies-item">
                 <img src="img/tmp.png" alt="Photo">
                 <div class="vacancies-text">
@@ -93,36 +93,53 @@
                     <a class="details">Подробнее</a>
                 </div>
             </div>
-            <span class="fix-nav form-fix-nav" id="form"></span>
+            <div class="vacancies-item">
+                <img src="img/tmp.png" alt="Photo">
+                <div class="vacancies-text">
+                    <h1>Информация о вакансии</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta reiciendis et dolores provident nesciunt reprehenderit unde ipsam animi. Officia ipsam facere laboriosam est qui neque facilis eveniet possimus debitis illum?</p>
+                    <a class="details">Подробнее</a>
+                </div>
+            </div>
+            <div class="vacancies-item">
+                <img src="img/tmp.png" alt="Photo">
+                <div class="vacancies-text">
+                    <h1>Информация о вакансии</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta reiciendis et dolores provident nesciunt reprehenderit unde ipsam animi. Officia ipsam facere laboriosam est qui neque facilis eveniet possimus debitis illum?</p>
+                    <a class="details">Подробнее</a>
+                </div>
+            </div>
             <a class="more">Показать еще</a>
         </div>
         
-        <form action="">
-            <div>
-                <h1 class="form-title">Заполните анкету</h1>
-                <div class="data">
-                    <input type="text" placeholder="Введите ФИО" name="name" required>
-                    <input type="email" placeholder="Введите E-mail" required>
-                    <input type="number" placeholder="Введите телефон" required>
-                </div>
-                <div class="__select" data-state="">
-                    <div class="__select__title" data-default="Option 0">Выберите вакансию</div>
-                    <div class="__select__content">
-                        <input  id="singleSelect0" class="__select__input" required type="radio" name="singleSelect" checked />
-                        <label  for="singleSelect0" class="__select__label"></label>
-                        <input  id="singleSelect1" class="__select__input" type="radio" name="singleSelect" />
-                        <label for="singleSelect1" class="__select__label">Вакансия №1</label>
-                        <input id="singleSelect2" class="__select__input" type="radio" name="singleSelect"/>
-                        <label for="singleSelect2" class="__select__label">Вакансия №2</label>
-                        <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect" />
-                        <label for="singleSelect3" class="__select__label">Вакансия №3</label>
-                        <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect" />
-                        <label for="singleSelect4" class="__select__label">Вакансия №4</label>
+        <section class="fix-nav" id="form">
+            <form action="" class="hidden">
+                <div>
+                    <h1 class="form-title">Заполните анкету</h1>
+                    <div class="data">
+                        <input type="text" placeholder="Введите ФИО" name="name" required>
+                        <input type="email" placeholder="Введите E-mail" required>
+                        <input type="number" placeholder="Введите телефон" required>
                     </div>
+                    <div class="__select" data-state="">
+                        <div class="__select__title select-title" data-default="Option 0">Выберите вакансию</div>
+                        <div class="__select__content">
+                            <input  id="singleSelect0" class="__select__input" required type="radio" name="singleSelect" checked />
+                            <label  for="singleSelect0" class="__select__label"></label>
+                            <input  id="singleSelect1" class="__select__input" type="radio" name="singleSelect" />
+                            <label for="singleSelect1" class="__select__label">Вакансия №1</label>
+                            <input id="singleSelect2" class="__select__input" type="radio" name="singleSelect"/>
+                            <label for="singleSelect2" class="__select__label">Вакансия №2</label>
+                            <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect" />
+                            <label for="singleSelect3" class="__select__label">Вакансия №3</label>
+                            <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect" />
+                            <label for="singleSelect4" class="__select__label">Вакансия №4</label>
+                        </div>
+                    </div>
+                    <button class="submit">Отправить</button>
                 </div>
-                <button class="submit">Отправить</button>
-            </div>
-        </form>
+            </form>
+        </section>
     </main>
 
     <footer>
@@ -146,5 +163,6 @@
     <script src="js/select.js"></script>
     <script src="js/active-nav-link-on-scroll.js"></script>
     <script src="js/show-more.js"></script>
+    <script src="js/animation.js"></script>
 </body>
 </html>
