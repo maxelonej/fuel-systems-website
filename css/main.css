@@ -290,59 +290,6 @@ button:hover {
     font-weight: bold;
 }
 
-.item:nth-child(2) {
-    transition-delay: 200ms;
-}
-.item:nth-child(3) {
-    transition-delay: 400ms;
-}
-.item:nth-child(4) {
-    transition-delay: 200ms;
-}
-.item:nth-child(5) {
-    transition-delay: 400ms;
-}
-.item:nth-child(6) {
-    transition-delay: 600ms;
-}
-.item:nth-child(7) {
-    transition-delay: 200ms;
-}
-.item:nth-child(8) {
-    transition-delay: 400ms;
-}
-.item:nth-child(9) {
-    transition-delay: 600ms;
-}
-.item:nth-child(10) {
-    transition-delay: 600ms;
-}
-/* .item:nth-child(2) {
-    transition-delay: 200ms;
-}
-.item:nth-child(3) {
-    transition-delay: 400ms;
-}
-.item:nth-child(4) {
-    transition-delay: 600ms;
-}
-.item:nth-child(5) {
-    transition-delay: 800ms;
-}
-.item:nth-child(6) {
-    transition-delay: 1000ms;
-}
-.item:nth-child(7) {
-    transition-delay: 1200ms;
-}
-.item:nth-child(8) {
-    transition-delay: 1400ms;
-}
-.item:nth-child(9) {
-    transition-delay: 1600ms;
-} */
-
-
 .icon {
     display: block;
     max-width: 5em;
@@ -478,6 +425,8 @@ a.link {
     width: 100%;
     display: flex;
     overflow-x: scroll;
+    background: var(--gallery-bg);
+    border-radius: 30px;
 }
 
 .gallery div {
@@ -689,13 +638,17 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 2em 0;
 }
 
 .form-wrapper {
     display: flex;
     flex-direction: column;
     align-items: start;
-    padding: 2em 0;
+    width: max(30%, 20rem);
+    border-radius: 30px;
+    background: var(--form-bg);
+    padding: 2em;
 }
 .form-wrapper > * {
     margin: .5em 0;
@@ -712,6 +665,8 @@ form {
     color: var(--white-text);
     background: var(--hover);
     font-size: 1em;
+    cursor: pointer;
+    border: none;
 }
 .send:hover {
     scale: 1;
@@ -732,6 +687,10 @@ form {
 .agree * {
     display: inline;
     font-size: 1em;
+}
+
+.agree p, .agree a {
+    display: inline;
 }
 
 .agree a p {
