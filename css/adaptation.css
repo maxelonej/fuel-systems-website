@@ -200,6 +200,8 @@
         transform: translate(-50%, -50%);
     }
     .nav-links a {
+        color: #b5b6b9;
+        font-size: 1.2em;
         position: relative;
         font-weight: 500;
     }
@@ -213,22 +215,30 @@
         left: 0;
         width: 0;
         height: 4px;
-        background: var(--background-hover);
+        background: var(--hover);
         transition: .3s;
     }
     .nav-links a:hover::before {
         width: 100%;
     }
-    .nav-links a {
-        color: grey;
-        font-size: 1.2em;
-    }
-    a.active {
+    a.lia.active {
         color: var(--text);
         font-size: 1.4em;
     }
-    
-    
+    a.lia.active::after {
+        content: "•"; /* Юникод для точки (можно использовать другие символы) */
+        position: absolute;
+        top: 20px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.2em; /* Размер */
+        color: var(--hover); /* Цвет */
+    }
+    a.active::before {
+        display: none;
+    }
+
     /* Temp footer */
     footer .split > * {
         margin-left: 0;
