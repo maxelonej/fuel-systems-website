@@ -5,11 +5,14 @@
     .hero {
         height: auto; /* Высота может быть автоматически рассчитана в зависимости от контента */
     }
+    .hero .container h1 {
+        padding: 1em 1em 0.5em 0;
+    }
 
     #video {
-        width: 100%; /* Ширина видео на мобильных устройствах */
+        width: 100%;
         height: 100%;
-        object-fit: cover; /* или другие значения, такие как contain */
+        object-fit: cover; 
     }
 
     .nav > #logo, .nav > .toggles > .toggle-btn {
