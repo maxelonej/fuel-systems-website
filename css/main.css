@@ -644,7 +644,7 @@ form {
 
 .agree p, .agree a {
     display: inline;
-    font-size: calc(9.6px + 1 * ((100vw - 320px) / (1280 - 320)));
+    font-size: calc(9.6px + .5 * ((100vw - 320px) / (1280 - 320)));
 }
 
 .agree a p {
