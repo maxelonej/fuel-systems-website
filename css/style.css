@@ -170,6 +170,7 @@ footer .container .split {
 
 .follow-link {
     padding: .4em;
+    filter: var(--hover-filter);
 }
 
 .split {

@@ -10,6 +10,7 @@
     --background-hover: rgba(68, 111, 161, 0.788);
     --hover: #6593bf;
     --btn-hover: #6593bfbb;
+    --hover-filter: invert(3%) sepia(7%) saturate(7212%) hue-rotate(198deg) brightness(96%) contrast(98%);
     --text: #080A11;
     --white-text: #DDE0EE;
     --black-text: #080A11;
@@ -28,6 +29,7 @@
     --ecology-div-bg: rgba(0, 0, 0, .6);
     --hover: #6593bf;
     --btn-hover: #6593bfbb;
+    --hover-filter: invert(96%) sepia(29%) saturate(810%) hue-rotate(178deg) brightness(94%) contrast(99%);
     --background-hover: rgba(68, 111, 161, 0.788);
     --text: #DDE0EE;
     --white-text: #DDE0EE;
