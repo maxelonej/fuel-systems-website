@@ -629,6 +629,9 @@ form {
 .agree-link {
     text-decoration: underline;
 }
+.agree-text {
+    color: var(--black-text);
+}
 .form-wrapper div > * {
     padding-left: .5em;
 }
