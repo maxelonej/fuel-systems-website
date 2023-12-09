@@ -2,7 +2,16 @@
 
 /* до 1250 ширины */
 @media (max-width: 1250px) {
-    /* header-rightside */
+    .hero {
+        height: auto; /* Высота может быть автоматически рассчитана в зависимости от контента */
+    }
+
+    #video {
+        width: 100%; /* Ширина видео на мобильных устройствах */
+        height: 100%;
+        object-fit: cover; /* или другие значения, такие как contain */
+    }
+
     .nav > #logo, .nav > .toggles > .toggle-btn {
         display: block;
     }
@@ -189,6 +198,10 @@
 }
 
 @media (min-width: 1250px) {
+    .hero {
+        width: 100vw;
+        height: 100vh;
+    }
     header .nav {
         display: flex;
         align-items: center;
