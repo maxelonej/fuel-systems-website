@@ -166,8 +166,7 @@ header ul li a {
     background: rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
-    min-height: 50vh;
-    height: 100vh;
+    min-height: 100vh;
     z-index: 1;
 }
 
