@@ -271,6 +271,7 @@ button:hover {
 }
 .mission-strategy p, .production p, .clients p {
     color: var(--black-text);
+    font-family: var(--ff-accent);
 }
 
 .mission-strategy h1, .mission-strategy p, .production-txt h1, .production-txt p, .client-txt h1, .client-txt p {
