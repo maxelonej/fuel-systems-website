@@ -460,8 +460,6 @@ a.link {
 }
 
 .transparent {
-    margin: 0 10em;
-    padding: 0 1em;
     backdrop-filter: blur(10px);
     background-color: var(--ecology-div-bg);
 }

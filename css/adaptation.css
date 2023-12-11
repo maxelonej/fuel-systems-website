@@ -201,6 +201,9 @@
 }
 
 @media (min-width: 1250px) {
+    .text-desc {
+        font-size: 2em;
+    }
     .hero {
         width: 100vw;
         height: 100vh;
@@ -287,7 +290,8 @@
     }
 
     .transparent {
-        margin: 0 10em;
+        margin: 0 2em;
+        padding-inline: 2em;
     }
 
     .option {
@@ -317,12 +321,6 @@
     }
     .link > div > p {
         font-size: 1.5em;
-    }
-    .safety__main > .text-desc {
-        font-size: 2em;
-    }
-    .contacts__main > .text-desc {
-        font-size: 2em;
     }
     #backBtn, #nextBtn {
         max-width: 5em;
