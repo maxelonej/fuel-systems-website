@@ -12,12 +12,18 @@ scrollContainer.addEventListener("wheel", (event) => {
 
 nextBtn.addEventListener("click", () => {
     scrollContainer.style.scrollBehavior = "smooth";
-    scrollContainer.scrollLeft += 920;
+    scrollContainer.scrollLeft += window.innerWidth / 2.5;
+    if (scrollContainer.scrollLeft == scrollContainer.clientWidth) {
+        scrollContainer.scrollLeft = 0;
+    }
 });
 
 backBtn.addEventListener("click", () => {
-    scrollContainer.style.scrollBehavior = 'smooth'
-    scrollContainer.scrollLeft -= 920;
+    scrollContainer.style.scrollBehavior = "smooth";
+    scrollContainer.scrollLeft -= window.innerWidth / 2.5;
+    if (scrollContainer.scrollLeft == 0) {
+        scrollContainer.scrollLeft = scrollContainer.clientWidth;
+    }
 });
 
 // awards full img
