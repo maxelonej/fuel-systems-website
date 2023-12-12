@@ -96,8 +96,7 @@ header ul li a {
     display: none;
     top: 5.5em;
     width: 300px;
-    background: var(--dropdown-menu-bg);
-    backdrop-filter: blur(10px);
+    background: var(--bg-3);
     border-radius: 10px;
     height: 0;
     overflow: hidden;
