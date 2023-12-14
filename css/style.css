@@ -164,12 +164,15 @@ footer .container .split {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: end;
 }
 
 .follow-link {
     padding: .4em;
-    filter: var(--hover-filter);
+    transition: .4s;
+    filter: var(--link-filter);
+}
+.follow-link:hover {
+    filter: var(--link-hover-filter);
 }
 
 .split {
