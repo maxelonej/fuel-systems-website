@@ -151,6 +151,7 @@ const languagesArray = {
         'social-media': 'Социальные сети',
         'address': '445043 Россия, Самарская область, Тольятти, ул. Северная, 39',
 
+        'form-title': 'Заполните форму',
         'select-vacancy': 'Выберите вакансию',
         'vacancy-1': 'Вакансия 1',
         'vacancy-2': 'Вакансия 2',
@@ -255,6 +256,7 @@ const languagesArray = {
         'social-media': 'Social media',
         'address': '445043 Russia, Samara region, Tolyatti, st. Severnaya, 39',
 
+        'form-title': 'Fill the form',
         'select-vacancy': 'Select a vacancy',
         'vacancy-1': 'Vacancy 1',
         'vacancy-2': 'Vacancy 2',
@@ -359,6 +361,7 @@ const languagesArray = {
         'social-media': 'Социальные сети',
         'address': '445043 Россия, Самарская область, Тольятти, ул. Северная, 39',
 
+        'form-title': 'Заполните форму',
         'select-vacancy': 'Выберите вакансию',
         'vacancy-1': 'Вакансия 1',
         'vacancy-2': 'Вакансия 2',
@@ -463,6 +466,7 @@ const languagesArray = {
         'social-media': 'Social media',
         'address': '445043 Russia, Samara region, Tolyatti, st. Severnaya, 39',
 
+        'form-title': 'Fill the form',
         'select-vacancy': 'Select a vacancy',
         'vacancy-1': 'Vacancy 1',
         'vacancy-2': 'Vacancy 2',
