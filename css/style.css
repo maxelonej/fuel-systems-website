@@ -153,7 +153,13 @@ footer .container .split {
 }
 
 .logo-footer {
+    display: flex;
     padding: 0.4em 0;
+    gap: 40px;
+    justify-content: center;
+}
+.logo-footer p {
+    padding-top: 1%;
 }
 .logo-footer > img {
     width: 106px;
@@ -178,4 +184,19 @@ footer .container .split {
 .split {
     display: flex;
     flex-direction: column;
+}
+
+footer > .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-split {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+.logo-footer {
+    display: none;
 }

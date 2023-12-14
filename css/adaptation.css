@@ -176,8 +176,6 @@
         font-size: calc(14px + 16 * ((100vw - 320px) / (1280 - 320)));
     }
 
-    
-    
     .corruption-txt > a {
         font-size: 1em;
     }
@@ -189,6 +187,20 @@
     .agree-text {
         font-size: .63em;
     }
+
+    .logo-footer {
+        flex-direction: column;
+    }
+    .footer-split {
+        flex-direction: column;
+    }
+    /* .logo-footer {
+        display: none;
+    } */
+    /* .logo-footer img {
+        display: none;
+        order: 2;
+    } */
 }   
 
 @media (min-width: 768px) and (max-width: 1250px) {
