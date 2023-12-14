@@ -12,6 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
 			translateParagraph.textContent = 'en';
             if (page === 'index.html') {
                 document.getElementsByName('Msg')[0].placeholder='Message';
+            } else if (page === 'vacancies.html') {
+                document.getElementsByName('name')[0].placeholder='Enter name';
+                document.getElementsByName('surname')[0].placeholder='Enter surname';
+                document.getElementsByName('email')[0].placeholder='Enter E-mail';
+                document.getElementsByName('tel')[0].placeholder='Enter phone number';
             }
 		} else {
 			lang.id = 'ru'
@@ -142,6 +147,18 @@ const languagesArray = {
         'vacancies': 'Вакансии',
         'form': 'Анкета',
         'back': 'Назад',
+
+        'social-media': 'Социальные сети',
+        'address': '445043 Россия, Самарская область, Тольятти, ул. Северная, 39',
+
+        'select-vacancy': 'Выберите вакансию',
+        'vacancy-1': 'Вакансия 1',
+        'vacancy-2': 'Вакансия 2',
+        'vacancy-3': 'Вакансия 3',
+        'vacancy-4': 'Вакансия 4',
+
+        'more-details': 'Показать еще',
+        'show-more': 'Подробнее',
     },
 
 	'en': {
@@ -234,6 +251,18 @@ const languagesArray = {
         'vacancies': 'Vacancies',
         'form': 'Form',
         'back': 'Back',
+
+        'social-media': 'Social media',
+        'address': '445043 Russia, Samara region, Tolyatti, st. Severnaya, 39',
+
+        'select-vacancy': 'Select a vacancy',
+        'vacancy-1': 'Vacancy 1',
+        'vacancy-2': 'Vacancy 2',
+        'vacancy-3': 'Vacancy 3',
+        'vacancy-4': 'Vacancy 4',
+
+        'more-details': 'More details',
+        'show-more': 'More',
     },
 
 	'ru-mobile': {
@@ -326,6 +355,18 @@ const languagesArray = {
         'vacancies': 'Вакансии',
         'form': 'Анкета',
         'back': 'Назад',
+
+        'social-media': 'Социальные сети',
+        'address': '445043 Россия, Самарская область, Тольятти, ул. Северная, 39',
+
+        'select-vacancy': 'Выберите вакансию',
+        'vacancy-1': 'Вакансия 1',
+        'vacancy-2': 'Вакансия 2',
+        'vacancy-3': 'Вакансия 3',
+        'vacancy-4': 'Вакансия 4',
+
+        'more-details': 'Показать еще',
+        'show-more': 'Подробнее',
     },
 
 	'en-mobile': {
@@ -418,5 +459,17 @@ const languagesArray = {
         'vacancies': 'Vacancies',
         'form': 'Form',
         'back': 'Back',
+
+        'social-media': 'Social media',
+        'address': '445043 Russia, Samara region, Tolyatti, st. Severnaya, 39',
+
+        'select-vacancy': 'Select a vacancy',
+        'vacancy-1': 'Vacancy 1',
+        'vacancy-2': 'Vacancy 2',
+        'vacancy-3': 'Vacancy 3',
+        'vacancy-4': 'Vacancy 4',
+
+        'more-details': 'More details',
+        'show-more': 'More',
     },
 }
