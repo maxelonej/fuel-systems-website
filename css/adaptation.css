@@ -353,3 +353,16 @@
         transition-delay: 600ms;
     }
 }
+
+@media (min-width: 1300px) {
+    .agree p, .agree a {
+        display: inline;
+        font-size: calc(8.6px + 2.5 * ((100vw - 320px) / (1280 - 320)));
+    }
+}
+@media (min-width: 1500px) {
+    .agree p, .agree a {
+        display: inline;
+        font-size: calc(10.6px + 2.5 * ((100vw - 320px) / (1280 - 320)));
+    }
+}
