@@ -165,12 +165,6 @@
         display: grid;
         grid-template-columns: auto auto;
     }
-    .option:hover .map-choice-img img {
-        content: url('../img/map/active.png');
-    }
-    .option:hover .map-choice-txt p {
-        color: var(--text);
-    }
     
     .ecology__main > .transparent > .text-desc {
         font-size: calc(14px + 16 * ((100vw - 320px) / (1280 - 320)));

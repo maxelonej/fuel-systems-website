@@ -2,6 +2,7 @@
     --bg-1: #ffffff;
     --bg-3: #e4edf1;
     --form-bg: #95A4C1;
+    --form-bg-hover: #95a4c1df;
     --gallery-bg: #95A4C1;
     --btn-bg: rgba(0, 0, 0, 0);
     --ecology-div-bg: rgba(0, 0, 0, .6);
@@ -15,6 +16,9 @@
     --white-text: #DDE0EE;
     --black-text: #080A11;
     --line: black;
+
+    --active-map: invert(18%) sepia(87%) saturate(6975%) hue-rotate(357deg) brightness(100%) contrast(100%);
+    --unactive-map: invert(43%) sepia(4%) saturate(145%) hue-rotate(315deg) brightness(100%) contrast(100%);
 
     --ff-primary: 'Open Sans', sans-serif;
     --ff-accent: 'Montserrat', sans-serif;

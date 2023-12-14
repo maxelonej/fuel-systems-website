@@ -528,8 +528,8 @@ a.link {
 }
 
 .map-choice-img > img {
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
 }
 
 .iframe {
@@ -552,20 +552,29 @@ a.link {
 
 .option {
     padding: 1em;
-    background-color: var(--bg-3);
+    background: var(--form-bg);
     display: flex;
 }
 
-.option:hover .map-choice-img img {
-    content: url('../img/map/hover.png');
+.map-choice-txt p {
+    color: var(--black-text);
 }
 
-.map-choice-txt {
-    transition: color 4s ease;
+.option {
+    transition: .4s;
 }
 
-.option:hover .map-choice-txt p {
-    color: var(--hover);
+.option:hover {
+    background-color: var(--form-bg-hover);
+}
+
+.option:nth-child(1) .map-choice-img img {
+    filter: var(--active-map);
+}
+
+.map-choice-img img {
+    filter: var(--unactive-map);
+    transition: filter .4s;
 }
 
 .option:hover {
@@ -575,14 +584,6 @@ a.link {
 .night-map {
     filter: invert(100%);
     border: 0;
-}
-
-.option-1 {
-    padding-bottom: 0;
-}
-
-.option-3 {
-    padding-top: 0;
 }
 
 form {
