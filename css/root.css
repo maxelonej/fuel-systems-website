@@ -1,7 +1,6 @@
 :root {
     --bg-1: #ffffff;
     --bg-3: #e4edf1;
-    /* --bg-2: #E6E6E5; */
     --form-bg: #95A4C1;
     --gallery-bg: #95A4C1;
     --btn-bg: rgba(0, 0, 0, 0);
@@ -10,7 +9,8 @@
     --background-hover: rgba(68, 111, 161, 0.788);
     --hover: #6593bf;
     --btn-hover: #6593bfbb;
-    --hover-filter: invert(3%) sepia(7%) saturate(7212%) hue-rotate(198deg) brightness(96%) contrast(98%);
+    --link-filter: invert(3%) sepia(7%) saturate(7212%) hue-rotate(198deg) brightness(70%) contrast(98%);
+    --link-hover-filter: invert(60%) sepia(14%) saturate(1212%) hue-rotate(167deg) brightness(90%) contrast(85%);
     --text: #080A11;
     --white-text: #DDE0EE;
     --black-text: #080A11;
@@ -22,14 +22,14 @@
 
 .dark-theme {
     --bg-1: #080A11;
-    --bg-2: #080A11;
     --bg-3: #161616;
     --btn-bg: rgba(0, 0, 0, 0);
     --dropdown-menu-bg: rgba(25, 25, 25, .5);
     --ecology-div-bg: rgba(0, 0, 0, .6);
     --hover: #6593bf;
     --btn-hover: #6593bfbb;
-    --hover-filter: invert(96%) sepia(29%) saturate(810%) hue-rotate(178deg) brightness(94%) contrast(99%);
+    --link-filter: invert(96%) sepia(29%) saturate(810%) hue-rotate(178deg) brightness(80%) contrast(99%);
+    --link-hover-filter: invert(60%) sepia(14%) saturate(1212%) hue-rotate(167deg) brightness(90%) contrast(85%);
     --background-hover: rgba(68, 111, 161, 0.788);
     --text: #DDE0EE;
     --white-text: #DDE0EE;
