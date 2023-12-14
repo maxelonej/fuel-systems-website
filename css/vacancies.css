@@ -196,11 +196,12 @@ a.details {
 }
 .vacancies-item {
     border-radius: 30px;
-    background-color: #D9D9D9;
-    margin: 2em 0;
+    background-color: var(--form-bg);
+    margin: .5em 0;
     padding: 2em;
     display: flex;
 }
+
 .more {
     display: flex;
     justify-content: center;
@@ -208,6 +209,7 @@ a.details {
     background-color: var(--hover);
     border-radius: .4em;
     padding: .5em;
+    margin-top: 1em;
     margin-inline: auto;
     transition: .4s;
     cursor: pointer;
