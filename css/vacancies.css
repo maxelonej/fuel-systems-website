@@ -1,119 +1,6 @@
 @import url(root.css);
 @import url(style.css);
 
-/*
-    .fix-nav {
-        height: 1000px; 
-        display: block;
-        height: 220px; 
-        margin-top: -220px; 
-        visibility: hidden;
-    }
-    .form-fix-nav {
-        display: block;
-        margin-top: -1000px;
-        visibility: hidden;
-    }
-*/
-
-#logo {
-    display: block;
-    height: 63px; /* this is the height of header */
-    margin-top: -63px; /* this is again negative value of the height of header */
-    visibility: hidden;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-*::before, *::after {
-    box-sizing: border-box;
-}
-
-*:focus {
-    outline: none;
-}
-
-*::-webkit-input-placeholder {
-    color: #c0c0c0;
-    opacity: 1;
-}
-
-*::-moz-placeholder {
-    color: #c0c0c0;
-    opacity: 1;
-}
-
-*:-ms-input-placeholder {
-    color: #c0c0c0;
-    opacity: 1;
-}
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-h1, h2, h3 {
-    font-family: var(--ff-accent);
-}
-
-h2, h3 {
-    font-weight: 100;
-    line-height: 1.2;
-}
-
-h1, h2, h3, p, a, li {
-    color: var(--text);
-}
-
-body, h1, h2, h3, p {
-    margin: 0;
-}
-
-section {
-    background-color: var(--bg-1);
-}
-
-a {
-    color: var(--text);
-    transition: color .4s ease;
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--hover);
-}
-
-html, body {
-    height: 100%;
-}
-
-body {
-    font-family: var(--ff-primary);
-    background-color: var(--bg-1);
-    font-weight: 400;
-    line-height: 1.6;
-    position: relative;
-    min-width: 320px;
-    overflow-x: hidden;
-    opacity: 1;
-}
-
-img {
-    max-width: 100%;
-}
-
-.logo:hover {
-    cursor: pointer;
-}
-
-.mobile-toggle-row {
-    display: flex;
-}
-
 .dropdown-menu {
     display: none;
     top: 5.5em;
@@ -135,18 +22,12 @@ img {
     z-index: 1;
 }
 
+.dropdown-menu.open {
+    height: calc(275px + (30) * ((100vw - 320px) / (1250 - 320)));
+}
+
 .dropdown-menu > a {
     margin: 1em;
-    font-weight: 550;
-}
-
-.dropdown-menu > a:hover {
-    color: var(--white-text);
-    background: var(--background-hover);
-}
-
-button:hover {
-    background-color: var(--btn-hover);
 }
 
 .vacancies-container {
@@ -169,7 +50,7 @@ a.details {
     display: flex;
     justify-content: center;
     color: var(--white-text);
-    background-color: var(--hover);
+    background: var(--hover);
     border-radius: .4em;
     padding: .5em;
     transition: background-color .4s;
@@ -178,7 +59,7 @@ a.details {
 }
 .details:hover {
     color: var(--white-text);
-    background-color: var(--background-hover);
+    background-color: var(--btn-bg-hover);
 }
 
 .vacancies-item img {
@@ -206,7 +87,7 @@ a.details {
     display: flex;
     justify-content: center;
     color: var(--white-text);
-    background-color: var(--hover);
+    background: var(--hover);
     border-radius: .4em;
     padding: .5em;
     margin-top: 1em;
@@ -222,7 +103,7 @@ a.details {
 }
 .more:hover {
     color: var(--white-text);
-    background-color: var(--background-hover);
+    background-color: var(--btn-bg-hover);
 }
 
 form {
@@ -289,13 +170,13 @@ input:focus {
     transition: border-color 0.4s ease-in-out;
 }
 .__select__title:hover {
-    border-color: var(--background-hover);
+    border-color: var(--dropdown-menu-bg);
 }
 .__select__title:hover::before, .__select__title:hover::after {
-    background-color: var(--background-hover);
+    background-color: var(--dropdown-menu-bg);
 }
 .__select__label:hover {
-    background-color: var(--background-hover) !important;
+    background-color: var(--dropdown-menu-bg) !important;
     color: var(--text);
 }
 .__select__content {
@@ -334,16 +215,5 @@ input:focus {
     cursor: pointer;
 }
 .submit:hover {
-    background: var(--background-hover);
-}
-
-.container {
-    margin-inline: auto;
-    width: min(90%, 120.5rem);
-    margin-top: 2em;
-    margin-bottom: 2em;
-}
-.split {
-    display: flex;
-    flex-direction: column;
+    background: var(--btn-bg-hover);
 }

@@ -55,6 +55,10 @@
     animation: wave 3s infinite;
 }
 
+.popup__close:hover {
+    color: var(--bg-hover);
+}
+
 @keyframes wave {
     from {
         -webkit-mask-position: 150%;
