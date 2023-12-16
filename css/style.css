@@ -1,6 +1,110 @@
-/* Общие стили для страниц */
-.fix-nav {
-    
+/* Стили для index.html + vacancies.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+*::-webkit-input-placeholder {
+    color: #c0c0c0;
+    opacity: 1;
+}
+
+*::-moz-placeholder {
+    color: #c0c0c0;
+    opacity: 1;
+}
+
+*:-ms-input-placeholder {
+    color: #c0c0c0;
+    opacity: 1;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+h1, h2, h3 {
+    font-family: var(--ff-accent);
+}
+
+h2, h3 {
+    font-weight: 100;
+    line-height: 1.2;
+}
+
+h1, h2, h3, p, li {
+    color: var(--text);
+}
+
+body, h1, h2, h3, p {
+    margin: 0;
+}
+
+section {
+    background-color: var(--bg-1);
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: var(--ff-primary);
+    background-color: var(--bg-1);
+    font-weight: 400;
+    line-height: 1.6;
+    position: relative;
+    min-width: 320px;
+    overflow-x: hidden;
+    opacity: 1;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Ввод, текстовая область, кнопка */
+input, textarea, button {
+    font-family: var(--ff-primary);
+    color: var(--text);
+}
+button:hover {
+    background-color: var(--btn-hover);
+}
+textarea {
+    min-height: 80px;
+    max-height: 500px;
+    resize: vertical;
+    border-radius: 15px;
+}
+input, textarea {
+    background-color: var(--bg-3);
+    border: 1px solid var(--bg-1);
+    padding: 1em;
+    transition: border 0.4s ease-in-out;
+}
+input {
+    border-radius: 50px;
+}
+input:focus, textarea:focus {
+    outline: none;
+    border: 1px solid var(--hover);
+}
+
+/* Ссылки */
+a {
+    transition: color .4s ease;
+    text-decoration: none;
 }
 
 html {
@@ -8,7 +112,7 @@ html {
     scroll-padding: 10rem;
 }
 
-/* Header */
+/* Шапка */
 header {
     position: fixed;
     top: 0;
@@ -18,22 +122,38 @@ header {
     padding: 0 1em;
 }
 
+/* Неупорядоченный список */
 header ul {
+    /* Убрать точки у каждого элемента в списке  */
     list-style-type: none;
 }
 
+/* Элемент списка */
 header ul li {
     display: inline-block;
     padding: 0 10px;
 }
 
+/* Ссылки элемента */
 header ul li a {
     transition: color .4s ease;
     display: block;
     text-decoration: none;
-    color: var(--text);
 }
 
+.container {
+    margin-inline: auto;
+    width: min(90%, 120.5rem);
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Иконка для малых экранов в навигации, при нажатии выпадает список */
 .burger::before,
 .burger::after {
     content: '';
@@ -49,16 +169,17 @@ header ul li a {
     top: 0;
     box-shadow: 0 11px 0 var(--text);
 }
-
 .burger:hover {
     background-color: var(--bg-3);
 }
 
+/* Переключатели */
 .toggles {
     display: flex;
     align-items: center;
 }
 
+/* Язык ru/en */
 .lang {
     color: var(--white-text);
     width: 65px;
@@ -72,7 +193,7 @@ header ul li a {
     cursor: pointer;
 }    
 
-
+/* Тема светлая/темная */
 .theme {
     width: 65px;
     background-color: #6593bf;
@@ -85,40 +206,18 @@ header ul li a {
     transition: .4s;
     cursor: pointer;
 }
+
+/* При наведении */
 .lang:hover, .theme:hover {
     background: var(--background-hover);
 }
+
+/* Не показывать кнопку темной темы по дефолту */
 #dark, #mobileDark {
     display: none;
 }
 
-.dropdown-menu {
-    display: none;
-    top: 5.5em;
-    width: 300px;
-    background: var(--bg-3);
-    border-radius: 10px;
-    height: 0;
-    overflow: hidden;
-    transition: height .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.dropdown-menu.open {
-    margin-top: .3em;
-}
-.dropdown-menu.open a:nth-child(1) {
-    margin-top: 1em;
-}
-
-.dropdown-menu > a {
-    margin: 1em;
-    font-weight: 550;
-}
-
-.dropdown-menu > a:hover {
-    color: var(--white-text);
-    background: var(--background-hover);
-}
-
+/* Язык для малых экранов */
 .lang-mobile {
     display: flex;
     padding: 1em 0 1em 0;
@@ -127,7 +226,6 @@ header ul li a {
     justify-content: center;
     font-weight: bold;
 }
-
 .mobile-toggle-row {
     display: flex;
     margin-inline: auto;
@@ -135,55 +233,16 @@ header ul li a {
     margin-top: 23px;
 }
 
+/* Подвал */
 footer {
     background-color: var(--bg-3);
-}
-
-footer {
     padding: 1em 1.5em;
 }
+
+/* Контейнер */
 footer .container {
     margin-inline: 1em;
     width: 100%;
-}
-
-footer .container .split {
-    padding: 1em;
-    padding-left: 0;
-}
-
-.logo-footer {
-    display: flex;
-    padding: 0.4em 0;
-    gap: 40px;
-    justify-content: center;
-}
-.logo-footer p {
-    padding-top: 1%;
-}
-.logo-footer > img {
-    width: 106px;
-    height: 39px;
-}
-
-.follow-links {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.follow-link {
-    padding: .4em;
-    transition: .4s;
-    filter: var(--link-filter);
-}
-.follow-link:hover {
-    filter: var(--link-hover-filter);
-}
-
-.split {
-    display: flex;
-    flex-direction: column;
 }
 
 footer > .container {
@@ -192,11 +251,47 @@ footer > .container {
     align-items: center;
 }
 
-.footer-split {
+/* Разделитель */
+footer .container .split {
+    padding: 1em;
+    padding-left: 0;
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Контейнер ссылок */
+.follow-links {
     display: flex;
     flex-direction: row;
+    align-items: center;
+}
+
+/* Ссылки */
+.follow-link {
+    padding: .4em;
+    transition: .4s;
+    filter: var(--link-filter);
+}
+
+/* При наведении */
+.follow-link:hover {
+    filter: var(--link-hover-filter);
+}
+
+/* Распределяет элементы в строку и ставит между ними пространство */
+.footer-split {
+    display: flex;
     gap: 40px;
 }
-.logo-footer {
-    display: none;
+
+/* Ссылка в подвале */
+footer a {
+    color: var(--link);
+}
+/* При нажатии */
+footer a:hover {
+    color: var(--hover);
 }
