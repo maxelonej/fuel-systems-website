@@ -15,9 +15,6 @@
     .vacancies-text p {
         font-size: 1em;
     }
-    .dropdown-menu.open {
-        height: calc(250px + (30) * ((100vw - 320px) / (1250 - 320)));
-    }
     .form-title {
         font-size: 1.7em;
     }
