@@ -1,7 +1,5 @@
 // Awards vertical scrolling
 let scrollContainer = document.querySelector(".gallery");
-let backBtn = document.getElementById("backBtn");
-let nextBtn = document.getElementById("nextBtn");
 
 // Управление колесиком мыши
 scrollContainer.addEventListener("wheel", (event) => {
@@ -10,25 +8,9 @@ scrollContainer.addEventListener("wheel", (event) => {
     scrollContainer.style.scrollBehavior = "auto";
 })
 
-nextBtn.addEventListener("click", () => {
-    scrollContainer.style.scrollBehavior = "smooth";
-    scrollContainer.scrollLeft += window.innerWidth / 2.5;
-    if (scrollContainer.scrollLeft == scrollContainer.clientWidth) {
-        scrollContainer.scrollLeft = 0;
-    }
-});
-
-backBtn.addEventListener("click", () => {
-    scrollContainer.style.scrollBehavior = "smooth";
-    scrollContainer.scrollLeft -= window.innerWidth / 2.5;
-    if (scrollContainer.scrollLeft == 0) {
-        scrollContainer.scrollLeft = scrollContainer.clientWidth;
-    }
-});
-
 // awards full img
-var fullImgBox = document.getElementById('fullImgBox');
-var fullImg = document.getElementById('fullImg');
+let fullImgBox = document.getElementById('fullImgBox');
+let fullImg = document.getElementById('fullImg');
 
 const openFullImg = (img) => {
     fullImgBox.style.display = 'flex';
