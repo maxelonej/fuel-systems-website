@@ -295,6 +295,7 @@ a.link {
     padding-top: 1em;
 }
 .corruption a {
+    display: inline-block;
     color: var(--link);
     padding: 0;
     transition: .4s;
@@ -305,6 +306,12 @@ a.link {
 }
 .corruption-txt > a {
     word-wrap: break-word;
+}
+.compliance {
+    display: inline !important;
+}
+.compliance::after {
+    display: inline !important;
 }
 .corruption a::after {
     content: '';
