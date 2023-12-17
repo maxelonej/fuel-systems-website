@@ -1,13 +1,3 @@
-// Awards vertical scrolling
-let scrollContainer = document.querySelector(".gallery");
-
-// Управление колесиком мыши
-scrollContainer.addEventListener("wheel", (event) => {
-    event.preventDefault();
-    scrollContainer.scrollLeft += event.deltaY;
-    scrollContainer.style.scrollBehavior = "auto";
-})
-
 // awards full img
 let fullImgBox = document.getElementById('fullImgBox');
 let fullImg = document.getElementById('fullImg');
