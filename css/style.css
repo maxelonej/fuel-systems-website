@@ -81,6 +81,9 @@ input, textarea, button {
 button:hover {
     background-color: var(--btn-hover);
 }
+button:active {
+    transform: scale(0.96);
+}
 textarea {
     min-height: 80px;
     max-height: 500px;

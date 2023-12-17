@@ -82,7 +82,9 @@
 }
 .main-button:hover {
     color: var(--white-text);
-    scale: 1.05;
+}
+.main-button:active {
+    transform: scale(0.96);
 }
 
 .hero__container .main-button {
