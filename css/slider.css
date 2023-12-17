@@ -1,0 +1,97 @@
+.card-wrapper {
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+}
+
+/* Стрелки */
+.card-wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: var(--white-text);
+    text-align: center;
+    line-height: 50px;
+    background: var(--form-bg);
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+.card-wrapper i:active{
+    transform: translateY(-50%) scale(0.85);
+}
+.card-wrapper i:first-child{
+    left: -22px;
+}
+.card-wrapper i:last-child{
+    right: -22px;
+}
+@media screen and (max-width: 460px) {
+    .card-wrapper i:first-child{
+        left: -11px;
+    }
+    .card-wrapper i:last-child{
+        right: -11px;
+    }
+}
+
+/* .gallery */
+.card-wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+.carousel.dragging .card, .carousel.dragging .small-img {
+    user-select: none;
+}
+.carousel :where(.card, .img), .carousel :where(.card, .small-img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel .card {
+    height: 342px;
+    flex-direction: column;
+    cursor: grab;
+}
+.carousel .card img {
+    cursor: pointer;
+}
+.carousel .card img {
+    filter: grayscale(100);
+    transition: filter .4s;
+}
+.carousel .card img:hover {
+    filter: grayscale(0);
+}
+.carousel .card .img, .carousel .card .small-img {
+    height: 440px;
+    width: 320px;
+}
+.card .img img {
+    width: 70%;
+    height: 90%;
+}
+/* Для изображений поменьше */
+.small-img img {
+    width: 80%;
+    height: 60%;
+}

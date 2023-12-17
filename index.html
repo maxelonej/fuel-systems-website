@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="css/popup.css">
         <link rel="stylesheet" href="css/adaptation.css">
         <link rel="stylesheet" href="css/hamburger-menu.css">
+        <link rel="stylesheet" href="css/slider.css">
         
         <!-- Подключение к сайту шрифтов -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,6 +26,18 @@
         <!-- Подключение шрифта Open Sans -->
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
         
+        <!-- Ссылка Fontawesome для стрелок в галерею -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    
+        <!-- Подключение скриптов -->
+        <script src="js/awards-gallery.js" defer></script>
+        <script src="js/popups.js" defer></script>
+        <script src="js/map-option.js" defer></script>
+        <script src="js/hamburger.js" defer></script>
+        <script src="js/theme-switcher.js" defer></script>
+        <script src="js/active-nav-link-on-scroll.js" defer></script>
+        <script src="js/language-switcher.js" defer></script>
+        <script src="js/slider.js" defer></script>
     </head>
     <body>
         <!-- Шапка -->
@@ -280,29 +293,56 @@
                         </div>
                     </div>
 
+                    <!-- Контент -->
                     <div class="container">
                         <!-- Коллекция наград -->
-                        <div class="gallery-wrap">
-                            <div class="gallery">
-                                <div>
-                                    <img src="img/awards/asset_1.png" alt="awards asset_1" onclick="openFullImg(this.src)">
-                                    <img src="img/awards/asset_2.png" alt="awards asset_2" onclick="openFullImg(this.src)">
-                                    <img src="img/awards/asset_3.png" alt="awards asset_3" onclick="openFullImg(this.src)">
-                                    <img src="img/awards/asset_4.png" alt="awards asset_4" onclick="openFullImg(this.src)">
-                                    <img src="img/awards/asset_5.png" alt="awards asset_5" onclick="openFullImg(this.src)">
-                                    <img src="img/awards/asset_6.png" alt="awards asset_6" onclick="openFullImg(this.src)">
-                                    <img src="img/awards/asset_7.png" alt="awards asset_7" onclick="openFullImg(this.src)">
-                                </div>
-                                <div>
-                                    <img src="img/awards/asset_8.png" alt="awards asset_8" onclick="openFullImg(this.src)">
-                                    <img src="img/awards/asset_9.png" alt="awards asset_9" onclick="openFullImg(this.src)">
-                                    <img src="img/awards/asset_10.png" alt="awards asset_10" onclick="openFullImg(this.src)">
-                                    <img src="img/awards/asset_11.png" alt="awards asset_11" onclick="openFullImg(this.src)">
-                                    <img src="img/awards/asset_12.png" alt="awards asset_12" onclick="openFullImg(this.src)">
-                                    <img src="img/awards/asset_13.png" alt="awards asset_13" onclick="openFullImg(this.src)">
-                                    <img src="img/awards/asset_14.png" alt="awards asset_14" onclick="openFullImg(this.src)">
-                                </div>
-                            </div>
+                        <div class="card-wrapper">
+                            <i id="left" class="fa-solid fa-angle-left"></i>
+                            <ul class="carousel">
+                                <li class="card">
+                                    <div class="img"><img src="img/awards/asset_1.png" alt="img" draggable="false" onclick="openFullImg(this.src)"></div>
+                                </li>
+                                <li class="card">
+                                    <div class="img"><img src="img/awards/asset_2.png" alt="img" draggable="false" onclick="openFullImg(this.src)"></div>
+                                </li>
+                                <li class="card">
+                                    <div class="small-img"><img src="img/awards/asset_3.png" alt="img" draggable="false" onclick="openFullImg(this.src)"></>
+                                </li>
+                                <li class="card">
+                                    <div class="img"><img src="img/awards/asset_4.png" alt="img" draggable="false" onclick="openFullImg(this.src)"></div>
+                                </li>
+                                <li class="card">
+                                    <div class="small-img"><img src="img/awards/asset_5.png" alt="img" draggable="false" onclick="openFullImg(this.src)"></div>
+                                </li>
+                                <li class="card">
+                                    <div class="img"><img src="img/awards/asset_6.png" alt="img" draggable="false" onclick="openFullImg(this.src)"></div>
+                                </li>
+                                <li class="card">
+                                    <div class="small-img"><img src="img/awards/asset_7.png" alt="img" draggable="false" onclick="openFullImg(this.src)"></div>
+                                </li>
+                                <li class="card">
+                                    <div class="img"><img src="img/awards/asset_8.png" alt="img" draggable="false" onclick="openFullImg(this.src)"></div>
+                                </li>
+                                <li class="card">
+                                    <div class="small-img"><img src="img/awards/asset_9.png" alt="img" draggable="false" onclick="openFullImg(this.src)"></div>
+                                </li>
+                                <li class="card">
+                                    <div class="small-img"><img src="img/awards/asset_10.png" alt="img" draggable="false" onclick="openFullImg(this.src)"></div>
+                                </li>
+                                <li class="card">
+                                    <div class="small-img"><img src="img/awards/asset_11.png" alt="img" draggable="false" onclick="openFullImg(this.src)"></div>
+                                </li>
+                                <li class="card">
+                                    <div class="small-img"><img src="img/awards/asset_12.png" alt="img" draggable="false" onclick="openFullImg(this.src)"></div>
+                                </li>
+                                <li class="card">
+                                    <div class="img"><img src="img/awards/asset_13.png" alt="img" draggable="false" onclick="openFullImg(this.src)"></div>
+                                </li>
+                                <li class="card">
+                                    <div class="img"><img src="img/awards/asset_14.png" alt="img" draggable="false" onclick="openFullImg(this.src)"></div>
+                                </li>
+                            </ul>
+                            <i id="right" class="fa-solid fa-angle-right"></i>
                         </div>
 
                         <!-- Изображение выбранной награды на весь экран -->
@@ -521,14 +561,5 @@
                 </div>
             </div>
         </footer>
-
-        <!-- Подключение скриптов -->
-        <script src="js/awards-gallery.js"></script>
-        <script src="js/popups.js"></script>
-        <script src="js/map-option.js"></script>
-        <script src="js/hamburger.js"></script>
-        <script src="js/theme-switcher.js"></script>
-        <script src="js/active-nav-link-on-scroll.js"></script>
-        <script src="js/language-switcher.js"></script>
     </body>
 </html>
