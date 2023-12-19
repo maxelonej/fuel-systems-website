@@ -279,6 +279,7 @@ a.link {
     justify-content: center;
     z-index: 2;
 }
+
 #fullImgBox {
     display: none;
 }
@@ -532,8 +533,10 @@ form {
     display: inline;
     font-size: 1em;
 }
+
 /* Ссылка */
-.agree-link {}
+/* .agree-link {} */
+
 /* Текст */
 .agree-text {
     color: var(--black-text);
