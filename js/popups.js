@@ -16,19 +16,6 @@ if (popupLinks.length > 0) {
     }
 }
 
-// X
-const popupCloseIcon = document.querySelectorAll('.close-popup');
-
-if (popupCloseIcon.length > 0) {
-    for (let i = 0; i < popupCloseIcon.length; i++) {
-        const el = popupCloseIcon[i];
-        el.addEventListener('click', e => {
-            popupClose(el.closest('.popup'));
-            e.preventDefault();
-        })
-    }
-}
-
 // Открытие popup'а
 const popupOpen = (currentPopup) => {
     if (currentPopup) {
@@ -40,9 +27,7 @@ const popupOpen = (currentPopup) => {
         }
         currentPopup.classList.add('open');
         currentPopup.addEventListener("click", e => {
-            if (!e.target.closest('.popup__content')) {
-                popupClose(e.target.closest('.popup'));
-            }
+            popupClose(e.target.closest('.popup'));
         });
     }
 }
@@ -58,3 +43,14 @@ document.addEventListener('keydown', event => {
         popupClose(popupActive);
     }
 });
+
+const fullImg = document.getElementById('fullImg');
+const galleryPopup = (img) => {
+    fullImg.src = img;
+    const arrowBtns = document.querySelectorAll(".popup__   body i");
+    arrowBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            
+        });
+    });
+}

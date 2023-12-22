@@ -26,11 +26,10 @@
 }
 
 .popup__body {
-    /* min-height: 100%; */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2em;
+    margin: 4em;
     padding: 1.5em 0;
 }
 
@@ -40,32 +39,45 @@
     padding: 10px;
 }
 
+.popup__content .container {
+    width: min(95%, 120.5rem);
+}
+
+/* Специально для галереи, содержание на белом фоне, даже при темной теме */
+#gallery-popup .popup__content {
+    background: #fff;
+}
+
+/* Кнопки */
+/* .popup__body i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: var(--white-text);
+    text-align: center;
+    line-height: 50px;
+    background: var(--form-bg);
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+.popup__body i:active{
+    transform: translateY(-50%) scale(0.85);
+}
+.popup__body i:first-child{
+    left: -65px;
+}
+.popup__body i:last-child{
+    right: -65px;
+} */
+
 .popup::-webkit-scrollbar {
     display: none;
-}
-
-.popup__close {
-    position: absolute;
-    right: .5em;
-    top: .01em;
-    font-size: 2.5rem;
-    color: red;
-    -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);
-    -webkit-mask-size: 200%;
-    animation: wave 3s infinite;
-}
-
-.popup__close:hover {
-    color: var(--bg-hover);
-}
-
-@keyframes wave {
-    from {
-        -webkit-mask-position: 150%;
-    }
-    to {
-        -webkit-mask-position: -50%;
-    }
 }
 
 .plastic-omnium .title-popup h1 {
@@ -82,5 +94,5 @@
 }
 
 .before-titles {
-    padding: 1em;
+    padding: .5em;
 }
