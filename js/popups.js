@@ -1,9 +1,5 @@
 // Использовать класс popup-link для всплывающих окон
 const popupLinks = document.querySelectorAll('.popup-link');
-const body = document.querySelector('body');
-
-const timeout = 800;
-
 if (popupLinks.length > 0) {
     for (let i = 0; i < popupLinks.length; i++) {
         const popupLink = popupLinks[i];
@@ -32,7 +28,7 @@ const popupOpen = (currentPopup) => {
     }
 }
 
-const popupClose = (popupActive, doUnlock = true) => {
+const popupClose = (popupActive) => {
     popupActive.classList.remove('open');
 }
 
@@ -47,10 +43,4 @@ document.addEventListener('keydown', event => {
 const fullImg = document.getElementById('fullImg');
 const galleryPopup = (img) => {
     fullImg.src = img;
-    const arrowBtns = document.querySelectorAll(".popup__   body i");
-    arrowBtns.forEach(btn => {
-        btn.addEventListener("click", () => {
-            
-        });
-    });
 }
