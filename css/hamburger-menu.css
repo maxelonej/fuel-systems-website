@@ -14,7 +14,7 @@
     margin-right: 1em;
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 1340px) {
     .dropdown-menu.open {
         display: none;
     }
@@ -55,10 +55,6 @@
 
 .dropdown-menu a {
     color: var(--link);
-}
-
-.dropdown-menu a:hover {
-    /* font-weight: 600; */
 }
 
 .burger {
