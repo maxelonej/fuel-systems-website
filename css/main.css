@@ -91,15 +91,16 @@
     position: absolute;
 }
 
+/* Для index.html со своими ссылками */
 .dropdown-menu.open {
-    height: calc(445px + (70) * ((100vw - 320px) / (1250 - 320)));
+    height: calc(465px + (70) * ((100vw - 320px) / (1250 - 320)));
 }
 .dropdown-menu > a:nth-last-child(2)::after {
     content: '';
     width: 80%;
     border-bottom: solid 1.5px var(--line);
     position: absolute;
-    bottom: 90px;
+    bottom: 95px;
     z-index: 1;
 }
 

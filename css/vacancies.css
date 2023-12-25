@@ -22,8 +22,9 @@
     z-index: 1;
 }
 
+/* Для vacancies.html со своими ссылками */
 .dropdown-menu.open {
-    height: calc(275px + (30) * ((100vw - 320px) / (1250 - 320)));
+    height: calc(285px + (30) * ((100vw - 320px) / (1250 - 320)));
 }
 
 .dropdown-menu > a {
@@ -115,23 +116,21 @@ a.details {
 form {
     margin: 5em 0;
     background: var(--form-bg);
-    width: max(30%, 20rem);
-    border-radius: 30px;
+    width: max(22%, 10rem);
     margin-inline: auto;
+    border-radius: 30px;
 }
 
 .form-title {
     color: var(--black-text);
-    font-size: 3em;
-    word-break: break-all;
+    font-size: 2.3em;
     padding-bottom: 0.5em;
 }
 form > div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    padding: 2em;
+    padding: 1.5em 0;
 }
 .data > * {
     display: flex;
