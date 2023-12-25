@@ -212,7 +212,7 @@ header ul li a {
 
 /* При наведении */
 .lang:hover, .theme:hover {
-    background: var(--background-hover);
+    background: var(--bg-hover);
 }
 
 /* Не показывать кнопку темной темы по дефолту */
