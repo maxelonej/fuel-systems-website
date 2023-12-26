@@ -116,7 +116,7 @@ a.details {
 form {
     margin: 5em 0;
     background: var(--form-bg);
-    width: max(22%, 10rem);
+    width: max(22%, 20rem);
     margin-inline: auto;
     border-radius: 30px;
 }
