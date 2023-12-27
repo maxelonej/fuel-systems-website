@@ -185,7 +185,6 @@ header ul li a {
 /* Язык ru/en */
 .lang {
     color: var(--white-text);
-    width: 65px;
     background-color: #6593bf;
     text-align: center;
     border-radius: .2em;
@@ -198,7 +197,6 @@ header ul li a {
 
 /* Тема светлая/темная */
 .theme {
-    width: 65px;
     background-color: #6593bf;
     color: #DDE0EE;
     text-align: center;
@@ -208,6 +206,11 @@ header ul li a {
     margin-left: 20px;
     transition: .4s;
     cursor: pointer;
+}
+
+.lang, .theme {
+    min-width: 65px;
+    max-width: 65px;
 }
 
 /* При наведении */
