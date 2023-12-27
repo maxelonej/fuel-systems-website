@@ -427,6 +427,7 @@ a.link {
 }
 
 /* Карта */
+
 .iframe {
     max-width: fit-content;
     max-height: max-content;
@@ -443,7 +444,7 @@ a.link {
 
 /* Контейнер опций */
 .option {
-    padding: 1em;
+    padding: 2em 1.5em;
     background: var(--form-bg);
     display: flex;
     transition: .4s;
