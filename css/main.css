@@ -512,7 +512,9 @@ form {
 }
 
 /* Ссылка */
-/* .agree-link {} */
+.agree-link {
+    text-decoration: underline;
+}
 
 /* Текст */
 .agree-text {
