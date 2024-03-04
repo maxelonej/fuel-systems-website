@@ -201,6 +201,12 @@
     font-size: 123em;
   }
 
+  .title-popup h1 {
+    font-weight: 900;
+    line-height: 1;
+    font-size: calc(19px + 16 * ((100vw - 320px) / (1280 - 320)));
+  }
+
   h1 {
     font-weight: 900;
     line-height: 1;
