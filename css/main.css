@@ -107,7 +107,7 @@
   align-items: center;
   justify-content: center;
   margin: 5em 0;
-  width: 100vw;
+  width: 100%;
 }
 
 .about-company-bg {
@@ -342,7 +342,7 @@ a.link {
   position: relative;
   margin: 2em 0;
   padding: 0 2em;
-  width: 100%;
+  width: fit-content;
 }
 
 .ecology-item:nth-child(2) {
@@ -399,7 +399,7 @@ a.link {
   background: url("../img/contacts/contacts_bg.png");
   background-size: cover;
   margin: 2em 0;
-  width: 100%;
+  width: auto;
 }
 
 .contacts>* {
@@ -451,6 +451,7 @@ a.link {
 /* Выровнять по центру контент секции "Контакты" */
 #contacts .container .split {
   justify-content: center;
+  gap: 0;
 }
 
 /* Размер изображения SVG маркера */
@@ -529,6 +530,14 @@ form {
   border-radius: 30px;
   background: var(--form-bg);
   padding: 2em;
+  margin: 2em auto;
+}
+@media (max-width: 375px) {
+  .form-wrapper {
+    width: 100%;
+    border-radius: 0px;
+    margin: 0px;
+  }
 }
 
 .form-wrapper>* {
