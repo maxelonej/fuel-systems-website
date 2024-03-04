@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // let mapChoice3 = document.querySelector('.iframe-3');
 
   option1.addEventListener("click", () => {
-    mapChoiceImg1.style = "filter: let(--active-map);";
-    mapChoiceImg2.style = "filter: let(--unactive-map);";
+    mapChoiceImg1.style = "filter: var(--active-map);";
+    mapChoiceImg2.style = "filter: var(--unactive-map);";
     // mapChoiceImg3.style = 'filter: let(--unactive-map);';
 
     mapChoice1.style = "display: block; border: 0;";
@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   option2.addEventListener("click", () => {
-    mapChoiceImg1.style = "filter: let(--unactive-map);";
-    mapChoiceImg2.style = "filter: let(--active-map);";
+    mapChoiceImg1.style = "filter: var(--unactive-map);";
+    mapChoiceImg2.style = "filter: var(--active-map);";
     // mapChoiceImg3.style = 'filter: let(--unactive-map);';
 
     mapChoice1.style = "display: none;";
