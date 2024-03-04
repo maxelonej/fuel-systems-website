@@ -1,303 +1,349 @@
 /* Стили для index.html + vacancies.css */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-*::before, *::after {
-    box-sizing: border-box;
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 *:focus {
-    outline: none;
+  outline: none;
 }
 
 *::-webkit-input-placeholder {
-    color: #c0c0c0;
-    opacity: 1;
+  color: #c0c0c0;
+  opacity: 1;
 }
 
 *::-moz-placeholder {
-    color: #c0c0c0;
-    opacity: 1;
+  color: #c0c0c0;
+  opacity: 1;
 }
 
 *:-ms-input-placeholder {
-    color: #c0c0c0;
-    opacity: 1;
+  color: #c0c0c0;
+  opacity: 1;
 }
 
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
-h1, h2, h3 {
-    font-family: var(--ff-accent);
+h1,
+h2,
+h3 {
+  font-family: var(--ff-accent);
 }
 
-h2, h3 {
-    font-weight: 100;
-    line-height: 1.2;
+h2,
+h3 {
+  font-weight: 100;
+  line-height: 1.2;
 }
 
-h1, h2, h3, p, li {
-    color: var(--text);
+h1,
+h2,
+h3,
+p,
+li {
+  color: var(--text);
 }
 
-body, h1, h2, h3, p {
-    margin: 0;
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
 }
 
 section {
-    background-color: var(--bg-1);
+  background-color: var(--bg-1);
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
 body {
-    font-family: var(--ff-primary);
-    background-color: var(--bg-1);
-    font-weight: 400;
-    line-height: 1.6;
-    position: relative;
-    min-width: 320px;
-    overflow-x: hidden;
-    opacity: 1;
+  font-family: var(--ff-primary);
+  background-color: var(--bg-1);
+  font-weight: 400;
+  line-height: 1.6;
+  position: relative;
+  min-width: 320px;
+  overflow-x: hidden;
+  opacity: 1;
 }
 
 img {
-    max-width: 100%;
+  -webkit-user-drag: none;
+  max-width: 100%;
 }
 
 /* Ввод, текстовая область, кнопка */
-input, textarea, button {
-    font-family: var(--ff-primary);
-    color: var(--text);
+input,
+textarea,
+button {
+  font-family: var(--ff-primary);
+  color: var(--text);
 }
+
 button:hover {
-    background-color: var(--btn-hover);
+  background-color: var(--btn-hover);
 }
+
 button:active {
-    transform: scale(0.96);
+  transform: scale(0.96);
 }
+
 textarea {
-    min-height: 80px;
-    max-height: 500px;
-    resize: vertical;
-    border-radius: 15px;
+  min-height: 80px;
+  max-height: 500px;
+  resize: vertical;
+  border-radius: 15px;
 }
-input, textarea {
-    background-color: var(--bg-3);
-    border: 1px solid var(--bg-1);
-    padding: 1em;
-    transition: border 0.4s ease-in-out;
+
+input,
+textarea {
+  background-color: var(--bg-3);
+  border: 1px solid var(--bg-1);
+  padding: 1em;
+  transition: border 0.4s ease-in-out;
 }
+
 input {
-    border-radius: 50px;
+  border-radius: 50px;
 }
-input:focus, textarea:focus {
-    outline: none;
-    border: 1px solid var(--hover);
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 1px solid var(--hover);
 }
 
 /* Ссылки */
 a {
-    transition: color .4s ease;
-    text-decoration: none;
+  transition: color .4s ease;
+  text-decoration: none;
 }
 
 html {
-    scroll-behavior: smooth;
-    scroll-padding: 10rem;
+  scroll-behavior: smooth;
+  scroll-padding: 10rem;
 }
 
 /* Шапка */
 header {
-    position: fixed;
-    top: 0;
-    background-color: var(--bg-3);
-    z-index: 2;
-    width: 100vw;
-    padding: 0 1em;
+  position: fixed;
+  top: 0;
+  background-color: var(--bg-3);
+  z-index: 2;
+  width: 100vw;
+  padding: 0 1em;
 }
 
 /* Неупорядоченный список */
 header ul {
-    /* Убрать точки у каждого элемента в списке  */
-    list-style-type: none;
+  /* Убрать точки у каждого элемента в списке  */
+  list-style-type: none;
 }
 
 /* Элемент списка */
 header ul li {
-    display: inline-block;
-    padding: 0 10px;
+  display: inline-block;
+  padding: 0 10px;
 }
 
 /* Ссылки элемента */
 header ul li a {
-    transition: color .4s ease;
-    display: block;
-    text-decoration: none;
+  transition: color .4s ease;
+  display: block;
+  text-decoration: none;
+}
+
+/* Выравнивать текст по центру */
+.text-center {
+  text-align: center;
 }
 
 .container {
-    margin-inline: auto;
-    width: min(90%, 120.5rem);
-    margin-top: 2em;
-    margin-bottom: 2em;
+  width: min(90%, 120.5rem);
+  margin: 2em auto;
 }
 
 .split {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 /* Иконка для малых экранов в навигации, при нажатии выпадает список */
 .burger::before,
 .burger::after {
-    content: '';
-    left: 0;
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 4px;
-    border-radius: 10px;
-    background: var(--text);
+  content: '';
+  left: 0;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  background: var(--text);
 }
+
 .burger::before {
-    top: 0;
-    box-shadow: 0 11px 0 var(--text);
+  top: 0;
+  box-shadow: 0 11px 0 var(--text);
 }
+
 .burger:hover {
-    background-color: var(--bg-3);
+  background-color: var(--bg-3);
 }
 
 /* Переключатели */
 .toggles {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 /* Язык ru/en */
 .lang {
-    color: var(--white-text);
-    background-color: #6593bf;
-    text-align: center;
-    border-radius: .2em;
-    padding: .5em;
-    padding-inline: .8em;
-    margin-left: 20px;
-    transition: .4s;
-    cursor: pointer;
-}    
+  color: var(--white-text);
+  background-color: #6593bf;
+  text-align: center;
+  border-radius: .2em;
+  padding: .5em;
+  padding-inline: .8em;
+  margin-left: 20px;
+  transition: .4s;
+  cursor: pointer;
+}
 
 /* Тема светлая/темная */
 .theme {
-    background-color: #6593bf;
-    color: #DDE0EE;
-    text-align: center;
-    border-radius: .2em;
-    padding: .5em;
-    padding-inline: .8em;
-    margin-left: 20px;
-    transition: .4s;
-    cursor: pointer;
+  background-color: #6593bf;
+  color: #DDE0EE;
+  text-align: center;
+  border-radius: .2em;
+  padding: .5em;
+  padding-inline: .8em;
+  margin-left: 20px;
+  transition: .4s;
+  cursor: pointer;
 }
 
-.lang, .theme {
-    min-width: 65px;
-    max-width: 65px;
+.lang,
+.theme {
+  min-width: 65px;
+  max-width: 65px;
+}
+
+@media (max-width: 768px) {
+
+  .lang,
+  .theme {
+    height: 45px;
+    width: 45px;
+    font-size: .9em;
+    align-items: center;
+  }
 }
 
 /* При наведении */
-.lang:hover, .theme:hover {
-    background: var(--bg-hover);
+.lang:hover,
+.theme:hover {
+  background: var(--bg-hover);
 }
 
 /* Не показывать кнопку темной темы по дефолту */
-#dark, #mobileDark {
-    display: none;
+#dark,
+#mobileDark {
+  display: none;
 }
 
 /* Язык для малых экранов */
 .lang-mobile {
-    display: flex;
-    padding: 1em 0 1em 0;
-    text-align: center;
-    text-transform: uppercase;
-    justify-content: center;
-    font-weight: bold;
+  display: flex;
+  padding: 1em 0 1em 0;
+  text-align: center;
+  text-transform: uppercase;
+  justify-content: center;
+  font-weight: bold;
 }
+
 .mobile-toggle-row {
-    display: flex;
-    margin-inline: auto;
-    width: fit-content;
-    margin-top: 23px;
+  display: flex;
+  margin-inline: auto;
+  width: fit-content;
+  margin-top: 23px;
 }
 
 /* Подвал */
 footer {
-    background-color: var(--bg-3);
-    padding: 1em 1.5em;
+  background-color: var(--bg-3);
+  padding: 1em 1.5em;
 }
 
 /* Контейнер */
 footer .container {
-    margin-inline: 1em;
-    width: 100%;
+  margin-inline: 1em;
+  width: 100%;
 }
 
-footer > .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+footer>.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Разделитель */
 footer .container .split {
-    padding: 1em;
-    padding-left: 0;
+  padding: 1em;
+  padding-left: 0;
 }
 
 .split {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Контейнер ссылок */
 .follow-links {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 /* Ссылки */
 .follow-link {
-    padding: .4em;
-    transition: .4s;
-    filter: var(--link-filter);
+  padding: .4em;
+  transition: .4s;
+  filter: var(--link-filter);
 }
 
 /* При наведении */
 .follow-link:hover {
-    filter: var(--link-hover-filter);
+  filter: var(--link-hover-filter);
 }
 
 /* Распределяет элементы в строку и ставит между ними пространство */
 .footer-split {
-    display: flex;
-    gap: 40px;
+  display: flex;
+  gap: 40px;
 }
 
 /* Ссылка в подвале */
 footer a {
-    color: var(--link);
+  color: var(--link);
 }
+
 /* При нажатии */
 footer a:hover {
-    color: var(--hover);
+  color: var(--hover);
 }

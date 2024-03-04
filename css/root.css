@@ -1,97 +1,102 @@
 :root {
-    /* Фон */
-    --bg-1: #ffffff;
-    --bg-3: #e4edf1;
-    --bg-hover: rgba(68, 111, 161, 0.788);
+  /* Фон */
+  --bg-1: #ffffff;
+  --bg-3: #e4edf1;
+  --bg-hover: rgba(68, 111, 161, 0.788);
 
-    /* Для формы/анкеты */
-    --form-bg: #95A4C1;
-    --form-bg-filter: invert(62%) sepia(13%) saturate(557%) hue-rotate(181deg) brightness(102%) contrast(93%);
-    --form-bg-hover: rgb(236, 236, 236);
-    --form-hover: rgb(242, 240, 243);
+  /* Для формы/анкеты */
+  --form-bg: #95A4C1;
+  --form-bg-filter: invert(62%) sepia(13%) saturate(557%) hue-rotate(181deg) brightness(102%) contrast(93%);
+  --form-bg-hover: rgb(236, 236, 236);
+  --form-hover: rgb(242, 240, 243);
 
-    /* Фон галереи */
-    --gallery-bg: #95A4C1;
+  /* Фон галереи */
+  --gallery-bg: #95A4C1;
 
-    /* Фон кнопки */
-    --btn-bg: rgba(0, 0, 0, 0);
-    --btn-bg-hover: rgba(68, 111, 161, 0.788);
+  /* Фон кнопки */
+  --btn-bg: rgba(0, 0, 0, 0);
+  --btn-bg-hover: rgba(68, 111, 161, 0.788);
 
-    /* Прозрачный фон секции Экология */
-    --ecology-div-bg: rgba(0, 0, 0, .6);
+  /* Прозрачный фон секции Экология */
+  --ecology-div-bg: rgba(0, 0, 0, .6);
 
-    /* При наведении */
-    --hover: #6093bf;
-    --mhover: #6593bf;
+  /* При наведении */
+  --hover: #6093bf;
+  --mhover: #6593bf;
 
-    /* Для ссылок */
-    --link: #080A11;
-    --hover-link: #080b14;
-    --link-w: #fff;
-    --hover-link-w: #fff;
-    --link-b: #080A11;
-    --hover-link-b: #0c0d0e; /* F5F7FA */
+  /* Для ссылок */
+  --link: #080A11;
+  --hover-link: #080b14;
+  --link-w: #fff;
+  --hover-link-w: #fff;
+  --link-b: #080A11;
+  --hover-link-b: #0c0d0e;
+  /* F5F7FA */
 
-    /* Для SVG ссылок */
-    --link-filter: invert(3%) sepia(7%) saturate(7212%) hue-rotate(198deg) brightness(70%) contrast(98%);
-    --link-hover-filter: invert(60%) sepia(14%) saturate(1212%) hue-rotate(167deg) brightness(90%) contrast(85%);
+  /* Для SVG ссылок */
+  --link-filter: invert(3%) sepia(7%) saturate(7212%) hue-rotate(198deg) brightness(70%) contrast(98%);
+  --link-hover-filter: invert(60%) sepia(14%) saturate(1212%) hue-rotate(167deg) brightness(90%) contrast(85%);
 
-    /* Параграфы, заголовки */
-    --text: #080A11;
-    --white-text: #DDE0EE;
-    --black-text: #080A11;
+  /* Параграфы, заголовки */
+  --text: #080A11;
+  --invert-text: #DDE0EE;
+  --white-text: #DDE0EE;
+  --black-text: #080A11;
 
-    /* Выпадающее меню */
-    --dropdown-menu-bg: rgba(221, 224, 238, .5);
-    /* Линия в выпадающем меню */
-    --line: black;
+  /* Выпадающее меню */
+  --dropdown-menu-bg: rgba(221, 224, 238, .5);
+  /* Линия в выпадающем меню */
+  --line: black;
 
-    /* Карта */
-    --active-map: invert(18%) sepia(87%) saturate(6975%) hue-rotate(357deg) brightness(100%) contrast(100%); /* Красный */
-    --unactive-map: invert(43%) sepia(4%) saturate(145%) hue-rotate(315deg) brightness(100%) contrast(100%); /* Серый */
+  /* Карта */
+  --active-map: invert(18%) sepia(87%) saturate(6975%) hue-rotate(357deg) brightness(100%) contrast(100%);
+  /* Красный */
+  --unactive-map: invert(43%) sepia(4%) saturate(145%) hue-rotate(315deg) brightness(100%) contrast(100%);
+  /* Серый */
 
-    /* Шрифты */
-    --ff-primary: 'Open Sans', sans-serif;
-    --ff-accent: 'Montserrat', sans-serif;
+  /* Шрифты */
+  --ff-primary: 'Open Sans', sans-serif;
+  --ff-accent: 'Montserrat', sans-serif;
 }
 
 .dark-theme {
-    /* Фон */
-    --bg-1: #080A11;
-    --bg-3: #161616;
-    --bg-hover: rgba(68, 111, 161, 0.788);
+  /* Фон */
+  --bg-1: #080A11;
+  --bg-3: #161616;
+  --bg-hover: rgba(68, 111, 161, 0.788);
 
-    /* Для формы/анкеты */
-    --form-bg: #95a4c0; 
-    --form-bg-filter: invert(62%) sepia(13%) saturate(557%) hue-rotate(181deg) brightness(102%) contrast(93%);
-    --form-bg-hover: #ced6d5;
-    --form-hover: #ced6d5;
+  /* Для формы/анкеты */
+  --form-bg: #95a4c0;
+  --form-bg-filter: invert(62%) sepia(13%) saturate(557%) hue-rotate(181deg) brightness(102%) contrast(93%);
+  --form-bg-hover: #ced6d5;
+  --form-hover: #ced6d5;
 
-    /* Кнопка */
-    --btn-bg: rgba(0, 0, 0, 0);
+  /* Кнопка */
+  --btn-bg: rgba(0, 0, 0, 0);
 
-    /* Прозрачный фон секции Экологии */
-    --ecology-div-bg: rgba(0, 0, 0, .6);
+  /* Прозрачный фон секции Экологии */
+  --ecology-div-bg: rgba(0, 0, 0, .6);
 
-    /* Для ссылок */
-    --link: #fff;
-    --hover-link: #fff;
+  /* Для ссылок */
+  --link: #fff;
+  --hover-link: #fff;
 
-    /* Для SVG ссылок */
-    --link-filter: invert(96%) sepia(29%) saturate(810%) hue-rotate(178deg) brightness(80%) contrast(99%);
-    --link-hover-filter: invert(60%) sepia(14%) saturate(1212%) hue-rotate(167deg) brightness(90%) contrast(85%);
-    
-    /* Параграфы, заголовки */
-    --text: #DDE0EE;
-    --white-text: #DDE0EE;
-    --black-text: #080A11;
-    
-    /* При выделении */
-    --hover: #6593bf;
-    
-    /* Выпадающее меню */
-    --dropdown-menu-bg: rgba(25, 25, 25, .5);
-    
-    /* Линия в выпадающем меню */
-    --line: grey;
+  /* Для SVG ссылок */
+  --link-filter: invert(96%) sepia(29%) saturate(810%) hue-rotate(178deg) brightness(80%) contrast(99%);
+  --link-hover-filter: invert(60%) sepia(14%) saturate(1212%) hue-rotate(167deg) brightness(90%) contrast(85%);
+
+  /* Параграфы, заголовки */
+  --text: #DDE0EE;
+  --invert-text: #080A11;
+  --white-text: #DDE0EE;
+  --black-text: #080A11;
+
+  /* При выделении */
+  --hover: #6593bf;
+
+  /* Выпадающее меню */
+  --dropdown-menu-bg: rgba(25, 25, 25, .5);
+
+  /* Линия в выпадающем меню */
+  --line: grey;
 }

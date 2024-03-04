@@ -1,347 +1,435 @@
 @import url(root.css);
 
-@media (max-width: 1340px) {
-    .nav > #logo, .nav > .toggles > .toggle-btn {
-        display: block;
-    }
-    .nav > .nav-links, .nav > .toggles > svg, .toggles > p {
-        display: none;
-    }
-    .nav {
-        margin-right: 0;
-    }
-    .nav {
-        display: flex;
-    }
-    .toggle-btn {
-        margin-left: auto;
-        margin-right: 0;
-    }
-    .nav {
-        justify-content: space-between;
-    }
-    .toggle-btn > .burger {
-        margin-bottom: 12px;
-    }
+@media (max-width: 1508px) {
+  .nav-links a {
+    font-size: 1.1em !important;
+  }
 
-    .form-title {
-        font-size: 2em;
-    }
+  a.lia.active {
+    color: var(--text);
+    font-size: 1.2em !important;
+  }
+}
+
+@media (max-width: 1406px) {
+  .nav-links a {
+    font-size: 1em !important;
+  }
+
+  a.lia.active {
+    color: var(--text);
+    font-size: 1.1em !important;
+  }
+}
+
+@media (max-width: 1340px) {
+
+  .nav>#logo,
+  .nav>.toggles>.toggle-btn {
+    display: block;
+  }
+
+  .nav>.nav-links,
+  .nav>.toggles>svg,
+  .toggles>p {
+    display: none;
+  }
+
+  .nav {
+    margin-right: 0;
+  }
+
+  .nav {
+    display: flex;
+  }
+
+  .toggle-btn {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .nav {
+    justify-content: space-between;
+  }
+
+  .toggle-btn>.burger {
+    margin-bottom: 12px;
+  }
+
+  .form-title {
+    font-size: 2em;
+  }
 }
 
 /* до 1250 ширины */
 @media (max-width: 1250px) {
-    .hero {
-        height: auto; /* Высота может быть автоматически рассчитана в зависимости от контента */
-    }
-    .hero .container h1 {
-        padding: 1em 1em 0.5em 0;
-    }
+  .hero {
+    height: auto;
+    /* Высота может быть автоматически рассчитана в зависимости от контента */
+  }
 
-    #video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; 
-    }
-    
-    .main-button {
-        font-size: 1em;
-    }
-    
-    header {
-        padding: 1em 1.5em;
-    }
-    .big-img {
-        width: 100%;
-        padding-bottom: 1em;
-    }
-    .clients .big-img {
-        order: 1;
-    }
-    .clients {
-        padding-top: 0;
-    }
-    .item {
-        font-size: calc(10px + 16 * ((100vw - 320px) / (1280 - 320)));
-    }
-    .mission, .strategy {
-        margin: 1em 0;
-    }
-    .production {
-        padding-top: 1em;
-    }
-    .production-txt, .client-txt {
-        margin-bottom: 2em;
-    }
-    .production > .split > div > img {
-        padding-top: .5em;
-    }
+  /* .hero .container h1 {
+    padding: 1em 1em 0.5em 0;
+  } */
 
-    .gallery div {
-        width: 200vw;
-    }
+  #video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-    .safety__main {
-        padding: 1em;
-    }
+  .main-button {
+    font-size: 1em;
+  }
 
-    .title {
-        font-size: 1.8em;
-    }
+  header {
+    padding: 1em 1.5em;
+  }
 
-    .link div a {
-        font-size: calc(14px + 16 * ((100vw - 320px) / (1280 - 320)));
-    }
-    .link div p, .split div ul {
-        font-size: calc(14px + 16 * ((100vw - 320px) / (1280 - 320)));
-    }
+  .big-img {
+    width: 100%;
+    padding-bottom: 1em;
+  }
 
-    .ecology__main > .transparent {
-        margin: 0;
-    }
+  .clients .big-img {
+    order: 1;
+  }
 
-    .title-popup {
-        width: 60vw;
-    }
-    
-    .h1-popup {
-        font-size: calc(16px + 16 * ((100vw - 320px) / (1280 - 320)));
-        padding-bottom: 0.8em;
-    }
-    .map-choice-img > img {
-        width: 30px;
-        height: 30px;
-    }
+  .clients {
+    padding-top: 0;
+  }
 
-    .title-popup > img {
-        max-width: 50%;
-    }
-    .popup__body {
-        margin: 1.5em;
-    }
-    .ecology-item {
-        padding: .5em 0;
-    }
-    .contacts__main > .text-desc {
-        font-size: 1em;
-    }
-    .iframe > iframe {
-        width: auto;
-        height: 15em;
-    }
+  .item {
+    font-size: calc(10px + 16 * ((100vw - 320px) / (1280 - 320)));
+  }
 
-    .iframe iframe {
-        width: 90vw;
-    }
+  .mission,
+  .strategy {
+    margin: 1em 0;
+  }
 
-    .option {
-        width: 90vw;
-    }
+  .production {
+    padding-top: 1em;
+  }
 
-    .ecology-container {
-        padding-top: 1em;
-    }
-    .about-company h2 {
-        font-size: 1.2em;
-    }
+  .production-txt,
+  .client-txt {
+    margin-bottom: 2em;
+  }
 
-    footer .container .split {
-        align-items: center;
-        justify-content: center;
-    }
+  .production>.split>div>img {
+    padding-top: .5em;
+  }
 
-    h1 {
-        font-weight: 900;
-        line-height: 1;
-        font-size: calc(32px + 16 * ((100vw - 320px) / (1280 - 320)));
-    }
-    h2 {
-        font-size: calc(18px + 16 * ((100vw - 320px) / (1280 - 320)));
-    }
-    p {
-        font-size: calc(13px + 16 * ((100vw - 320px) / (1280 - 320)));
-    }
-    button {
-        font-size: calc(24px + 16 * ((100vw - 320px) / (1280 - 320)));
-    }
-    .safety__main {
-        background: url(../img/safety_bg.jpg) bottom no-repeat;
-        background-size: 800%;
-        width: 100%;
-    }
-    .grid-container {
-        display: grid;
-        grid-template-columns: auto auto;
-    }
-    
-    .ecology__main > .transparent > .text-desc {
-        font-size: calc(14px + 16 * ((100vw - 320px) / (1280 - 320)));
-    }
+  .gallery div {
+    width: 200vw;
+  }
 
-    .corruption-txt > a {
-        font-size: 1em;
-    }
-    .contacts {
-        display: flex;
-        flex-direction: column;
-        font-size: .95em;
-    }
-    .agree-text {
-        font-size: .63em;
-    }
+  .safety__main {
+    padding: 1em;
+  }
 
-    .logo-footer {
-        flex-direction: column;
-    }
-    .footer-split {
-        flex-direction: column;
-    }
-}   
+  .title {
+    font-size: 1.8em;
+  }
+
+  .link div a {
+    font-size: calc(14px + 16 * ((100vw - 320px) / (1280 - 320)));
+  }
+
+  .link div p,
+  .split div ul {
+    font-size: calc(14px + 16 * ((100vw - 320px) / (1280 - 320)));
+  }
+
+  .ecology__main>.transparent {
+    margin: 0;
+  }
+
+  .title-popup {
+    width: 60vw;
+  }
+
+  .map-choice-img>img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .title-popup>img {
+    max-width: 50%;
+  }
+
+  .popup__body {
+    margin: 1.5em;
+  }
+
+  .ecology-item {
+    padding: .5em 0;
+  }
+
+  .contacts__main>.text-desc {
+    font-size: 1em;
+  }
+
+  .iframe>iframe {
+    width: auto;
+    height: 15em;
+  }
+
+  .iframe iframe {
+    width: 90vw;
+  }
+
+  .option {
+    width: 90vw;
+  }
+
+  .ecology-container {
+    padding-top: 1em;
+  }
+
+  .about-company h2 {
+    font-size: 1.2em;
+  }
+
+  footer .container .split {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title-popup a {
+    font-size: 123em;
+  }
+
+  h1 {
+    font-weight: 900;
+    line-height: 1;
+    font-size: calc(32px + 16 * ((100vw - 320px) / (1280 - 320)));
+  }
+
+  h2 {
+    font-size: calc(18px + 16 * ((100vw - 320px) / (1280 - 320)));
+  }
+
+  p {
+    font-size: calc(13px + 16 * ((100vw - 320px) / (1280 - 320)));
+  }
+
+  button {
+    font-size: calc(24px + 16 * ((100vw - 320px) / (1280 - 320)));
+  }
+
+  .safety__main {
+    background: url(../img/safety_bg.jpg) bottom no-repeat;
+    background-size: 800%;
+    width: 100%;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .ecology__main>.transparent>.text-desc {
+    font-size: calc(14px + 16 * ((100vw - 320px) / (1280 - 320)));
+  }
+
+  .corruption-txt>a {
+    font-size: 1em;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    font-size: .95em;
+  }
+
+  .agree-text {
+    font-size: .63em;
+  }
+
+  .logo-footer {
+    flex-direction: column;
+  }
+
+  .footer-split {
+    flex-direction: column;
+  }
+}
 
 @media (min-width: 768px) and (max-width: 1250px) {
-    .gallery div {
-        width: 100vw;
-    }
-    #nextBtn, #backBtn {
-        max-width: 5em;
-    }
+  .gallery div {
+    width: 100vw;
+  }
+
+  #nextBtn,
+  #backBtn {
+    max-width: 5em;
+  }
 }
 
 @media (min-width: 1250px) {
-    .text-desc {
-        font-size: 2em;
-    }
-    .hero {
-        width: 100vw;
-        height: 100vh;
-    }
-    header .nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1em;
-    }
-    .nav-links {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-    }
-    .nav-links a {
-        color: #696c75;
-        font-size: 1.2em;
-        position: relative;
-        font-weight: 500;
-    }
-    .nav-links a:hover {
-        color: var(--text);
-    }
-    .nav-links a::before {
-        content: '';
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 0;
-        height: 4px;
-        background: var(--hover);
-        transition: .3s;
-    }
-    .nav-links a:hover::before {
-        width: 100%;
-    }
-    a.lia.active {
-        color: var(--text);
-        font-size: 1.4em;
-    }
-    a.lia.active::after {
-        content: "•"; /* Юникод для точки (можно использовать другие символы) */
-        position: absolute;
-        top: 20px;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 1.2em; /* Размер */
-        color: var(--hover); /* Цвет */
-    }
-    a.active::before {
-        display: none;
-    }
+  .text-desc {
+    font-size: 2em;
+  }
 
-    footer .split > * {
-        margin-left: 0;
-    }
-    .dropdown-menu.open {
-        display: none;
-    }
+  .hero {
+    width: 100vw;
+    height: 100vh;
+  }
 
-    .split {
-        flex-direction: row;
-    }
+  header .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+  }
 
-    .split > * {
-        flex-basis: 100%;
-    }
-    
-    .split > * + * {
-        margin-left: 2em;
-    }
+  .nav-links {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
 
-    .mission-strategy {
-        padding: 2em 0;
-    }
+  .nav-links a {
+    position: relative;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #696c75;
+  }
 
-    .transparent .links {
-        padding-right: 1em;
-    }
+  .nav-links a:hover {
+    color: var(--text);
+  }
 
-    .transparent {
-        margin: 0 2em;
-        padding-inline: 2em;
-    }
+  .nav-links a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: var(--hover);
+    transition: .3s;
+  }
 
-    .option {
-        min-width: 460px;
-    }
+  .nav-links a:hover::before {
+    width: 100%;
+  }
 
-    .choice {
-        margin-left: 0;
-    }
+  a.lia.active {
+    color: var(--text);
+    font-size: 1.4em;
+  }
 
-    h1 {
+  a.lia.active::after {
+    content: "•";
+    /* Юникод для точки (можно использовать другие символы) */
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    font-size: 1.2em;
+    /* Размер */
+    color: var(--hover);
+    /* Цвет */
+  }
+
+  a.active::before {
+    display: none;
+  }
+
+  footer .split>* {
+    margin-left: 0;
+  }
+
+  .dropdown-menu.open {
+    display: none;
+  }
+
+  .split {
+    flex-direction: row;
+  }
+
+  .split>* {
+    flex-basis: 100%;
+  }
+
+  .mission-strategy {
+    padding: 2em 0;
+  }
+
+  .transparent .links {
+    padding-right: 1em;
+  }
+
+  .transparent {
+    margin: 0 2em;
+    padding-inline: 2em;
+  }
+
+  .option {
+    min-width: 460px;
+  }
+
+  .choice {
+    margin-left: 0;
+  }
+
+  h1 {
     font-weight: 900;
     line-height: 1;
     font-size: 4em;
-    }
-    h2 {
-        font-size: 2em;
-    }
-    p, .split li {
-        font-size: 1.3em;
-    }
-    button {
-        font-size: 2.5em;
-    }
-    a {
-        font-size: 1.5em;
-    }
-    .link > div > p {
-        font-size: 1.5em;
-    }
-    #backBtn, #nextBtn {
-        max-width: 5em;
-    }
+  }
+
+  .title-popup a {
+    font-size: 1em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  p,
+  .split li {
+    font-size: 1.3em;
+  }
+
+  button {
+    font-size: 2.5em;
+  }
+
+  a {
+    font-size: 1.5em;
+  }
+
+  .link>div>p {
+    font-size: 1.5em;
+  }
+
+  #backBtn,
+  #nextBtn {
+    max-width: 5em;
+  }
 }
 
 @media (min-width: 1300px) {
-    .agree p, .agree a {
-        display: inline;
-        font-size: calc(8.6px + 2.5 * ((100vw - 320px) / (1280 - 320)));
-    }
+
+  .agree p,
+  .agree a {
+    display: inline;
+    font-size: calc(8.6px + 2.5 * ((100vw - 320px) / (1280 - 320)));
+  }
 }
+
 @media (min-width: 1500px) {
-    .agree p, .agree a {
-        display: inline;
-        font-size: calc(10.6px + 2.5 * ((100vw - 320px) / (1280 - 320)));
-    }
+
+  .agree p,
+  .agree a {
+    display: inline;
+    font-size: calc(10.6px + 2.5 * ((100vw - 320px) / (1280 - 320)));
+  }
 }
