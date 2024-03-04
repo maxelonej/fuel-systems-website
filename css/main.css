@@ -353,6 +353,10 @@ a.link {
   transition-delay: 400ms;
 }
 
+#ecology .container > * {
+  text-align: center;
+} 
+
 /* Прозрачный блок с блюром для читаемости */
 .transparent {
   backdrop-filter: blur(10px);
