@@ -1,7 +1,7 @@
 @import url(root.css);
 
-@media (max-width: 1508px) {
-  .nav-links a {
+/* @media (max-width: 1508px) {
+  nav a {
     font-size: 1.1em !important;
   }
 
@@ -12,7 +12,7 @@
 }
 
 @media (max-width: 1406px) {
-  .nav-links a {
+  nav a {
     font-size: 1em !important;
   }
 
@@ -20,57 +20,18 @@
     color: var(--text);
     font-size: 1.1em !important;
   }
-}
+} */
 
 @media (max-width: 1340px) {
-
-  .nav>#logo,
-  .nav>.toggles>.toggle-btn {
-    display: block;
-  }
-
-  .nav>.nav-links,
-  .nav>.toggles>svg,
-  .toggles>p {
-    display: none;
-  }
-
-  .nav {
-    margin-right: 0;
-  }
-
-  .nav {
-    display: flex;
-  }
-
-  .toggle-btn {
-    margin-left: auto;
-    margin-right: 0;
-  }
-
-  .nav {
-    justify-content: space-between;
-  }
-
-  .toggle-btn>.burger {
-    margin-bottom: 12px;
-  }
-
   .form-title {
     font-size: 2em;
   }
 }
 
-/* до 1250 ширины */
 @media (max-width: 1250px) {
   .hero {
     height: auto;
-    /* Высота может быть автоматически рассчитана в зависимости от контента */
   }
-
-  /* .hero .container h1 {
-    padding: 1em 1em 0.5em 0;
-  } */
 
   #video {
     width: 100%;
@@ -263,6 +224,7 @@
   }
 }
 
+/* Галерея */
 @media (min-width: 768px) and (max-width: 1250px) {
   .gallery div {
     width: 100vw;
@@ -284,68 +246,11 @@
     height: 100vh;
   }
 
-  header .nav {
+  header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1em;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
-
-  .nav-links a {
-    position: relative;
-    font-size: 1.2em;
-    font-weight: 500;
-    color: #696c75;
-  }
-
-  .nav-links a:hover {
-    color: var(--text);
-  }
-
-  .nav-links a::before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0;
-    height: 4px;
-    background: var(--hover);
-    transition: .3s;
-  }
-
-  .nav-links a:hover::before {
-    width: 100%;
-  }
-
-  a.lia.active {
-    color: var(--text);
-    font-size: 1.4em;
-  }
-
-  a.lia.active::after {
-    content: "•";
-    /* Юникод для точки (можно использовать другие символы) */
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    font-size: 1.2em;
-    /* Размер */
-    color: var(--hover);
-    /* Цвет */
-  }
-
-  a.active::before {
-    display: none;
   }
 
   footer .split>* {
@@ -423,7 +328,6 @@
 }
 
 @media (min-width: 1300px) {
-
   .agree p,
   .agree a {
     display: inline;
@@ -432,7 +336,6 @@
 }
 
 @media (min-width: 1500px) {
-
   .agree p,
   .agree a {
     display: inline;

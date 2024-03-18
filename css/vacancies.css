@@ -1,35 +1,4 @@
-@import url(root.css);
-@import url(style.css);
-
-.dropdown-menu {
-  display: none;
-  top: 5.5em;
-  width: 300px;
-  background: var(--dropdown-menu-bg);
-  backdrop-filter: blur(10px);
-  border-radius: 10px;
-  height: 0;
-  overflow: hidden;
-  transition: height .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.dropdown-menu>a:nth-last-child(2)::after {
-  content: '';
-  position: absolute;
-  width: 80%;
-  z-index: 1;
-  bottom: 95px;
-  border-bottom: solid 1.5px var(--line);
-}
-
-/* Для vacancies.html со своими ссылками */
-.dropdown-menu.open {
-  height: calc(272px + (44) * ((100vw - 320px) / (1250 - 320)));
-}
-
-.dropdown-menu>a {
-  margin: 1em;
-}
+@import url(basic.css);
 
 .vacancies-container {
   display: flex;

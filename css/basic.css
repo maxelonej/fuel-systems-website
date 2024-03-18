@@ -1,5 +1,6 @@
-/* Стили для index.html + vacancies.css */
+@import url(root.css);
 
+/* Общие стили */
 * {
   margin: 0;
   padding: 0;
@@ -34,6 +35,11 @@
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 10rem;
 }
 
 h1,
@@ -89,7 +95,6 @@ img {
   max-width: 100%;
 }
 
-/* Ввод, текстовая область, кнопка */
 input,
 textarea,
 button {
@@ -136,41 +141,6 @@ a {
   text-decoration: none;
 }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding: 10rem;
-}
-
-/* Шапка */
-header {
-  position: fixed;
-  top: 0;
-  background-color: var(--bg-3);
-  z-index: 2;
-  width: 100vw;
-  padding: 0 1em;
-}
-
-/* Неупорядоченный список */
-header ul {
-  /* Убрать точки у каждого элемента в списке  */
-  list-style-type: none;
-}
-
-/* Элемент списка */
-header ul li {
-  display: inline-block;
-  padding: 0 10px;
-}
-
-/* Ссылки элемента */
-header ul li a {
-  transition: color .4s ease;
-  display: block;
-  text-decoration: none;
-}
-
-/* Выравнивать текст по центру */
 .text-center {
   text-align: center;
 }
@@ -186,7 +156,96 @@ header ul li a {
   gap: 32px;
 }
 
-/* Иконка для малых экранов в навигации, при нажатии выпадает список */
+/* Шапка */
+header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+  width: 100vw;
+  z-index: 2;
+  background-color: var(--bg-3);
+}
+
+header ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  list-style-type: none;
+}
+header ul li a {
+  text-decoration: none;
+  transition: color .4s ease;
+}
+
+nav a {
+  position: relative;
+  font-size: 1em;
+  font-weight: 500;
+  color: #696c75;
+}
+nav a::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: var(--hover);
+  transition: .3s;
+}
+nav a:hover {
+  color: var(--text);
+}
+nav a:hover::before {
+  width: 100%;
+}
+
+a.lia.active {
+  color: var(--text);
+  font-size: 1.25em;
+}
+a.lia.active::after {
+  content: "•";
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  font-size: 1.2em;
+  color: var(--hover);
+}
+a.active::before {
+  display: none;
+}
+
+@media (max-width: 1440px) {
+  nav a {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 1025px) {
+  nav a {
+    font-size: 1em;
+  }
+  .lang, .theme {
+
+  }
+}
+@media (max-width: 769px) {
+  #logo, .toggles > .toggle-btn {
+    display: block;
+  }
+  nav, .toggles > svg, .toggles > p {
+    display: none;
+  }
+  .lang, .theme {
+    font-size: 1em;
+  }
+}
+
 .burger::before,
 .burger::after {
   content: '';
@@ -208,33 +267,26 @@ header ul li a {
   background-color: var(--bg-3);
 }
 
-/* Переключатели */
 .toggles {
   display: flex;
   align-items: center;
 }
 
-/* Язык ru/en */
 .lang {
   color: var(--white-text);
   background-color: #6593bf;
   text-align: center;
   border-radius: .2em;
-  padding: .5em;
-  padding-inline: .8em;
   margin-left: 20px;
   transition: .4s;
   cursor: pointer;
 }
 
-/* Тема светлая/темная */
 .theme {
   background-color: #6593bf;
   color: #DDE0EE;
   text-align: center;
   border-radius: .2em;
-  padding: .5em;
-  padding-inline: .8em;
   margin-left: 20px;
   transition: .4s;
   cursor: pointer;
@@ -242,51 +294,42 @@ header ul li a {
 
 .lang,
 .theme {
+  font-size: 1.35em;
+  width: 100%;
+  padding: 0.7em;
   min-width: 65px;
   max-width: 65px;
 }
 
-@media (max-width: 768px) {
-
-  .lang,
-  .theme {
-    height: 45px;
-    width: 45px;
-    font-size: .9em;
-    align-items: center;
-  }
-}
-
-/* При наведении */
 .lang:hover,
 .theme:hover {
   background: var(--bg-hover);
 }
 
-/* Не показывать кнопку темной темы по дефолту */
-#dark,
-#mobileDark {
-  display: none;
-}
-
-/* Язык для малых экранов */
 .lang-mobile {
   display: flex;
-  padding: 1em 0 1em 0;
   text-align: center;
   text-transform: uppercase;
   justify-content: center;
   font-weight: bold;
 }
 
-.mobile-toggle-row {
-  display: flex;
-  margin-inline: auto;
-  width: fit-content;
-  margin-top: 23px;
+#dark,
+#mobileDark {
+  display: none;
 }
 
-/* Подвал */
+@media (max-width: 769px) {
+  .lang-mobile,
+  .theme {
+    max-height: 55px;
+    max-width: 55px;
+    min-width: 55px;
+    font-size: .9em;
+    align-items: center;
+  }
+}
+
 footer {
   background-color: var(--bg-3);
   padding: 1em 1.5em;

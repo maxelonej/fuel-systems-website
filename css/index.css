@@ -1,5 +1,4 @@
-@import url(root.css);
-@import url(style.css);
+@import url(basic.css);
 
 /* Лого в шапке */
 #logo {
@@ -84,20 +83,6 @@
 
 .hero__container .main-button {
   position: absolute;
-}
-
-/* Для index.html со своими ссылками */
-.dropdown-menu.open {
-  height: calc(500px + (104) * ((100vw - 320px) / (1250 - 320)));
-}
-
-.dropdown-menu>a:nth-last-child(2)::after {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  width: 80%;
-  border-bottom: solid 1.5px var(--line);
-  bottom: 95px;
 }
 
 /* Секция 2. О компании */

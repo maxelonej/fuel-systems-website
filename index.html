@@ -4,14 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Название вкладки -->
-  <title>DIPO</title>
-
-  <!-- Фавикон/Картинка вкладки -->
+  <!-- favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="img/logo/favicon.ico" />
 
-  <!-- Подключение CSS -->
-  <link rel="stylesheet" href="css/main.css" />
+  <!-- css -->
+  <link rel="stylesheet" href="css/index.css" />
   <link rel="stylesheet" href="css/popup.css" />
   <link rel="stylesheet" href="css/adaptation.css" />
   <link rel="stylesheet" href="css/hamburger-menu.css" />
@@ -29,66 +26,58 @@
 
   <!-- Ссылка Fontawesome для стрелок в галерею -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
+  <title>DIPO</title>
 </head>
 
 <body>
-  <!-- Шапка -->
   <header>
-    <!-- Навигация -->
-    <div class="nav">
-      <!-- Лого -->
-      <div class="logo">
-        <!-- Ссылка -->
-        <a href="#hero">
-          <!-- Картинка -->
-          <img src="img/logo/logo_top.png" alt="logo" />
-        </a>
-      </div>
-      <!-- Ссылки -->
-      <div class="nav-links">
-        <!-- Неотсортированный список элементов-ссылок -->
-        <ul>
-          <li>
-            <a href="#about-company" class="lia translate" key="about-company-title">О компании</a>
-          </li>
-          <li>
-            <a href="#production" class="lia translate" key="production-title">Продукция</a>
-          </li>
-          <li>
-            <a href="#safety" class="lia translate" key="safety-title">Безопасность</a>
-          </li>
-          <li>
-            <a href="#ecology" class="lia translate" key="ecology-title">Экология</a>
-          </li>
-          <li>
-            <a href="#contacts" class="lia translate" key="contacts-title">Контакты</a>
-          </li>
-          <li>
-            <a href="vacancies.html" class="lia translate" key="career">Карьера</a>
-          </li>
-        </ul>
-      </div>
-      <!-- Тема, язык, гамбургер меню -->
-      <div class="toggles">
-        <!-- Тема -->
-        <svg id="light" class="theme" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-          stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z">
-          </path>
-        </svg>
-        <svg id="dark" class="theme" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-          stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z">
-          </path>
-        </svg>
-        <!-- Язык -->
-        <p class="lang" id="ru">ru</p>
-        <!-- Гамбургер -->
-        <div class="toggle-btn">
-          <button class="burger"></button>
-        </div>
+    <div class="logo">
+      <a href="#hero">
+        <img src="img/logo/logo_top.png" alt="logo" />
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <a href="#about-company" class="lia translate" key="about-company-title">О компании</a>
+        </li>
+        <li>
+          <a href="#production" class="lia translate" key="production-title">Продукция</a>
+        </li>
+        <li>
+          <a href="#safety" class="lia translate" key="safety-title">Безопасность</a>
+        </li>
+        <li>
+          <a href="#ecology" class="lia translate" key="ecology-title">Экология</a>
+        </li>
+        <li>
+          <a href="#contacts" class="lia translate" key="contacts-title">Контакты</a>
+        </li>
+        <li>
+          <a href="vacancies.html" class="lia translate" key="career">Карьера</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="toggles">
+      <!-- Тема -->
+      <svg id="light" class="theme" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z">
+        </path>
+      </svg>
+      <svg id="dark" class="theme" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z">
+        </path>
+      </svg>
+      <!-- Язык -->
+      <p class="lang" id="ru">ru</p>
+      <!-- Гамбургер -->
+      <div class="toggle-btn">
+        <button class="burger"></button>
       </div>
     </div>
   </header>
@@ -667,7 +656,7 @@
       <form action="">
         <div class="form-wrapper">
           <!-- Ввод -->
-          <input type="text" placeholder="E-mail" required />
+          <input type="text" name="email" id="email" placeholder="E-mail" required />
           <!-- Текстовое поле -->
           <textarea placeholder="Сообщение" name="Msg" cols="30" rows="5" required></textarea>
           <!-- Текст + ссылка -->

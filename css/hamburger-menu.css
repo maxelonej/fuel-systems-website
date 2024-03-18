@@ -3,15 +3,12 @@
   font-size: 1.5rem;
   cursor: pointer;
   display: none;
+  margin-left: auto;
+  margin-right: 0;
 }
 
-.dropdown-menu.open {
-  display: block;
-  position: fixed;
-  z-index: 3;
-  right: 0;
-  left: auto;
-  margin-right: 1em;
+.toggle-btn > .burger {
+  margin-bottom: 12px;
 }
 
 @media (min-width: 1340px) {
@@ -31,33 +28,47 @@
   padding: .5em 0;
 }
 
-/* Выпадающее меню */
 .dropdown-menu {
-  display: none;
+  position: fixed;
+  z-index: 3;
   top: 5.5em;
+  left: auto;
+  right: 0;
+  margin-top: .3em;
+  margin-right: .5em;
   width: 300px;
   background: var(--bg-3);
-  border-radius: 10px;
-  height: 0;
-  overflow: hidden;
-  transition: height .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 25px;
+  opacity: 0;
+  visibility: hidden;
+  transition: .4s;
 }
 
 .dropdown-menu.open {
-  margin-top: .3em;
-}
-
-.dropdown-menu.open a:nth-child(1) {
-  margin-top: 1em;
-}
-
-.dropdown-menu>a {
-  margin: 1em;
-  font-weight: 550;
+  opacity: 1;
+  visibility: visible;
 }
 
 .dropdown-menu a {
+  margin: 1em;
+  font-weight: 550;
   color: var(--link);
+}
+.dropdown-menu.open a:nth-child(1) {
+  margin-top: 1em;
+}
+.dropdown-menu.open a:nth-last-child(2)::after {
+  content: '';
+  width: 100%;
+  border-bottom: solid 1px var(--link);
+  margin-top: 3.5em;
+  position: absolute;
+}
+.mobile-toggle-row {
+  display: flex;
+  margin: 23px auto;
+  width: fit-content;
+  position: relative;
 }
 
 .burger {
