@@ -1,67 +1,67 @@
 // Перевод через массив, содержащий русскую и английскую версию
 
 document.addEventListener("DOMContentLoaded", () => {
-  const lang = document.querySelector(".lang");
-  const translateParagraph = document.querySelector(".lang");
+  const lang = document.querySelector(".lang")
+  const translateParagraph = document.querySelector(".lang")
 
-  let path = window.location.pathname;
-  let page = path.split("/").pop();
-  let language; // Чтобы информацию не повторять в languagesArray
+  let path = window.location.pathname
+  let page = path.split("/").pop()
+  let language // Чтобы информацию не повторять в languagesArray
 
   translateParagraph.addEventListener("click", () => {
     // Меняет язык и изображение
     if (lang.id === "ru") {
-      lang.id = "en";
-      translateParagraph.textContent = "en";
+      lang.id = "en"
+      translateParagraph.textContent = "en"
       if (page === "index.html") {
-        document.getElementsByName("Msg")[0].placeholder = "Message";
+        document.getElementsByName("Msg")[0].placeholder = "Message"
       } else if (page === "vacancies.html") {
-        document.getElementsByName("name")[0].placeholder = "Enter name";
-        document.getElementsByName("surname")[0].placeholder = "Enter surname";
-        document.getElementsByName("email")[0].placeholder = "Enter E-mail";
-        document.getElementsByName("tel")[0].placeholder = "Enter phone number";
+        document.getElementsByName("name")[0].placeholder = "Enter name"
+        document.getElementsByName("surname")[0].placeholder = "Enter surname"
+        document.getElementsByName("email")[0].placeholder = "Enter E-mail"
+        document.getElementsByName("tel")[0].placeholder = "Enter phone number"
       }
     } else {
-      lang.id = "ru";
-      translateParagraph.textContent = "ru";
+      lang.id = "ru"
+      translateParagraph.textContent = "ru"
       if (page === "index.html") {
-        document.getElementsByName("Msg")[0].placeholder = "Сообщение";
+        document.getElementsByName("Msg")[0].placeholder = "Сообщение"
       }
     }
 
     // Применяет тексты для каждого класса lang
     document.querySelectorAll(".translate").forEach((innerItem) => {
       innerItem.textContent =
-        languagesArray[lang.id][innerItem.getAttribute("key")];
-    });
-  });
+        languagesArray[lang.id][innerItem.getAttribute("key")]
+    })
+  })
 
-  const mobileLang = document.querySelector(".lang-mobile");
-  const mobiletranslateParagraph = document.querySelector(".lang-mobile");
+  const mobileLang = document.querySelector(".lang-mobile")
+  const mobiletranslateParagraph = document.querySelector(".lang-mobile")
 
   mobiletranslateParagraph.addEventListener("click", () => {
     if (mobileLang.id === "ru-mobile") {
-      mobileLang.id = "en-mobile";
-      language = "en";
-      mobiletranslateParagraph.textContent = "en";
+      mobileLang.id = "en-mobile"
+      language = "en"
+      mobiletranslateParagraph.textContent = "en"
       if (page === "index.html") {
-        document.getElementsByName("Msg")[0].placeholder = "Message";
+        document.getElementsByName("Msg")[0].placeholder = "Message"
       }
     } else {
-      mobileLang.id = "ru-mobile";
-      language = "ru";
-      mobiletranslateParagraph.textContent = "ru";
+      mobileLang.id = "ru-mobile"
+      language = "ru"
+      mobiletranslateParagraph.textContent = "ru"
       if (page === "index.html") {
-        document.getElementsByName("Msg")[0].placeholder = "Сообщение";
+        document.getElementsByName("Msg")[0].placeholder = "Сообщение"
       }
     }
 
     document.querySelectorAll(".translate").forEach((innerItem) => {
       innerItem.textContent =
-        languagesArray[language][innerItem.getAttribute("key")];
-    });
-  });
-});
+        languagesArray[language][innerItem.getAttribute("key")]
+    })
+  })
+})
 
 const languagesArray = {
   "ru": {
@@ -96,15 +96,15 @@ const languagesArray = {
 
     "mission-title": "Миссия",
     "mission-description-1":
-      "1. Укреплять свои позиции как лидирующего поставщика 1-го уровня в производстве пластиковых топливных систем;",
+      "1. Укреплять свои позиции как лидирующего поставщика 1-го уровня в производстве пластиковых топливных систем",
     "mission-description-2":
-      "2. Поставлять экологически чистую и безопасную продукцию;",
+      "2. Поставлять экологически чистую и безопасную продукцию",
     "strategy-title": "Стратегия",
 
     "strategy-description-1": "1. Стать бесспорным лидером на рынке топливных баков.",
     "strategy-description-2": "2. Обеспечить целевые экономические показатели для среднесрочного развития.",
     "strategy-description-3": "3. Принять обязательства по Качеству и Удовлетворенности потребителя в стремлении к совершенству во всех сферах деятельности.",
-    "strategy-description-4": "4. Стать отраслевым эталоном корпоративной социальной ответственности: быть безопаснее, чтобы не было несчастных случаев; быть более разнообразным, к полу, возрасту, культуре и этническому разнообразию на всех уровнях иерархии и во всех географических регионах.",
+    "strategy-description-4": "4. Стать отраслевым эталоном корпоративной социальной ответственности: быть безопаснее, чтобы не было несчастных случаев быть более разнообразным, к полу, возрасту, культуре и этническому разнообразию на всех уровнях иерархии и во всех географических регионах.",
 
     "production-description": "Безопасные и качественные пластиковые топливные системы для автомобилей, а также производство локальных компонентов для них.",
 
@@ -209,16 +209,16 @@ const languagesArray = {
 
     "mission-title": "Mission",
     "mission-description-1":
-      "1. Strengthen our position as a leading 1st level supplier in the production of plastic fuel systems;",
+      "1. Strengthen our position as a leading 1st level supplier in the production of plastic fuel systems",
     "mission-description-2":
-      "2. Supply environmentally friendly and safe products;",
+      "2. Supply environmentally friendly and safe products",
 
     "strategy-title": "Strategy",
 
     "strategy-description-1": "1. Become the undisputed leader in the fuel tank market.",
     "strategy-description-2": "2. Provide targeted economic indicators for medium-term development.",
     "strategy-description-3": "3. Commit to Quality and Customer Satisfaction in striving for excellence in all fields of activity.",
-    "strategy-description-4": "4. To become an industry benchmark for corporate social responsibility: to be safer so that there are no accidents; to be more diverse, by gender, age, culture and ethnic diversity at all levels of the hierarchy and in all geographical regions.",
+    "strategy-description-4": "4. To become an industry benchmark for corporate social responsibility: to be safer so that there are no accidents to be more diverse, by gender, age, culture and ethnic diversity at all levels of the hierarchy and in all geographical regions.",
 
     "production-description": "Safe and high-quality plastic fuel systems for cars, as well as the production of local components for them.",
 
@@ -289,4 +289,4 @@ const languagesArray = {
     "more-details": "More details",
     "show-more": "More",
   },
-};
+}
