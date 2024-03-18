@@ -1,38 +1,28 @@
 @import url(basic.css);
 
-/* Лого в шапке */
-#logo {
-  display: block;
-  height: 63px;
-  margin-top: -63px;
-  visibility: hidden;
-}
-
-/* Всем элементам из основных контейнеров и главного контейнера */
 .main__container *,
 .hero__container>* {
   color: var(--white-text);
 }
-
-/* Основа в секциях */
 .main__container {
   width: 100%;
   padding: 1em;
   display: flex;
   flex-direction: column;
 }
-
 .main__container>* {
   margin: .5em;
 }
 
-/* Секция 1 - Главная */
+/* Главная */
 .hero {
   position: relative;
   z-index: 1;
   height: 100vh;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.2);
+  margin-top: 80px;
+  padding: 2em 2em 2em 2em;
 }
 
 /* Видео на фон */
@@ -49,7 +39,7 @@
 
 /* Заголовок */
 .hero .container h1 {
-  padding: 2em 1em .5em 0;
+  padding-bottom: 0.5em;
   color: var(--hover);
 }
 

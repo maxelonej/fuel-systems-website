@@ -156,6 +156,13 @@ a {
   gap: 32px;
 }
 
+#logo {
+  display: block;
+  height: 63px;
+  margin-top: -63px;
+  visibility: hidden;
+}
+
 /* Шапка */
 header {
   position: fixed;
