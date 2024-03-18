@@ -221,17 +221,28 @@ a.active::before {
   display: none;
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 1442px) {
+  nav a {
+    font-size: 1.3em;
+  }
+  a.lia.active {
+    font-size: 1.35em;
+  }
+}
+@media (max-width: 1441px) {
   nav a {
     font-size: 1.2em;
+  }
+  a.lia.active {
+    font-size: 1.25em;
   }
 }
 @media (max-width: 1025px) {
   nav a {
     font-size: 1em;
   }
-  .lang, .theme {
-
+  a.lia.active {
+    font-size: 1.15em;
   }
 }
 @media (max-width: 769px) {
