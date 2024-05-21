@@ -21,15 +21,17 @@ window.onscroll = () => {
             .classList.add("active");
         });
       }
-    } else if (page === "index.html") {
-      if (top >= offset && top < offset + height) {
-        navLinks.forEach((link) => {
-          link.classList.remove("active");
-          document
-            .querySelector("header a[href*=" + id + "]")
-            .classList.add("active");
-        });
-      }
+    } else if (
+      page === "index.html" &&
+      top >= offset &&
+      top < offset + height
+    ) {
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        document
+          .querySelector("header a[href*=" + id + "]")
+          .classList.add("active");
+      });
     }
   });
 };
